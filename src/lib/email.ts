@@ -68,7 +68,7 @@ export async function sendOrderConfirmation(order: OrderWithItems) {
 </html>`;
 
   await getResend().emails.send({
-    from: "ResAI <onboarding@resend.dev>",
+    from: "ResAI <noreply@resai.us>",
     replyTo: "foxglobe2023@gmail.com",
     to: order.customer_email,
     subject: `Order Confirmed – ResAI #${order.id.slice(0, 8).toUpperCase()}`,
