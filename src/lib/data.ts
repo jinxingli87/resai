@@ -39,7 +39,7 @@ export const COURSES = [
       "A hands-on course covering core ML concepts with Python and PyTorch — from linear models through CNNs, Transformers, and AI for scientific applications.",
     topics: ["Python & PyTorch", "MLP & CNN", "Transformers", "AI for Science"],
     level: "Beginner–Intermediate",
-    price_cents: 149900,
+    price_cents: 300000,
     stripe_price_env: "STRIPE_PRICE_ML_FUNDAMENTALS",
   },
   {
@@ -51,7 +51,7 @@ export const COURSES = [
       "Deep-dive into transformer architecture, LLM training, fine-tuning techniques, RLHF, and production deployment of large language models.",
     topics: ["Transformers", "Pre-training & Fine-tuning", "RLHF", "Deployment"],
     level: "Intermediate–Advanced",
-    price_cents: 199900,
+    price_cents: 300000,
     stripe_price_env: "STRIPE_PRICE_LLM",
   },
   {
@@ -63,7 +63,7 @@ export const COURSES = [
       "Explore convolutional networks, Vision Transformers, self-supervised learning, and vision-language models in a project-based curriculum.",
     topics: ["CNN & ViT", "Self-Supervised Learning", "Vision-Language Models", "Real-world Projects"],
     level: "Intermediate–Advanced",
-    price_cents: 199900,
+    price_cents: 300000,
     stripe_price_env: "STRIPE_PRICE_CV",
   },
   {
@@ -75,7 +75,7 @@ export const COURSES = [
       "Designed for non-technical professionals and executives who need to understand AI capabilities, evaluate vendors, and drive organizational AI strategy.",
     topics: ["AI Landscape & Trends", "Evaluating AI Tools", "ROI & Risk", "Change Management"],
     level: "Non-technical",
-    price_cents: 199900,
+    price_cents: 300000,
     stripe_price_env: "STRIPE_PRICE_AI_EXEC",
   },
 ];
