@@ -2,7 +2,7 @@ export const dynamic = "force-dynamic";
 
 import { redirect } from "next/navigation";
 import Link from "next/link";
-import { createClient } from "@/lib/supabase/server";
+import { createClient, createAdminClient } from "@/lib/supabase/server";
 import { formatCurrency, formatDate } from "@/lib/utils";
 import type { OrderWithItems } from "@/types";
 
@@ -18,9 +18,8 @@ export default async function DashboardPage() {
 
   if (!user) redirect("/auth/login");
 
-  // Match by user_id OR by customer_email so orders appear
-  // regardless of whether user_id was stored correctly
-  const { data: orders } = await supabase
+  const admin = createAdminClient();
+  const { data: orders } = await admin
     .from("orders")
     .select("*, order_items(*)")
     .or(`user_id.eq.${user.id},customer_email.eq.${user.email}`)
