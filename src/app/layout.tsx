@@ -15,9 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "FoxGlobe – AI Strategy & Training",
+  title: "ResAI – AI Strategy & Training",
   description:
-    "FoxGlobe helps businesses implement AI strategy and empowers professionals with world-class AI/ML education.",
+    "ResAI helps businesses implement AI strategy and empowers professionals with world-class AI/ML education.",
 };
 
 export default function RootLayout({

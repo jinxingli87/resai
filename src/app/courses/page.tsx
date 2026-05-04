@@ -3,9 +3,9 @@ import { COURSES } from "@/lib/data";
 import { formatCurrency } from "@/lib/utils";
 
 export const metadata = {
-  title: "AI & ML Courses – FoxGlobe",
+  title: "AI & ML Courses – ResAI",
   description:
-    "Master machine learning, LLMs, computer vision, and AI strategy with FoxGlobe's expert-led courses.",
+    "Master machine learning, LLMs, computer vision, and AI strategy with ResAI's expert-led courses.",
 };
 
 export default function CoursesPage() {
@@ -83,7 +83,7 @@ export default function CoursesPage() {
                     "Hands-on projects and coding assignments",
                     "Course materials accessible for 1 year",
                     "Certificate of completion",
-                    "Access to FoxGlobe alumni community",
+                    "Access to ResAI alumni community",
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-3 text-sm text-slate-600">
                       <svg

@@ -43,7 +43,7 @@ export default function Navbar() {
       <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
           <span className="font-bold text-xl text-slate-900">
-            Fox<span className="text-blue-600">Globe</span>
+            Res<span className="text-blue-600">AI</span>
           </span>
         </Link>
 

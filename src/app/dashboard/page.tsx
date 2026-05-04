@@ -7,7 +7,7 @@ import { formatCurrency, formatDate } from "@/lib/utils";
 import type { OrderWithItems } from "@/types";
 
 export const metadata = {
-  title: "My Orders – FoxGlobe",
+  title: "My Orders – ResAI",
 };
 
 export default async function DashboardPage() {

@@ -2,7 +2,7 @@ import { Suspense } from "react";
 import CheckoutForm from "./checkout-form";
 
 export const metadata = {
-  title: "Checkout – FoxGlobe",
+  title: "Checkout – ResAI",
 };
 
 export default function CheckoutPage() {

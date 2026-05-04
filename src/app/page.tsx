@@ -20,7 +20,7 @@ export default function HomePage() {
               </span>
             </h1>
             <p className="text-lg text-slate-300 leading-relaxed mb-10 max-w-xl">
-              FoxGlobe delivers end-to-end AI strategy, agentic workflow
+              ResAI delivers end-to-end AI strategy, agentic workflow
               automation, and world-class AI/ML training — so your organization
               can lead the intelligence era.
             </p>
@@ -195,7 +195,7 @@ export default function HomePage() {
           </h2>
           <p className="text-blue-100 mb-8 max-w-lg mx-auto">
             Whether you&apos;re implementing AI at the enterprise level or
-            upskilling your team, FoxGlobe has the expertise you need.
+            upskilling your team, ResAI has the expertise you need.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link

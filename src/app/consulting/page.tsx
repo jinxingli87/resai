@@ -2,9 +2,9 @@ import Link from "next/link";
 import { SERVICES } from "@/lib/data";
 
 export const metadata = {
-  title: "AI Consulting – FoxGlobe",
+  title: "AI Consulting – ResAI",
   description:
-    "FoxGlobe AI consulting: Agentic AI workflow automation and Generative AI integration for your business.",
+    "ResAI AI consulting: Agentic AI workflow automation and Generative AI integration for your business.",
 };
 
 export default function ConsultingPage() {

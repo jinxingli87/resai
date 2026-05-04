@@ -27,7 +27,7 @@ export async function sendOrderConfirmation(order: OrderWithItems) {
       <table width="600" cellpadding="0" cellspacing="0" style="background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
         <tr>
           <td style="background:#0F172A;padding:32px 40px;">
-            <h1 style="color:#fff;margin:0;font-size:24px;font-weight:700;">FoxGlobe</h1>
+            <h1 style="color:#fff;margin:0;font-size:24px;font-weight:700;">ResAI</h1>
             <p style="color:#94a3b8;margin:4px 0 0;">AI Strategy &amp; Training</p>
           </td>
         </tr>
@@ -58,7 +58,7 @@ export async function sendOrderConfirmation(order: OrderWithItems) {
         </tr>
         <tr>
           <td style="background:#f8fafc;padding:24px 40px;text-align:center;">
-            <p style="color:#94a3b8;font-size:13px;margin:0;">© ${new Date().getFullYear()} FoxGlobe. All rights reserved.</p>
+            <p style="color:#94a3b8;font-size:13px;margin:0;">© ${new Date().getFullYear()} ResAI. All rights reserved.</p>
           </td>
         </tr>
       </table>
@@ -68,10 +68,10 @@ export async function sendOrderConfirmation(order: OrderWithItems) {
 </html>`;
 
   await getResend().emails.send({
-    from: "FoxGlobe <onboarding@resend.dev>",
+    from: "ResAI <onboarding@resend.dev>",
     replyTo: "foxglobe2023@gmail.com",
     to: order.customer_email,
-    subject: `Order Confirmed – FoxGlobe #${order.id.slice(0, 8).toUpperCase()}`,
+    subject: `Order Confirmed – ResAI #${order.id.slice(0, 8).toUpperCase()}`,
     html,
   });
 }

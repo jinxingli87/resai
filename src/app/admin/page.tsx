@@ -6,7 +6,7 @@ import { formatCurrency, formatDate } from "@/lib/utils";
 import type { OrderWithItems } from "@/types";
 
 export const metadata = {
-  title: "Admin – FoxGlobe",
+  title: "Admin – ResAI",
 };
 
 export default async function AdminPage() {
@@ -46,7 +46,7 @@ export default async function AdminPage() {
     <div className="max-w-6xl mx-auto px-6 py-12">
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-slate-900">Admin Dashboard</h1>
-        <p className="text-slate-500 mt-1">All orders across FoxGlobe</p>
+        <p className="text-slate-500 mt-1">All orders across ResAI</p>
       </div>
 
       {/* Stats */}

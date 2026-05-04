@@ -83,7 +83,7 @@ export default function LoginForm() {
             <p className="text-slate-500 text-sm mt-2">
               {mode === "login"
                 ? "Sign in to access your orders and courses"
-                : "Get started with FoxGlobe today"}
+                : "Get started with ResAI today"}
             </p>
           </div>
 
