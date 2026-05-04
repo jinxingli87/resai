@@ -63,9 +63,7 @@ export default function CheckoutForm() {
             <div className="flex items-start justify-between gap-4">
               <div>
                 <p className="font-semibold text-slate-900">{course.name}</p>
-                <p className="text-sm text-slate-500 mt-1">
-                  {course.duration} · {course.level}
-                </p>
+                <p className="text-sm text-slate-500 mt-1">{course.level}</p>
               </div>
               <span className="font-bold text-slate-900 shrink-0">
                 {formatCurrency(course.price_cents)}

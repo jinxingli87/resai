@@ -41,7 +41,6 @@ export default function CoursesPage() {
                   <span className="text-xs font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">
                     {course.level}
                   </span>
-                  <span className="text-xs text-slate-400">{course.duration}</span>
                 </div>
                 <h2 className="text-3xl font-bold text-slate-900 mb-3">
                   {course.name}

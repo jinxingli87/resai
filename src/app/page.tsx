@@ -143,7 +143,6 @@ export default function HomePage() {
                 <p className="text-sm text-slate-500 mb-4 flex-1">
                   {course.tagline}
                 </p>
-                <div className="text-sm text-slate-400 mb-4">{course.duration}</div>
                 <div className="flex items-center justify-between">
                   <span className="font-bold text-slate-900">
                     {formatCurrency(course.price_cents)}
