@@ -18,10 +18,12 @@ export default async function DashboardPage() {
 
   if (!user) redirect("/auth/login");
 
+  // Match by user_id OR by customer_email so orders appear
+  // regardless of whether user_id was stored correctly
   const { data: orders } = await supabase
     .from("orders")
     .select("*, order_items(*)")
-    .eq("user_id", user.id)
+    .or(`user_id.eq.${user.id},customer_email.eq.${user.email}`)
     .order("created_at", { ascending: false });
 
   const typedOrders = (orders || []) as OrderWithItems[];
