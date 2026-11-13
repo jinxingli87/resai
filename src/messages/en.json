@@ -30,7 +30,6 @@
     "copied": "Copied"
   },
   "stages": {
-    "foundation": "Foundations",
     "core": "Core",
     "specialization": "Specializations",
     "applied": "Applied AI"
@@ -121,37 +120,19 @@
     "metaTitle": "AI programs for students",
     "eyebrow": "Education",
     "title": "AI programs, from first principles to frontier systems",
-    "lead": "Seven programs across four stages. Every program combines the underlying math, hands-on coding, and projects that matter.",
-    "principles": {
-      "fundamentals": {
-        "title": "Fundamentals first",
-        "body": "We teach why methods work, not just how to call them, so students can reason about new models on their own."
-      },
-      "build": {
-        "title": "Learn by building",
-        "body": "Every module ends in working code. Students train, debug, and evaluate real models."
-      },
-      "research": {
-        "title": "Ready for research",
-        "body": "Programs lead naturally into olympiad problems and independent research projects."
-      }
-    },
+    "lead": "Seven programs across three stages. Every program combines the underlying math, hands-on coding, and projects that matter.",
     "pathEyebrow": "Learning path",
-    "pathTitle": "Four stages, seven programs",
+    "pathTitle": "Three stages, seven programs",
     "pathLead": "Start at the stage that fits. We'll help place each student.",
     "stageN": "Stage {n}",
     "stageBlurb": {
-      "foundation": "Programming, AI-assisted coding, and the math every AI student needs.",
-      "core": "The core ideas of machine learning and deep learning.",
+      "core": "Programming, AI-assisted coding, machine learning, and the math behind it.",
       "specialization": "Deep dives into language and vision, the two pillars of modern AI.",
       "applied": "Put it all together and build AI systems that act."
     },
     "modulesCount": "{count, plural, one {# module} other {# modules}}",
     "projectsCount": "{count, plural, one {# project} other {# projects}}",
-    "viewProgram": "View program",
-    "detailsTitle": "Schedules and enrollment",
-    "detailsBody": "Class schedules, formats, and enrollment details are shared on request. Contact us and tell us which program you're interested in.",
-    "detailsCta": "Contact us for details"
+    "viewProgram": "View program"
   },
   "program": {
     "enquire": "Contact us for details",

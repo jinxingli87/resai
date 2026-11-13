@@ -2,10 +2,13 @@ import type { Localized } from "@/lib/i18n";
 
 export type ProgramIcon = "code" | "sparkles" | "sigma" | "brain" | "messages" | "eye" | "bot";
 
+export const STAGES = ["core", "specialization", "applied"] as const;
+export type Stage = (typeof STAGES)[number];
+
 export type Program = {
   slug: string;
   icon: ProgramIcon;
-  stage: "foundation" | "core" | "specialization" | "applied";
+  stage: Stage;
   shortTitle: Localized;
   title: Localized;
   tagline: Localized;
@@ -21,7 +24,7 @@ export const programs: Program[] = [
   {
     slug: "python",
     icon: "code",
-    stage: "foundation",
+    stage: "core",
     shortTitle: { en: "Python Coding", zh: "Python 编程" },
     title: { en: "Python Coding", zh: "Python 编程" },
     tagline: {
@@ -68,7 +71,7 @@ export const programs: Program[] = [
   {
     slug: "vibe-coding",
     icon: "sparkles",
-    stage: "applied",
+    stage: "core",
     shortTitle: { en: "Vibe Coding with AI", zh: "AI 辅助编程" },
     title: { en: "Vibe Coding with AI", zh: "AI 辅助编程（Vibe Coding）" },
     tagline: {
@@ -103,53 +106,6 @@ export const programs: Program[] = [
     outcomes: {
       en: ["Ship a personal website built with AI tools", "Use AI to accelerate a research workflow", "Judge when AI output is right, and when it isn't"],
       zh: ["上线一个用 AI 工具搭建的个人网站", "用 AI 加速研究流程", "判断 AI 的输出何时可信、何时不可信"],
-    },
-  },
-  {
-    slug: "math-for-ai",
-    icon: "sigma",
-    stage: "foundation",
-    shortTitle: { en: "Math Foundations for AI", zh: "AI 数学基础" },
-    title: { en: "Mathematical Foundations for AI", zh: "人工智能的数学基础" },
-    tagline: {
-      en: "The calculus, linear algebra, and probability behind every model.",
-      zh: "每个模型背后的微积分、线性代数与概率统计。",
-    },
-    overview: {
-      en: "Modern AI is built on three pillars of mathematics. Students learn each one with an eye on how it's used: derivatives for training, matrices for data and neural networks, and probability for uncertainty. Every concept is paired with a short coding exercise.",
-      zh: "现代人工智能建立在三大数学支柱之上。学生在学习每一部分时都会关注它的实际用途：导数用于模型训练，矩阵用于表示数据和神经网络，概率用于刻画不确定性。每个概念都配有简短的编程练习。",
-    },
-    audience: {
-      en: "Students preparing for machine learning, deep learning, or AI olympiads such as USAAIO.",
-      zh: "准备学习机器学习、深度学习，或备战 USAAIO 等 AI 奥赛的学生。",
-    },
-    prerequisites: { en: "Algebra II.", zh: "代数二（Algebra II）。" },
-    modules: [
-      {
-        title: { en: "Calculus", zh: "微积分" },
-        topics: {
-          en: ["Derivatives and the chain rule", "Integrals and areas", "Partial derivatives and gradients", "Gradient descent, from intuition to code"],
-          zh: ["导数与链式法则", "积分与面积", "偏导数与梯度", "梯度下降：从直觉到代码"],
-        },
-      },
-      {
-        title: { en: "Linear algebra", zh: "线性代数" },
-        topics: {
-          en: ["Vectors and inner products", "Matrix multiplication", "Linear transformations", "Eigenvectors and why PCA works"],
-          zh: ["向量与内积", "矩阵乘法", "线性变换", "特征向量，以及 PCA 为何有效"],
-        },
-      },
-      {
-        title: { en: "Probability and statistics", zh: "概率与统计" },
-        topics: {
-          en: ["Random variables, mean, and variance", "The Gaussian distribution", "Conditional probability and Bayes' rule", "Estimation and maximum likelihood"],
-          zh: ["随机变量、均值与方差", "高斯分布", "条件概率与贝叶斯公式", "参数估计与最大似然"],
-        },
-      },
-    ],
-    outcomes: {
-      en: ["Compute gradients by hand and in code", "Read the matrix notation used in ML papers", "Reason about uncertainty with probability"],
-      zh: ["手算并编程计算梯度", "读懂机器学习论文中的矩阵符号", "用概率思维分析不确定性"],
     },
   },
   {
@@ -197,6 +153,53 @@ export const programs: Program[] = [
     outcomes: {
       en: ["Implement regression, classification, and clustering from scratch", "Train and evaluate a neural network in PyTorch", "Diagnose overfitting and fix it"],
       zh: ["从零实现回归、分类和聚类算法", "用 PyTorch 训练并评估神经网络", "诊断并解决过拟合问题"],
+    },
+  },
+  {
+    slug: "math-for-ai",
+    icon: "sigma",
+    stage: "core",
+    shortTitle: { en: "Math Foundations for AI", zh: "AI 数学基础" },
+    title: { en: "Mathematical Foundations for AI", zh: "人工智能的数学基础" },
+    tagline: {
+      en: "The calculus, linear algebra, and probability behind every model.",
+      zh: "每个模型背后的微积分、线性代数与概率统计。",
+    },
+    overview: {
+      en: "Modern AI is built on three pillars of mathematics. Students learn each one with an eye on how it's used: derivatives for training, matrices for data and neural networks, and probability for uncertainty. Every concept is paired with a short coding exercise.",
+      zh: "现代人工智能建立在三大数学支柱之上。学生在学习每一部分时都会关注它的实际用途：导数用于模型训练，矩阵用于表示数据和神经网络，概率用于刻画不确定性。每个概念都配有简短的编程练习。",
+    },
+    audience: {
+      en: "Students preparing for machine learning, deep learning, or AI olympiads such as USAAIO.",
+      zh: "准备学习机器学习、深度学习，或备战 USAAIO 等 AI 奥赛的学生。",
+    },
+    prerequisites: { en: "Algebra II.", zh: "代数二（Algebra II）。" },
+    modules: [
+      {
+        title: { en: "Calculus", zh: "微积分" },
+        topics: {
+          en: ["Derivatives and the chain rule", "Integrals and areas", "Partial derivatives and gradients", "Gradient descent, from intuition to code"],
+          zh: ["导数与链式法则", "积分与面积", "偏导数与梯度", "梯度下降：从直觉到代码"],
+        },
+      },
+      {
+        title: { en: "Linear algebra", zh: "线性代数" },
+        topics: {
+          en: ["Vectors and inner products", "Matrix multiplication", "Linear transformations", "Eigenvectors and why PCA works"],
+          zh: ["向量与内积", "矩阵乘法", "线性变换", "特征向量，以及 PCA 为何有效"],
+        },
+      },
+      {
+        title: { en: "Probability and statistics", zh: "概率与统计" },
+        topics: {
+          en: ["Random variables, mean, and variance", "The Gaussian distribution", "Conditional probability and Bayes' rule", "Estimation and maximum likelihood"],
+          zh: ["随机变量、均值与方差", "高斯分布", "条件概率与贝叶斯公式", "参数估计与最大似然"],
+        },
+      },
+    ],
+    outcomes: {
+      en: ["Compute gradients by hand and in code", "Read the matrix notation used in ML papers", "Reason about uncertainty with probability"],
+      zh: ["手算并编程计算梯度", "读懂机器学习论文中的矩阵符号", "用概率思维分析不确定性"],
     },
   },
   {

@@ -30,7 +30,6 @@
     "copied": "已复制"
   },
   "stages": {
-    "foundation": "基础",
     "core": "核心",
     "specialization": "专项",
     "applied": "应用"
@@ -121,37 +120,19 @@
     "metaTitle": "面向学生的 AI 课程",
     "eyebrow": "课程",
     "title": "从第一性原理到前沿系统的 AI 课程",
-    "lead": "四个阶段，七门课程。每门课程都将底层数学、动手编程和有意义的项目结合在一起。",
-    "principles": {
-      "fundamentals": {
-        "title": "基础优先",
-        "body": "我们讲清楚方法为什么有效，而不只是怎么调用，让学生能够独立理解新的模型。"
-      },
-      "build": {
-        "title": "在实践中学习",
-        "body": "每个模块都以可运行的代码收尾，学生亲手训练、调试和评估真实模型。"
-      },
-      "research": {
-        "title": "为科研做好准备",
-        "body": "课程自然衔接竞赛题目和独立研究项目。"
-      }
-    },
+    "lead": "三个阶段，七门课程。每门课程都将底层数学、动手编程和有意义的项目结合在一起。",
     "pathEyebrow": "学习路径",
-    "pathTitle": "四个阶段，七门课程",
+    "pathTitle": "三个阶段，七门课程",
     "pathLead": "从合适的阶段开始，我们会帮助每位学生找到起点。",
     "stageN": "第 {n} 阶段",
     "stageBlurb": {
-      "foundation": "编程、AI 辅助编程，以及每位 AI 学习者都需要的数学。",
-      "core": "机器学习与深度学习的核心思想。",
+      "core": "编程、AI 辅助编程、机器学习，以及背后的数学。",
       "specialization": "深入语言与视觉，现代 AI 的两大支柱。",
       "applied": "融会贯通，构建能够自主行动的 AI 系统。"
     },
     "modulesCount": "{count} 个模块",
     "projectsCount": "{count} 个项目",
-    "viewProgram": "查看课程",
-    "detailsTitle": "课程安排与报名",
-    "detailsBody": "课程时间、形式和报名信息可按需提供。请联系我们，并告诉我们您感兴趣的课程。",
-    "detailsCta": "联系我们了解详情"
+    "viewProgram": "查看课程"
   },
   "program": {
     "enquire": "联系我们了解详情",

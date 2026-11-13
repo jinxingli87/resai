@@ -5,7 +5,7 @@ import { Link } from "@/i18n/navigation";
 import { buttonClass } from "@/components/ui/button";
 import { CtaBand, Section, SectionHeading } from "@/components/ui/page";
 import { Icon } from "@/components/ui/icons";
-import { programs } from "@/content/programs";
+import { programs, STAGES } from "@/content/programs";
 import { humanityAreas, scienceAreas } from "@/content/research";
 import { getUsaaioStats } from "@/lib/usaaio-data";
 import { pageMetadata, pick } from "@/lib/i18n";
@@ -16,8 +16,6 @@ export async function generateMetadata({ params }: PageProps<"/[locale]">): Prom
   const t = await getTranslations({ locale, namespace: "meta" });
   return { ...pageMetadata(locale, "/", t("defaultTitle"), t("description")), title: { absolute: t("defaultTitle") } };
 }
-
-const STAGES = ["foundation", "core", "specialization", "applied"] as const;
 
 export default async function HomePage({ params }: PageProps<"/[locale]">) {
   const { locale } = await params;
@@ -113,7 +111,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
               {t("path.cta")}
             </Link>
           </div>
-          <ol className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+          <ol className="mt-12 grid gap-4 md:grid-cols-3">
             {STAGES.map((s, i) => (
               <li key={s} className="relative rounded-2xl border border-slate-200 bg-white p-6">
                 <div className="flex items-center gap-3">

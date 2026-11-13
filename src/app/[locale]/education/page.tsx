@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { ArrowRight, Hammer, Layers, Microscope } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import { CtaBand, PageHero, Section, SectionHeading } from "@/components/ui/page";
+import { CtaBand, PageHero, SectionHeading } from "@/components/ui/page";
 import { Icon } from "@/components/ui/icons";
-import { programs } from "@/content/programs";
+import { programs, STAGES } from "@/content/programs";
 import { pageMetadata, pick } from "@/lib/i18n";
 
 export async function generateMetadata({ params }: PageProps<"/[locale]/education">): Promise<Metadata> {
@@ -12,8 +12,6 @@ export async function generateMetadata({ params }: PageProps<"/[locale]/educatio
   const t = await getTranslations({ locale, namespace: "education" });
   return pageMetadata(locale, "/education", t("metaTitle"), t("lead"));
 }
-
-const STAGES = ["foundation", "core", "specialization", "applied"] as const;
 
 export default async function EducationPage({ params }: PageProps<"/[locale]/education">) {
   const { locale } = await params;
@@ -26,23 +24,7 @@ export default async function EducationPage({ params }: PageProps<"/[locale]/edu
     <>
       <PageHero crumbs={[{ href: "/", label: nav("home") }, { label: nav("education") }]} eyebrow={t("eyebrow")} title={t("title")} lead={t("lead")} />
 
-      <Section>
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-          {[
-            { icon: Layers, key: "fundamentals" },
-            { icon: Hammer, key: "build" },
-            { icon: Microscope, key: "research" },
-          ].map((f) => (
-            <div key={f.key} className="rounded-2xl border border-slate-200 p-6">
-              <f.icon className="size-6 text-brand-700" aria-hidden />
-              <h2 className="mt-4 text-lg font-semibold">{t(`principles.${f.key}.title`)}</h2>
-              <p className="mt-2 leading-7 text-slate-600">{t(`principles.${f.key}.body`)}</p>
-            </div>
-          ))}
-        </div>
-      </Section>
-
-      <section className="border-y border-slate-200/70 bg-slate-50/70">
+      <section className="border-b border-slate-200/70 bg-slate-50/70">
         <div className="container-page py-16 sm:py-20">
           <SectionHeading eyebrow={t("pathEyebrow")} title={t("pathTitle")} lead={t("pathLead")} />
           <div className="mt-12 space-y-12">
@@ -86,18 +68,6 @@ export default async function EducationPage({ params }: PageProps<"/[locale]/edu
           </div>
         </div>
       </section>
-
-      <Section>
-        <div className="rounded-2xl border border-brand-100 bg-brand-50/60 p-8 md:flex md:items-center md:justify-between md:gap-8">
-          <div>
-            <h2 className="text-2xl font-semibold">{t("detailsTitle")}</h2>
-            <p className="mt-2 max-w-2xl leading-7 text-slate-600">{t("detailsBody")}</p>
-          </div>
-          <Link href="/contact" className="mt-6 inline-flex shrink-0 items-center gap-1.5 font-semibold text-brand-700 hover:underline md:mt-0">
-            {t("detailsCta")} <ArrowRight className="size-4" aria-hidden />
-          </Link>
-        </div>
-      </Section>
 
       <CtaBand />
     </>
