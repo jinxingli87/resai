@@ -1,0 +1,479 @@
+{
+  "meta": {
+    "defaultTitle": "ResAI · AI education and research for students",
+    "description": "ResAI teaches students AI from Python to agentic systems, supports USA AI Olympiad preparation, and guides student research in AI for science and society."
+  },
+  "nav": {
+    "skipToContent": "Skip to content",
+    "home": "Home",
+    "primary": "Main navigation",
+    "getInTouch": "Get in touch",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "education": "Education",
+    "usaaio": "USAAIO",
+    "research": "Research",
+    "about": "About",
+    "forum": "Forum",
+    "contact": "Contact"
+  },
+  "lang": {
+    "label": "Language"
+  },
+  "aiNotice": {
+    "text": "This page was translated by AI. If anything differs, the English version prevails.",
+    "viewEnglish": "View in English",
+    "dismiss": "Dismiss"
+  },
+  "common": {
+    "copy": "Copy",
+    "copied": "Copied"
+  },
+  "stages": {
+    "foundation": "Foundations",
+    "core": "Core",
+    "specialization": "Specializations",
+    "applied": "Applied AI"
+  },
+  "cta": {
+    "title": "Start your AI journey with ResAI",
+    "lead": "Tell us about the student, their background, and their goals. We'll suggest where to begin.",
+    "contact": "Contact us",
+    "programs": "Browse programs"
+  },
+  "footer": {
+    "tagline": "AI education, olympiad preparation, and research mentorship for students.",
+    "programs": "Programs",
+    "olympiad": "Olympiad",
+    "company": "ResAI",
+    "usaaioOverview": "USAAIO overview",
+    "problems": "Past problems",
+    "statistics": "2026 winner map",
+    "ioai": "IOAI",
+    "email": "Email",
+    "wechat": "WeChat",
+    "rights": "All rights reserved."
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "AI education and research for students",
+      "titleA": "Learn AI the way",
+      "titleB": "researchers do",
+      "lead": "From your first line of Python to building AI agents, ResAI teaches the math, the code, and the thinking behind modern AI, and then helps students put it to work on real research.",
+      "primary": "Explore programs",
+      "secondary": "USA AI Olympiad",
+      "panelTitle": "The ResAI learning path",
+      "panelStat": "2026 USAAIO Round 2 winners from {schools} schools"
+    },
+    "pillars": {
+      "eyebrow": "What we do",
+      "title": "One place to learn, compete, and research",
+      "lead": "Students build strong foundations, test themselves against the best, and go on to ask their own questions.",
+      "education": {
+        "title": "Education",
+        "body": "Seven programs that take students from Python and math through machine learning, LLMs, computer vision, and agentic AI.",
+        "link": "See the programs"
+      },
+      "usaaio": {
+        "title": "USA AI Olympiad",
+        "body": "Past problems with summaries, a map of the 2026 Round 2 winners, and the international olympiads that follow.",
+        "link": "Explore USAAIO"
+      },
+      "research": {
+        "title": "Research",
+        "body": "Guided projects in AI for science and AI for humanity, from astrophysics and medicine to ethics and social science.",
+        "link": "Research areas"
+      }
+    },
+    "path": {
+      "eyebrow": "Learning path",
+      "title": "From first program to frontier AI",
+      "lead": "Each stage builds on the last. Students can start where they are and follow the path at their own pace.",
+      "cta": "All programs"
+    },
+    "usaaio": {
+      "eyebrow": "USA AI Olympiad",
+      "title": "See where 2026's top AI students come from",
+      "lead": "Our interactive map shows the 2026 USA-NA-AIO Round 2 winners by school. It shows counts only, never names. Next to it are the official past problems, each with a short summary.",
+      "map": "Open the winner map",
+      "problems": "Past problems",
+      "statWinners": "Round 2 winners",
+      "statSchools": "schools",
+      "statStates": "US states",
+      "statCampers": "selected for camp",
+      "source": "Source: USA-NA-AIO 2026 Round 2 results. Counts per school only."
+    },
+    "research": {
+      "eyebrow": "Research",
+      "title": "AI as a tool for discovery",
+      "lead": "Our students use AI to study the universe, human health, and society, and learn how to make AI itself fair and trustworthy.",
+      "science": "AI for scientific research",
+      "humanity": "AI for humanity",
+      "cta": "Explore research"
+    },
+    "who": {
+      "eyebrow": "Who we are",
+      "statement": "ResAI is co-founded by researchers from UCLA, Harvard, Stanford, and Peking University.",
+      "link": "About ResAI"
+    }
+  },
+  "education": {
+    "metaTitle": "AI programs for students",
+    "eyebrow": "Education",
+    "title": "AI programs, from first principles to frontier systems",
+    "lead": "Seven programs across four stages. Every program combines the underlying math, hands-on coding, and projects that matter.",
+    "principles": {
+      "fundamentals": {
+        "title": "Fundamentals first",
+        "body": "We teach why methods work, not just how to call them, so students can reason about new models on their own."
+      },
+      "build": {
+        "title": "Learn by building",
+        "body": "Every module ends in working code. Students train, debug, and evaluate real models."
+      },
+      "research": {
+        "title": "Ready for research",
+        "body": "Programs lead naturally into olympiad problems and independent research projects."
+      }
+    },
+    "pathEyebrow": "Learning path",
+    "pathTitle": "Four stages, seven programs",
+    "pathLead": "Start at the stage that fits. We'll help place each student.",
+    "stageN": "Stage {n}",
+    "stageBlurb": {
+      "foundation": "Programming, AI-assisted coding, and the math every AI student needs.",
+      "core": "The core ideas of machine learning and deep learning.",
+      "specialization": "Deep dives into language and vision, the two pillars of modern AI.",
+      "applied": "Put it all together and build AI systems that act."
+    },
+    "modulesCount": "{count, plural, one {# module} other {# modules}}",
+    "projectsCount": "{count, plural, one {# project} other {# projects}}",
+    "viewProgram": "View program",
+    "detailsTitle": "Schedules and enrollment",
+    "detailsBody": "Class schedules, formats, and enrollment details are shared on request. Contact us and tell us which program you're interested in.",
+    "detailsCta": "Contact us for details"
+  },
+  "program": {
+    "enquire": "Contact us for details",
+    "overview": "Overview",
+    "curriculum": "Curriculum",
+    "projects": "Projects",
+    "outcomes": "What students will be able to do",
+    "audience": "Who it's for",
+    "prerequisites": "Prerequisites",
+    "detailsTitle": "Interested in this program?",
+    "detailsBody": "We share schedules and enrollment details on request.",
+    "morePrograms": "More programs",
+    "previous": "Previous",
+    "next": "Next"
+  },
+  "research": {
+    "metaTitle": "Student research in AI",
+    "eyebrow": "Research",
+    "title": "Research with AI, guided by researchers",
+    "lead": "We help students take on real research questions where AI meets science and society, from first idea to finished paper.",
+    "howEyebrow": "How it works",
+    "howTitle": "From curiosity to contribution",
+    "howLead": "Research is a skill. We teach it step by step.",
+    "scienceTitle": "AI for scientific research",
+    "scienceLead": "Modern science produces more data than people can analyze. AI helps find patterns, make predictions, and spot the unexpected.",
+    "humanityTitle": "AI for humanity",
+    "humanityLead": "AI is changing how people live and decide. Studying it carefully is research in its own right.",
+    "ideas": "Example project directions",
+    "note": "Project directions are examples. Each student's project is shaped around their interests, background, and the time available.",
+    "ctaTitle": "Have a research question in mind?",
+    "ctaLead": "Tell us what you're curious about. We'll help turn it into a project."
+  },
+  "about": {
+    "metaTitle": "About ResAI",
+    "eyebrow": "About",
+    "title": "About ResAI",
+    "cofounded": "ResAI is co-founded by researchers from UCLA, Harvard, Stanford, and Peking University.",
+    "missionEyebrow": "Our mission",
+    "missionTitle": "Help students understand AI deeply and use it to do good work",
+    "missionBody1": "AI is becoming a basic tool of science, engineering, and everyday life. We believe students should understand how it works, not just how to use it.",
+    "missionBody2": "ResAI brings a researcher's perspective to AI education: rigorous foundations, hands-on building, and the habit of asking good questions.",
+    "what": {
+      "education": {
+        "title": "Education",
+        "body": "Seven programs from Python to agentic AI."
+      },
+      "olympiad": {
+        "title": "Olympiad",
+        "body": "Resources for the USA AI Olympiad and IOAI."
+      },
+      "research": {
+        "title": "Research",
+        "body": "Mentored projects in AI for science and society."
+      }
+    },
+    "teachEyebrow": "How we teach",
+    "teachTitle": "Our approach",
+    "teach": {
+      "rigor": {
+        "title": "Rigor",
+        "body": "Math and code go together. Students derive the ideas and then implement them."
+      },
+      "curiosity": {
+        "title": "Curiosity",
+        "body": "We encourage students to question results, run experiments, and follow surprising findings."
+      },
+      "guidance": {
+        "title": "Guidance",
+        "body": "Researchers guide students toward problems that are challenging and within reach."
+      }
+    },
+    "ctaTitle": "Let's talk",
+    "ctaLead": "Questions about programs, olympiad preparation, or research? We'd love to hear from you."
+  },
+  "contact": {
+    "metaTitle": "Contact ResAI",
+    "eyebrow": "Contact",
+    "title": "Get in touch",
+    "lead": "Questions about programs, olympiad preparation, or research mentorship? Reach us by email or WeChat.",
+    "emailTitle": "Email",
+    "emailBody": "Best for detailed questions.",
+    "copyEmail": "email address",
+    "wechatTitle": "WeChat",
+    "wechatBody": "Add us by ID or scan the QR code.",
+    "copyWechat": "WeChat ID",
+    "qrAlt": "WeChat QR code for {id}",
+    "scanWechat": "Scan with WeChat to add us",
+    "topicsTitle": "We can help with",
+    "topics": {
+      "programs": "Choosing the right program",
+      "usaaio": "USAAIO and IOAI preparation",
+      "research": "Research mentorship",
+      "other": "Anything else about AI learning"
+    }
+  },
+  "forum": {
+    "metaTitle": "Forum",
+    "eyebrow": "Community",
+    "title": "The ResAI forum is coming soon",
+    "lead": "A place for students to discuss problems, share projects, and learn together. Until it opens, contact us directly with any questions.",
+    "badge": "Coming soon",
+    "cta": "Contact us"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "body": "The page you're looking for doesn't exist or has moved.",
+    "home": "Back to home",
+    "contact": "Contact us"
+  },
+  "usaaio": {
+    "metaTitle": "USA AI Olympiad (USAAIO)",
+    "eyebrow": "USA AI Olympiad",
+    "title": "USA–North America AI Olympiad",
+    "lead": "USA-NA-AIO, run by the USA AI Olympiad (USAAIO), is an individual competition for middle and high school students in the US and Canada. It is the only pathway to Team USA at the international AI olympiads.",
+    "statsCta": "Map of {count} winners",
+    "problemsCta": "Past problems",
+    "disclaimer": "ResAI is an independent education provider and is not affiliated with USAAIO. Facts below are summarized from usaaio.org.",
+    "pathEyebrow": "The path",
+    "pathTitle": "From Round 1 to Team USA",
+    "pathLead": "Each round is by invitation based on the round before. Every round is taken onsite with a proctor.",
+    "path": {
+      "r1": {
+        "title": "Round 1",
+        "when": "February 19, 2027",
+        "body": "Open to all eligible students. A non-coding part followed by a coding part in Google Colab."
+      },
+      "r2": {
+        "title": "Round 2",
+        "when": "March or April 2027",
+        "body": "By invitation. Longer, deeper problems, including open-ended modeling tasks. Awards include Camper, Gold, Silver, and Bronze."
+      },
+      "camp": {
+        "title": "Round 3: Camp",
+        "when": "June 2027",
+        "body": "Top Round 2 students attend the USAAIO camp for training and final selection."
+      },
+      "team": {
+        "title": "Team USA",
+        "when": "International olympiads",
+        "body": "Team USA represents the United States at the IOAI, IAIO, and IAI²O."
+      }
+    },
+    "eligibilityTitle": "Who can take part",
+    "eligibility": {
+      "e1": "US or Canadian citizens or permanent residents, or full-time middle or high school students studying in the US or Canada.",
+      "e2": "Under 20 years old by August 30 of the competition year.",
+      "e3": "Not a full-time university student during the competition year."
+    },
+    "datesTitle": "2027 key dates",
+    "dates": {
+      "registration": {
+        "label": "Round 1 registration",
+        "value": "Closes Jan 31, 2027"
+      },
+      "round1": {
+        "label": "Round 1",
+        "value": "Fri, Feb 19, 2027"
+      },
+      "round2": {
+        "label": "Round 2",
+        "value": "Mar or Apr 2027"
+      },
+      "camp": {
+        "label": "USAAIO camp",
+        "value": "June 2027"
+      }
+    },
+    "datesNote": "Round 1 registration costs $50; fee waivers are available for financial hardship. Always confirm dates on usaaio.org.",
+    "formatTitle": "Round 1 format",
+    "format": {
+      "f1": "Part 1, non-coding (60 minutes): 20 multiple-choice or fill-in-the-blank problems, 150 points.",
+      "f2": "Part 2, coding (75 minutes): tasks solved in Google Colab on CPUs.",
+      "f3": "Topics: math for AI, Python, machine learning, PyTorch, deep learning, and CNNs."
+    },
+    "exploreEyebrow": "Resources",
+    "exploreTitle": "Explore USAAIO on ResAI",
+    "explore": {
+      "problems": {
+        "title": "Past problems",
+        "body": "The 2026 Round 1 and Round 2 problems, shown on the site with a summary of every problem."
+      },
+      "statistics": {
+        "title": "2026 winner map",
+        "body": "An interactive map of Round 2 winners by school, filterable by award tier."
+      },
+      "ioai": {
+        "title": "IOAI",
+        "body": "Tasks from the International Olympiad in Artificial Intelligence, 2024 to 2026."
+      }
+    },
+    "open": "Open",
+    "prepEyebrow": "Preparation",
+    "prepTitle": "Programs that match the syllabus",
+    "prepLead": "The USAAIO syllabus covers math foundations, machine learning, deep learning, and modern architectures. These programs cover the same ground.",
+    "officialSite": "Official information:"
+  },
+  "problems": {
+    "metaTitle": "USAAIO past problems",
+    "crumb": "Past problems",
+    "eyebrow": "USAAIO past problems",
+    "title": "Past problems",
+    "lead": "The official USA-NA-AIO problems, shown page by page, with a ResAI summary of every problem and its topics.",
+    "pages": "{count} pages",
+    "points": "{count} pts",
+    "view": "View problems",
+    "rationaleTitle": "2026 Round 2: problem design and rationale",
+    "rationaleShort": "Design and rationale",
+    "rationaleBody": "USAAIO's own explanation of the principles behind the Round 2 problems: first-principles understanding, math together with implementation, foundational and modern AI, and creativity in model design.",
+    "rationaleTeaser": "Why the Round 2 problems look the way they do.",
+    "external2025": "The 2025 problems are published by USAAIO on its community forum.",
+    "attribution": "Problems © USA-NA-AIO (USAAIO). Shown for educational purposes with attribution; summaries and topic tags are written by ResAI. Source:",
+    "datasets": "Datasets for the coding problems are published by USAAIO on",
+    "date": "Date",
+    "problemCount": "Problems",
+    "totalPoints": "Total points",
+    "pageCount": "Pages",
+    "atAGlance": "Problems at a glance",
+    "summaryNote": "Summaries are written by ResAI. The official statement below is authoritative.",
+    "openEnded": "Open-ended",
+    "guided": "Guided",
+    "officialPages": "Official problem pages",
+    "openOfficial": "Open the official PDF",
+    "downloadPdf": "Download PDF",
+    "officialSource": "Official source",
+    "jumpToPage": "Jump to page",
+    "pageN": "Page {n}"
+  },
+  "stats": {
+    "metaTitle": "2026 USAAIO Round 2 winner map",
+    "crumb": "Winner map",
+    "eyebrow": "USA-NA-AIO 2026 · Round 2",
+    "title": "Where the 2026 winners come from",
+    "lead": "{winners} Round 2 winners from {schools} schools. Explore by award tier, state, or school.",
+    "tableToggle": "View the data as a table ({count} schools)",
+    "tableCaption": "Round 2 winners per school by award tier",
+    "colSchool": "School",
+    "colLocation": "Location",
+    "colTotal": "Total",
+    "privacyTitle": "Counts only, no names",
+    "privacyBody": "This page shows how many students from each school won each award. It never shows names or any other personal information.",
+    "sourceTitle": "Data source",
+    "sourceBody": "Compiled from the published USA-NA-AIO 2026 Round 2 results. School locations are approximate. Online schools are placed at their home base."
+  },
+  "map": {
+    "tierFilter": "Award tier",
+    "tiers": {
+      "All": "All tiers",
+      "Camper": "Camper",
+      "Gold": "Gold",
+      "Silver": "Silver",
+      "Bronze": "Bronze"
+    },
+    "searchLabel": "Find a school",
+    "searchPlaceholder": "Find a school…",
+    "kpi": {
+      "winners": "winners",
+      "tierWinners": "{tier} winners",
+      "schools": "schools",
+      "states": "US states",
+      "outside": "winners outside the US"
+    },
+    "mapLabel": "Map of winners by school across the United States and Canada",
+    "zoomIn": "Zoom in",
+    "zoomOut": "Zoom out",
+    "reset": "Reset view",
+    "close": "Close",
+    "winnersCount": "{count, plural, one {# winner} other {# winners}}",
+    "tierWinnersCount": "{count} {tier}",
+    "acrossAll": "{count} across all tiers",
+    "regionSummary": "{winners, plural, one {# winner} other {# winners}} from {schools, plural, one {# school} other {# schools}}",
+    "clickToZoom": "Click to zoom in and list schools",
+    "noWinners": "No winners in this tier",
+    "jumpTo": "Jump to",
+    "presets": {
+      "bay": "Bay Area",
+      "socal": "Southern California",
+      "northeast": "Northeast",
+      "toronto": "Greater Toronto"
+    },
+    "legendSize": "Winners per school (circle area)",
+    "legendMix": "Slices show the tier mix",
+    "legendTier": "Tier",
+    "zoomHint": "Drag to pan. Pinch, or hold Ctrl/⌘ and scroll, to zoom. Click a state or province to list its schools.",
+    "clear": "Clear",
+    "byTier": "Winners by tier",
+    "topRegions": "Top states and provinces",
+    "schoolsCount": "{count, plural, one {# school} other {# schools}}",
+    "showFewer": "Show fewer",
+    "showAllRegions": "Show all {count}",
+    "topSchools": "Top schools",
+    "showAllSchools": "Show all {count} schools",
+    "outside": "Not on the map",
+    "outsideNote": "Schools outside North America, or whose location we couldn't confirm.",
+    "unknownNote": "We couldn't confirm this school's location.",
+    "noneInTier": "None in this tier"
+  },
+  "ioai": {
+    "metaTitle": "International Olympiad in Artificial Intelligence (IOAI)",
+    "eyebrow": "International",
+    "title": "International Olympiad in Artificial Intelligence",
+    "lead": "IOAI brings together top high school AI students from around the world. Team USA is selected through USA-NA-AIO.",
+    "tasksCount": "{count, plural, one {# task} other {# tasks}}",
+    "fullStatements": "full statements",
+    "viewTasks": "View tasks",
+    "whatTitle": "What IOAI tasks look like",
+    "whatBody": "IOAI tasks are practical machine-learning problems scored on hidden test data, solved under strict time and compute limits.",
+    "what": {
+      "w1": "Each task is a notebook with data, a baseline, and a scoring metric.",
+      "w2": "Tasks cover vision, language, speech, generative models, and robustness.",
+      "w3": "Strong solutions combine solid fundamentals with creative modeling under tight constraints."
+    },
+    "officialSite": "Official information:",
+    "officialRepo": "Official repository",
+    "tasks": "Tasks",
+    "day": "Day {n}",
+    "officialTask": "Official task",
+    "showStatement": "Read the full statement",
+    "hideStatement": "Hide statement",
+    "zhSource": "Chinese statements are the official China translations from the IOAI repository.",
+    "attribution": "Tasks © IOAI {year}, licensed under",
+    "source": "Source:",
+    "adapted": "Statements are reproduced with formatting changes and images converted for the web.",
+    "summariesOnly": "Task summaries are written by ResAI; see the official repository for full statements and solutions."
+  }
+}

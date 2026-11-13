@@ -1,0 +1,786 @@
+{
+ "Adams Middle School": {
+  "city": null,
+  "region": null,
+  "country": null,
+  "lat": null,
+  "lon": null,
+  "note": "location unknown"
+ },
+ "Amador Valley High School": {
+  "city": "Pleasanton",
+  "region": "CA",
+  "country": "USA",
+  "lat": 37.666,
+  "lon": -121.874,
+  "note": null
+ },
+ "Anaheim Discovery Christian School": {
+  "city": "Anaheim",
+  "region": "CA",
+  "country": "USA",
+  "lat": 33.836,
+  "lon": -117.914,
+  "note": null
+ },
+ "Archbishop Mitty High School": {
+  "city": "San Jose",
+  "region": "CA",
+  "country": "USA",
+  "lat": 37.302,
+  "lon": -121.99,
+  "note": null
+ },
+ "BASIS Independent Fremont": {
+  "city": "Fremont",
+  "region": "CA",
+  "country": "USA",
+  "lat": 37.53,
+  "lon": -121.97,
+  "note": null
+ },
+ "BASIS Independent Silicon Valley": {
+  "city": "San Jose",
+  "region": "CA",
+  "country": "USA",
+  "lat": 37.315,
+  "lon": -121.915,
+  "note": null
+ },
+ "BASIS Scottsdale": {
+  "city": "Scottsdale",
+  "region": "AZ",
+  "country": "USA",
+  "lat": 33.628,
+  "lon": -111.884,
+  "note": null
+ },
+ "Bellevue High School": {
+  "city": "Bellevue",
+  "region": "WA",
+  "country": "USA",
+  "lat": 47.602,
+  "lon": -122.188,
+  "note": null
+ },
+ "Bentonville High School": {
+  "city": "Bentonville",
+  "region": "AR",
+  "country": "USA",
+  "lat": 36.353,
+  "lon": -94.229,
+  "note": null
+ },
+ "Berkshire School": {
+  "city": "Sheffield",
+  "region": "MA",
+  "country": "USA",
+  "lat": 42.108,
+  "lon": -73.412,
+  "note": null
+ },
+ "Bridgeland High School": {
+  "city": "Cypress",
+  "region": "TX",
+  "country": "USA",
+  "lat": 29.933,
+  "lon": -95.737,
+  "note": null
+ },
+ "Bridgewater-Raritan High School": {
+  "city": "Bridgewater",
+  "region": "NJ",
+  "country": "USA",
+  "lat": 40.593,
+  "lon": -74.617,
+  "note": null
+ },
+ "Canyon Crest Academy": {
+  "city": "San Diego",
+  "region": "CA",
+  "country": "USA",
+  "lat": 32.958,
+  "lon": -117.201,
+  "note": null
+ },
+ "Carlmont High School": {
+  "city": "Belmont",
+  "region": "CA",
+  "country": "USA",
+  "lat": 37.509,
+  "lon": -122.299,
+  "note": null
+ },
+ "Carmel High School": {
+  "city": "Carmel",
+  "region": "IN",
+  "country": "USA",
+  "lat": 39.9787,
+  "lon": -86.118,
+  "note": null
+ },
+ "Carroll High School": {
+  "city": "Southlake",
+  "region": "TX",
+  "country": "USA",
+  "lat": 32.943,
+  "lon": -97.141,
+  "note": null
+ },
+ "Challenger School Middlefield": {
+  "city": "Palo Alto",
+  "region": "CA",
+  "country": "USA",
+  "lat": 37.418,
+  "lon": -122.114,
+  "note": null
+ },
+ "Concord Academy": {
+  "city": "Concord",
+  "region": "MA",
+  "country": "USA",
+  "lat": 42.459,
+  "lon": -71.353,
+  "note": null
+ },
+ "Crean Lutheran High School": {
+  "city": "Irvine",
+  "region": "CA",
+  "country": "USA",
+  "lat": 33.664,
+  "lon": -117.757,
+  "note": null
+ },
+ "Cupertino High School": {
+  "city": "Cupertino",
+  "region": "CA",
+  "country": "USA",
+  "lat": 37.319,
+  "lon": -122.008,
+  "note": null
+ },
+ "Davidson Academy Online": {
+  "city": "Reno",
+  "region": "NV",
+  "country": "USA",
+  "lat": 39.543,
+  "lon": -119.816,
+  "note": "Online school; plotted at its Reno, NV home"
+ },
+ "Davis Senior High School": {
+  "city": "Davis",
+  "region": "CA",
+  "country": "USA",
+  "lat": 38.556,
+  "lon": -121.757,
+  "note": null
+ },
+ "Del Norte High School": {
+  "city": "San Diego",
+  "region": "CA",
+  "country": "USA",
+  "lat": 32.997,
+  "lon": -117.064,
+  "note": null
+ },
+ "Dulles High School": {
+  "city": "Sugar Land",
+  "region": "TX",
+  "country": "USA",
+  "lat": 29.596,
+  "lon": -95.601,
+  "note": null
+ },
+ "Eastside Preparatory School": {
+  "city": "Kirkland",
+  "region": "WA",
+  "country": "USA",
+  "lat": 47.646,
+  "lon": -122.173,
+  "note": null
+ },
+ "Elite Preparatory Academy": {
+  "city": "Hopatcong",
+  "region": "NJ",
+  "country": "USA",
+  "lat": 40.933,
+  "lon": -74.659,
+  "note": "Boarding/day school that also runs an online program"
+ },
+ "Enloe Magnet High School": {
+  "city": "Raleigh",
+  "region": "NC",
+  "country": "USA",
+  "lat": 35.778,
+  "lon": -78.62,
+  "note": null
+ },
+ "Frisco High School": {
+  "city": "Frisco",
+  "region": "TX",
+  "country": "USA",
+  "lat": 33.152,
+  "lon": -96.825,
+  "note": null
+ },
+ "Fulton Science Academy": {
+  "city": "Alpharetta",
+  "region": "GA",
+  "country": "USA",
+  "lat": 34.075,
+  "lon": -84.29,
+  "note": null
+ },
+ "Garnet Valley High School": {
+  "city": "Glen Mills",
+  "region": "PA",
+  "country": "USA",
+  "lat": 39.864,
+  "lon": -75.481,
+  "note": null
+ },
+ "Grace Church School": {
+  "city": "New York",
+  "region": "NY",
+  "country": "USA",
+  "lat": 40.732,
+  "lon": -73.991,
+  "note": null
+ },
+ "H. H. Dow High School": {
+  "city": "Midland",
+  "region": "MI",
+  "country": "USA",
+  "lat": 43.645,
+  "lon": -84.256,
+  "note": null
+ },
+ "Henry M. Gunn High School": {
+  "city": "Palo Alto",
+  "region": "CA",
+  "country": "USA",
+  "lat": 37.401,
+  "lon": -122.133,
+  "note": null
+ },
+ "Highland Park High School": {
+  "city": "Dallas",
+  "region": "TX",
+  "country": "USA",
+  "lat": 32.836,
+  "lon": -96.794,
+  "note": null
+ },
+ "Homestead High School": {
+  "city": "Cupertino",
+  "region": "CA",
+  "country": "USA",
+  "lat": 37.337,
+  "lon": -122.049,
+  "note": null
+ },
+ "Illinois Mathematics and Science Academy": {
+  "city": "Aurora",
+  "region": "IL",
+  "country": "USA",
+  "lat": 41.79,
+  "lon": -88.315,
+  "note": null
+ },
+ "International Community School": {
+  "city": "Kirkland",
+  "region": "WA",
+  "country": "USA",
+  "lat": 47.664,
+  "lon": -122.181,
+  "note": null
+ },
+ "Iolani School": {
+  "city": "Honolulu",
+  "region": "HI",
+  "country": "USA",
+  "lat": 21.288,
+  "lon": -157.824,
+  "note": null
+ },
+ "James E. Taylor High School": {
+  "city": "Katy",
+  "region": "TX",
+  "country": "USA",
+  "lat": 29.772,
+  "lon": -95.724,
+  "note": null
+ },
+ "Jericho High School": {
+  "city": "Jericho",
+  "region": "NY",
+  "country": "USA",
+  "lat": 40.789,
+  "lon": -73.539,
+  "note": null
+ },
+ "Jesuit High School": {
+  "city": "Portland",
+  "region": "OR",
+  "country": "USA",
+  "lat": 45.49,
+  "lon": -122.772,
+  "note": null
+ },
+ "Lakeside School": {
+  "city": "Seattle",
+  "region": "WA",
+  "country": "USA",
+  "lat": 47.732,
+  "lon": -122.296,
+  "note": null
+ },
+ "Lexington High School": {
+  "city": "Lexington",
+  "region": "MA",
+  "country": "USA",
+  "lat": 42.444,
+  "lon": -71.23,
+  "note": null
+ },
+ "Los Gatos High School": {
+  "city": "Los Gatos",
+  "region": "CA",
+  "country": "USA",
+  "lat": 37.2268,
+  "lon": -121.979,
+  "note": null
+ },
+ "Lubbock High School": {
+  "city": "Lubbock",
+  "region": "TX",
+  "country": "USA",
+  "lat": 33.585,
+  "lon": -101.869,
+  "note": null
+ },
+ "Lynbrook High School": {
+  "city": "San Jose",
+  "region": "CA",
+  "country": "USA",
+  "lat": 37.3005,
+  "lon": -122.0016,
+  "note": null
+ },
+ "Mater Dei High School": {
+  "city": "Santa Ana",
+  "region": "CA",
+  "country": "USA",
+  "lat": 33.749,
+  "lon": -117.868,
+  "note": null
+ },
+ "McLean High School": {
+  "city": "McLean",
+  "region": "VA",
+  "country": "USA",
+  "lat": 38.924,
+  "lon": -77.188,
+  "note": null
+ },
+ "Mission San Jose High School": {
+  "city": "Fremont",
+  "region": "CA",
+  "country": "USA",
+  "lat": 37.531,
+  "lon": -121.923,
+  "note": null
+ },
+ "Montgomery Blair High School": {
+  "city": "Silver Spring",
+  "region": "MD",
+  "country": "USA",
+  "lat": 39.018,
+  "lon": -77.012,
+  "note": null
+ },
+ "Montgomery High School": {
+  "city": "Skillman",
+  "region": "NJ",
+  "country": "USA",
+  "lat": 40.427,
+  "lon": -74.68,
+  "note": null
+ },
+ "Morris Hills High School": {
+  "city": "Rockaway",
+  "region": "NJ",
+  "country": "USA",
+  "lat": 40.893,
+  "lon": -74.526,
+  "note": null
+ },
+ "Mountain House High School": {
+  "city": "Mountain House",
+  "region": "CA",
+  "country": "USA",
+  "lat": 37.779,
+  "lon": -121.54,
+  "note": null
+ },
+ "North Reading High School": {
+  "city": "North Reading",
+  "region": "MA",
+  "country": "USA",
+  "lat": 42.576,
+  "lon": -71.088,
+  "note": null
+ },
+ "Northern Highlands Regional High School": {
+  "city": "Allendale",
+  "region": "NJ",
+  "country": "USA",
+  "lat": 41.041,
+  "lon": -74.132,
+  "note": null
+ },
+ "Palo Alto High School": {
+  "city": "Palo Alto",
+  "region": "CA",
+  "country": "USA",
+  "lat": 37.437,
+  "lon": -122.156,
+  "note": null
+ },
+ "Panther Creek High School": {
+  "city": "Cary",
+  "region": "NC",
+  "country": "USA",
+  "lat": 35.8366,
+  "lon": -78.89,
+  "note": null
+ },
+ "Parkland High School": {
+  "city": "Allentown",
+  "region": "PA",
+  "country": "USA",
+  "lat": 40.625,
+  "lon": -75.553,
+  "note": null
+ },
+ "Phillips Academy Andover": {
+  "city": "Andover",
+  "region": "MA",
+  "country": "USA",
+  "lat": 42.647,
+  "lon": -71.132,
+  "note": null
+ },
+ "Phillips Exeter Academy": {
+  "city": "Exeter",
+  "region": "NH",
+  "country": "USA",
+  "lat": 42.979,
+  "lon": -70.95,
+  "note": null
+ },
+ "Pinewood School": {
+  "city": "Los Altos Hills",
+  "region": "CA",
+  "country": "USA",
+  "lat": 37.382,
+  "lon": -122.141,
+  "note": null
+ },
+ "Princeton International School of Mathematics and Science": {
+  "city": "Princeton",
+  "region": "NJ",
+  "country": "USA",
+  "lat": 40.379,
+  "lon": -74.651,
+  "note": null
+ },
+ "Redmond High School": {
+  "city": "Redmond",
+  "region": "WA",
+  "country": "USA",
+  "lat": 47.695,
+  "lon": -122.099,
+  "note": null
+ },
+ "Richmond Hill High School": {
+  "city": "Richmond Hill",
+  "region": "ON",
+  "country": "Canada",
+  "lat": 43.887,
+  "lon": -79.444,
+  "note": null
+ },
+ "Ruben S. Ayala High School": {
+  "city": "Chino Hills",
+  "region": "CA",
+  "country": "USA",
+  "lat": 33.953,
+  "lon": -117.733,
+  "note": null
+ },
+ "Sage Hill School": {
+  "city": "Newport Coast",
+  "region": "CA",
+  "country": "USA",
+  "lat": 33.607,
+  "lon": -117.824,
+  "note": null
+ },
+ "Semiahmoo Secondary School": {
+  "city": "Surrey",
+  "region": "BC",
+  "country": "Canada",
+  "lat": 49.035,
+  "lon": -122.8,
+  "note": null
+ },
+ "Sequoyah Middle School": {
+  "city": "Edmond",
+  "region": "OK",
+  "country": "USA",
+  "lat": 35.655,
+  "lon": -97.468,
+  "note": null
+ },
+ "Shanghai High School International Division": {
+  "city": "Shanghai",
+  "region": null,
+  "country": "China",
+  "lat": 31.15,
+  "lon": 121.43,
+  "note": null
+ },
+ "Skyline High School": {
+  "city": "Salt Lake City",
+  "region": "UT",
+  "country": "USA",
+  "lat": 40.694,
+  "lon": -111.815,
+  "note": null
+ },
+ "South Pasadena High School": {
+  "city": "South Pasadena",
+  "region": "CA",
+  "country": "USA",
+  "lat": 34.114,
+  "lon": -118.155,
+  "note": null
+ },
+ "St. George's School": {
+  "city": "Vancouver",
+  "region": "BC",
+  "country": "Canada",
+  "lat": 49.247,
+  "lon": -123.189,
+  "note": null
+ },
+ "St. John's School": {
+  "city": "Houston",
+  "region": "TX",
+  "country": "USA",
+  "lat": 29.737,
+  "lon": -95.421,
+  "note": null
+ },
+ "Stanford Online High School": {
+  "city": "Stanford",
+  "region": "CA",
+  "country": "USA",
+  "lat": 37.4275,
+  "lon": -122.1697,
+  "note": "Online school; plotted at its Stanford, CA home"
+ },
+ "Stevenson High School": {
+  "city": "Lincolnshire",
+  "region": "IL",
+  "country": "USA",
+  "lat": 42.195,
+  "lon": -87.93,
+  "note": null
+ },
+ "Stevenson School": {
+  "city": "Pebble Beach",
+  "region": "CA",
+  "country": "USA",
+  "lat": 36.587,
+  "lon": -121.944,
+  "note": null
+ },
+ "Stratford Academy": {
+  "city": "Macon",
+  "region": "GA",
+  "country": "USA",
+  "lat": 32.88,
+  "lon": -83.697,
+  "note": null
+ },
+ "Stuyvesant High School": {
+  "city": "New York",
+  "region": "NY",
+  "country": "USA",
+  "lat": 40.7178,
+  "lon": -74.0139,
+  "note": null
+ },
+ "Texas Academy of Mathematics and Science": {
+  "city": "Denton",
+  "region": "TX",
+  "country": "USA",
+  "lat": 33.21,
+  "lon": -97.15,
+  "note": null
+ },
+ "The Harker School": {
+  "city": "San Jose",
+  "region": "CA",
+  "country": "USA",
+  "lat": 37.317,
+  "lon": -121.972,
+  "note": null
+ },
+ "The Hockaday School": {
+  "city": "Dallas",
+  "region": "TX",
+  "country": "USA",
+  "lat": 32.901,
+  "lon": -96.804,
+  "note": null
+ },
+ "The King's Academy": {
+  "city": "Sunnyvale",
+  "region": "CA",
+  "country": "USA",
+  "lat": 37.36,
+  "lon": -122.027,
+  "note": null
+ },
+ "The Nueva School": {
+  "city": "San Mateo",
+  "region": "CA",
+  "country": "USA",
+  "lat": 37.546,
+  "lon": -122.307,
+  "note": null
+ },
+ "The Pingry School": {
+  "city": "Basking Ridge",
+  "region": "NJ",
+  "country": "USA",
+  "lat": 40.653,
+  "lon": -74.581,
+  "note": null
+ },
+ "Thomas Jefferson High School for Science and Technology": {
+  "city": "Alexandria",
+  "region": "VA",
+  "country": "USA",
+  "lat": 38.8186,
+  "lon": -77.168,
+  "note": null
+ },
+ "Toronto French School": {
+  "city": "Toronto",
+  "region": "ON",
+  "country": "Canada",
+  "lat": 43.727,
+  "lon": -79.379,
+  "note": null
+ },
+ "Troy High School": {
+  "city": "Fullerton",
+  "region": "CA",
+  "country": "USA",
+  "lat": 33.883,
+  "lon": -117.904,
+  "note": null
+ },
+ "USCA Academy International School": {
+  "city": "Toronto",
+  "region": "ON",
+  "country": "Canada",
+  "lat": 43.79,
+  "lon": -79.27,
+  "note": null
+ },
+ "Unionville High School": {
+  "city": "Markham",
+  "region": "ON",
+  "country": "Canada",
+  "lat": 43.864,
+  "lon": -79.314,
+  "note": null
+ },
+ "University High School": {
+  "city": "Irvine",
+  "region": "CA",
+  "country": "USA",
+  "lat": 33.651,
+  "lon": -117.83,
+  "note": null
+ },
+ "University of Chicago Laboratory Schools": {
+  "city": "Chicago",
+  "region": "IL",
+  "country": "USA",
+  "lat": 41.792,
+  "lon": -87.599,
+  "note": null
+ },
+ "University of Toronto Schools": {
+  "city": "Toronto",
+  "region": "ON",
+  "country": "Canada",
+  "lat": 43.668,
+  "lon": -79.399,
+  "note": null
+ },
+ "Vincent Massey Secondary School": {
+  "city": "Windsor",
+  "region": "ON",
+  "country": "Canada",
+  "lat": 42.285,
+  "lon": -83.005,
+  "note": null
+ },
+ "West Ranch High School": {
+  "city": "Stevenson Ranch",
+  "region": "CA",
+  "country": "USA",
+  "lat": 34.377,
+  "lon": -118.58,
+  "note": null
+ },
+ "West Windsor-Plainsboro High School South": {
+  "city": "West Windsor",
+  "region": "NJ",
+  "country": "USA",
+  "lat": 40.294,
+  "lon": -74.624,
+  "note": null
+ },
+ "Weston High School": {
+  "city": "Weston",
+  "region": "MA",
+  "country": "USA",
+  "lat": 42.356,
+  "lon": -71.31,
+  "note": null
+ },
+ "Westwood High School": {
+  "city": "Austin",
+  "region": "TX",
+  "country": "USA",
+  "lat": 30.448,
+  "lon": -97.792,
+  "note": null
+ },
+ "Whitney M. Young Magnet High School": {
+  "city": "Chicago",
+  "region": "IL",
+  "country": "USA",
+  "lat": 41.878,
+  "lon": -87.664,
+  "note": null
+ }
+}

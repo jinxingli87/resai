@@ -1,35 +1,102 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-brand-50: #fff7ed;
+  --color-brand-100: #ffedd5;
+  --color-brand-200: #fed7aa;
+  --color-brand-300: #fdba74;
+  --color-brand-400: #fb923c;
+  --color-brand-500: #f06a1a; /* logo "Res" */
+  --color-brand-600: #dd5a12;
+  --color-brand-700: #c2410c; /* text links, button fills (AA on white) */
+  --color-brand-800: #9a3412;
+  --color-brand-900: #7c2d12;
+  --color-amber-brand: #f9b20a; /* logo "AI"; never used for text on white */
+  --color-ink: #0f172a;
+
+  --color-tier-camper: #6d28d9;
+  --color-tier-gold: #e0a800;
+  --color-tier-silver: #8e9aab;
+  --color-tier-bronze: #b8733d;
+
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+}
 
 :root {
-  --background: #ffffff;
-  --foreground: #0f172a;
-  --fg-primary: #2563eb;
-  --fg-primary-hover: #1d4ed8;
-  --fg-dark: #0f172a;
-  --fg-accent: #06b6d4;
-  --fg-muted: #64748b;
-  --fg-border: #e2e8f0;
+  color-scheme: light;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-fg-primary: var(--fg-primary);
-  --color-fg-dark: var(--fg-dark);
-  --color-fg-accent: var(--fg-accent);
-  --color-fg-muted: var(--fg-muted);
-  --color-fg-border: var(--fg-border);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html:lang(zh-CN) {
+  --font-sans: var(--font-geist-sans), "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC",
+    ui-sans-serif, system-ui, sans-serif;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-geist-sans, Arial, Helvetica, sans-serif);
-  -webkit-font-smoothing: antialiased;
+@layer base {
+  body {
+    @apply bg-white text-slate-700 antialiased;
+    font-family: var(--font-sans);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply text-ink;
+    text-wrap: balance;
+  }
+
+  :lang(zh-CN) :is(h1, h2, h3) {
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+
+  ::selection {
+    @apply bg-brand-100 text-brand-900;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-brand-700;
+  }
 }
 
-* {
-  box-sizing: border-box;
+@utility container-page {
+  @apply mx-auto w-full max-w-7xl px-5 sm:px-8;
+}
+
+@utility text-gradient-brand {
+  background-image: linear-gradient(100deg, #c2410c 0%, #ea580c 45%, #d97706 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility bg-grid {
+  background-image:
+    linear-gradient(to right, rgb(15 23 42 / 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(15 23 42 / 0.045) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+.prose-resai {
+  @apply prose prose-slate max-w-none prose-headings:scroll-mt-24 prose-headings:font-semibold prose-a:text-brand-700 prose-a:underline-offset-2 prose-code:rounded prose-code:bg-slate-100 prose-code:px-1 prose-code:py-0.5 prose-code:font-normal prose-code:before:content-none prose-code:after:content-none prose-pre:bg-slate-900 prose-img:rounded-xl prose-img:border prose-img:border-slate-200 prose-table:text-sm prose-th:bg-slate-50 prose-th:px-3 prose-td:px-3;
+}
+
+.prose-resai :not(pre) > code {
+  overflow-wrap: anywhere;
+}
+
+.prose-resai .katex-display {
+  @apply overflow-x-auto overflow-y-hidden py-1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
