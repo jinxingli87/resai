@@ -36,7 +36,7 @@ export default async function EducationPage({ params }: PageProps<"/[locale]/edu
                   </p>
                   <p className="mt-2 text-sm leading-6 text-slate-500">{t(`stageBlurb.${s}`)}</p>
                 </div>
-                <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+                <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
                   {programs
                     .filter((p) => p.stage === s)
                     .map((p) => (

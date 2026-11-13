@@ -111,7 +111,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
               {t("path.cta")}
             </Link>
           </div>
-          <ol className="mt-12 grid gap-4 md:grid-cols-3">
+          <ol className="mt-12 grid gap-4 md:grid-cols-2">
             {STAGES.map((s, i) => (
               <li key={s} className="relative rounded-2xl border border-slate-200 bg-white p-6">
                 <div className="flex items-center gap-3">

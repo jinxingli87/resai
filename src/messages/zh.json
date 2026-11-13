@@ -1,7 +1,7 @@
 {
   "meta": {
     "defaultTitle": "ResAI · 面向学生的人工智能教育与科研",
-    "description": "ResAI 为学生提供从 Python 到智能体系统的人工智能课程，支持美国人工智能奥林匹克竞赛备赛，并指导学生开展 AI 赋能科学与社会的研究。"
+    "description": "ResAI 为学生提供从编程到 AI 智能体的人工智能课程，支持美国人工智能奥林匹克竞赛备赛，并指导学生开展 AI 赋能科学与社会的研究。"
   },
   "nav": {
     "skipToContent": "跳到正文",
@@ -31,8 +31,7 @@
   },
   "stages": {
     "core": "核心",
-    "specialization": "专项",
-    "applied": "应用"
+    "specialization": "专项"
   },
   "cta": {
     "title": "与 ResAI 一起开启 AI 学习之旅",
@@ -70,7 +69,7 @@
       "lead": "学生在这里打下扎实基础，与顶尖选手同台竞技，并逐步提出属于自己的研究问题。",
       "education": {
         "title": "课程",
-        "body": "七门课程，带领学生从 Python 与数学出发，学习机器学习、大语言模型、计算机视觉和智能体 AI。",
+        "body": "六门课程，带领学生从编程与数学出发，学习机器学习、大语言模型、计算机视觉和 AI 智能体。",
         "link": "查看课程"
       },
       "usaaio": {
@@ -120,15 +119,14 @@
     "metaTitle": "面向学生的 AI 课程",
     "eyebrow": "课程",
     "title": "从第一性原理到前沿系统的 AI 课程",
-    "lead": "三个阶段，七门课程。每门课程都将底层数学、动手编程和有意义的项目结合在一起。",
+    "lead": "两个阶段，六门课程。每门课程都将底层数学、动手编程和有意义的项目结合在一起。",
     "pathEyebrow": "学习路径",
-    "pathTitle": "三个阶段，七门课程",
+    "pathTitle": "两个阶段，六门课程",
     "pathLead": "从合适的阶段开始，我们会帮助每位学生找到起点。",
     "stageN": "第 {n} 阶段",
     "stageBlurb": {
       "core": "编程、AI 辅助编程、机器学习，以及背后的数学。",
-      "specialization": "深入语言与视觉，现代 AI 的两大支柱。",
-      "applied": "融会贯通，构建能够自主行动的 AI 系统。"
+      "specialization": "深入大语言模型、计算机视觉与 AI 智能体。"
     },
     "modulesCount": "{count} 个模块",
     "projectsCount": "{count} 个项目",
@@ -173,7 +171,7 @@
     "what": {
       "education": {
         "title": "课程",
-        "body": "从 Python 到智能体 AI 的七门课程。"
+        "body": "从编程到 AI 智能体的六门课程。"
       },
       "olympiad": {
         "title": "竞赛",

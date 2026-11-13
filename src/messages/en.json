@@ -1,7 +1,7 @@
 {
   "meta": {
     "defaultTitle": "ResAI · AI education and research for students",
-    "description": "ResAI teaches students AI from Python to agentic systems, supports USA AI Olympiad preparation, and guides student research in AI for science and society."
+    "description": "ResAI teaches students AI from coding to AI agents, supports USA AI Olympiad preparation, and guides student research in AI for science and society."
   },
   "nav": {
     "skipToContent": "Skip to content",
@@ -31,8 +31,7 @@
   },
   "stages": {
     "core": "Core",
-    "specialization": "Specializations",
-    "applied": "Applied AI"
+    "specialization": "Specializations"
   },
   "cta": {
     "title": "Start your AI journey with ResAI",
@@ -70,7 +69,7 @@
       "lead": "Students build strong foundations, test themselves against the best, and go on to ask their own questions.",
       "education": {
         "title": "Education",
-        "body": "Seven programs that take students from Python and math through machine learning, LLMs, computer vision, and agentic AI.",
+        "body": "Six programs that take students from coding and math through machine learning, LLMs, computer vision, and AI agents.",
         "link": "See the programs"
       },
       "usaaio": {
@@ -120,15 +119,14 @@
     "metaTitle": "AI programs for students",
     "eyebrow": "Education",
     "title": "AI programs, from first principles to frontier systems",
-    "lead": "Seven programs across three stages. Every program combines the underlying math, hands-on coding, and projects that matter.",
+    "lead": "Six programs across two stages. Every program combines the underlying math, hands-on coding, and projects that matter.",
     "pathEyebrow": "Learning path",
-    "pathTitle": "Three stages, seven programs",
+    "pathTitle": "Two stages, six programs",
     "pathLead": "Start at the stage that fits. We'll help place each student.",
     "stageN": "Stage {n}",
     "stageBlurb": {
       "core": "Programming, AI-assisted coding, machine learning, and the math behind it.",
-      "specialization": "Deep dives into language and vision, the two pillars of modern AI.",
-      "applied": "Put it all together and build AI systems that act."
+      "specialization": "Deep dives into language models, computer vision, and AI agents."
     },
     "modulesCount": "{count, plural, one {# module} other {# modules}}",
     "projectsCount": "{count, plural, one {# project} other {# projects}}",
@@ -173,7 +171,7 @@
     "what": {
       "education": {
         "title": "Education",
-        "body": "Seven programs from Python to agentic AI."
+        "body": "Six programs from coding to AI agents."
       },
       "olympiad": {
         "title": "Olympiad",

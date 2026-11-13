@@ -1,8 +1,8 @@
 import type { Localized } from "@/lib/i18n";
 
-export type ProgramIcon = "code" | "sparkles" | "sigma" | "brain" | "messages" | "eye" | "bot";
+export type ProgramIcon = "code" | "sigma" | "brain" | "messages" | "eye" | "bot";
 
-export const STAGES = ["core", "specialization", "applied"] as const;
+export const STAGES = ["core", "specialization"] as const;
 export type Stage = (typeof STAGES)[number];
 
 export type Program = {
@@ -22,22 +22,22 @@ export type Program = {
 
 export const programs: Program[] = [
   {
-    slug: "python",
+    slug: "coding",
     icon: "code",
     stage: "core",
-    shortTitle: { en: "Python Coding", zh: "Python 编程" },
-    title: { en: "Python Coding", zh: "Python 编程" },
+    shortTitle: { en: "Coding (with AI)", zh: "编程（AI 辅助）" },
+    title: { en: "Coding (with AI)", zh: "编程（AI 辅助）" },
     tagline: {
-      en: "The language of AI, from first lines of code to real data analysis.",
-      zh: "人工智能的通用语言：从第一行代码到真实的数据分析。",
+      en: "Python from the first line of code, then building real projects fast with AI as a coding partner.",
+      zh: "从第一行 Python 代码开始，再与 AI 结对编程，快速做出真正可用的作品。",
     },
     overview: {
-      en: "Students learn to think like programmers: breaking problems into steps, choosing the right data structure, and writing clean, testable Python. The course ends with hands-on data analysis using the same tools researchers use every day.",
-      zh: "学生将学会像程序员一样思考：把问题拆解成步骤、选择合适的数据结构，并写出清晰、可测试的 Python 代码。课程最后使用科研人员日常使用的工具进行实战数据分析。",
+      en: "Students learn to think like programmers: breaking problems into steps, choosing the right data structure, and writing clean, testable Python, then analyzing real data with the tools researchers use every day. They then learn to work with AI coding assistants: describing what they want, reviewing and testing what the AI produces, and staying in control of quality. Students ship a working website and use AI to speed up a small research project.",
+      zh: "学生将学会像程序员一样思考：把问题拆解成步骤、选择合适的数据结构，写出清晰、可测试的 Python 代码，并使用科研人员日常使用的工具分析真实数据。随后，学生将学会与 AI 编程助手协作：清楚描述需求、审查并测试 AI 生成的结果，始终把控质量。课程中学生将上线一个可用的网站，并用 AI 加速一个小型研究项目。",
     },
     audience: {
-      en: "Students new to programming, or self-taught coders who want solid fundamentals before moving on to machine learning.",
-      zh: "零基础的编程新手，或希望在学习机器学习之前打牢基础的自学者。",
+      en: "Students new to programming, or self-taught coders who want solid fundamentals and want to turn ideas into working projects quickly.",
+      zh: "零基础的编程新手，或希望打牢基础、并把想法快速变成作品的自学者。",
     },
     prerequisites: { en: "None.", zh: "无。" },
     modules: [
@@ -62,32 +62,6 @@ export const programs: Program[] = [
           zh: ["NumPy 数组与向量化计算", "Pandas DataFrame：读取、清洗与分组", "用 Matplotlib 绘制清晰的图表", "数据分析小项目"],
         },
       },
-    ],
-    outcomes: {
-      en: ["Write and debug Python programs on your own", "Pick lists, dicts, and sets appropriately", "Analyze a real dataset and present findings in charts"],
-      zh: ["独立编写并调试 Python 程序", "恰当地使用列表、字典和集合", "分析真实数据集并用图表呈现结论"],
-    },
-  },
-  {
-    slug: "vibe-coding",
-    icon: "sparkles",
-    stage: "core",
-    shortTitle: { en: "Vibe Coding with AI", zh: "AI 辅助编程" },
-    title: { en: "Vibe Coding with AI", zh: "AI 辅助编程（Vibe Coding）" },
-    tagline: {
-      en: "Build real things fast by working with AI as a coding partner.",
-      zh: "与 AI 结对编程，快速做出真正可用的作品。",
-    },
-    overview: {
-      en: "AI coding assistants change how software and research get done. Students learn to direct AI tools effectively: describing what they want, reviewing and testing what the AI produces, and staying in control of quality. They ship a working website and use AI to speed up a small research project.",
-      zh: "AI 编程助手正在改变软件开发和科研的方式。学生将学会高效地驾驭 AI 工具：清楚描述需求、审查并测试 AI 生成的结果，始终把控质量。课程中学生将上线一个可用的网站，并用 AI 加速一个小型研究项目。",
-    },
-    audience: {
-      en: "Any student who wants to turn ideas into working projects quickly, including those with little coding experience.",
-      zh: "希望把想法快速变成作品的学生，编程经验不多也可以参加。",
-    },
-    prerequisites: { en: "Basic computer literacy. Python experience helps but isn't required.", zh: "具备基本的电脑操作能力。有 Python 基础更好，但不是必需。" },
-    modules: [
       {
         title: { en: "Building websites with AI", zh: "用 AI 搭建网站" },
         topics: {
@@ -104,8 +78,8 @@ export const programs: Program[] = [
       },
     ],
     outcomes: {
-      en: ["Ship a personal website built with AI tools", "Use AI to accelerate a research workflow", "Judge when AI output is right, and when it isn't"],
-      zh: ["上线一个用 AI 工具搭建的个人网站", "用 AI 加速研究流程", "判断 AI 的输出何时可信、何时不可信"],
+      en: ["Write and debug Python programs on your own", "Analyze a real dataset and present findings in charts", "Ship a personal website built with AI tools", "Use AI to accelerate a research workflow", "Judge when AI output is right, and when it isn't"],
+      zh: ["独立编写并调试 Python 程序", "分析真实数据集并用图表呈现结论", "上线一个用 AI 工具搭建的个人网站", "用 AI 加速研究流程", "判断 AI 的输出何时可信、何时不可信"],
     },
   },
   {
@@ -311,11 +285,11 @@ export const programs: Program[] = [
     },
   },
   {
-    slug: "agentic-ai",
+    slug: "ai-agents",
     icon: "bot",
-    stage: "applied",
-    shortTitle: { en: "Agentic AI", zh: "智能体 AI" },
-    title: { en: "Agentic AI", zh: "智能体 AI（Agentic AI）" },
+    stage: "specialization",
+    shortTitle: { en: "AI Agents", zh: "AI 智能体" },
+    title: { en: "AI Agents", zh: "AI 智能体" },
     tagline: {
       en: "Project-based: design and build AI agents that do real work.",
       zh: "项目制学习：设计并构建能完成真实任务的 AI 智能体。",
@@ -328,7 +302,7 @@ export const programs: Program[] = [
       en: "Students who can program in Python and want to build practical AI applications.",
       zh: "会用 Python 编程、希望构建实用 AI 应用的学生。",
     },
-    prerequisites: { en: "Python coding. Large Language Models recommended.", zh: "Python 编程。建议先修大语言模型课程。" },
+    prerequisites: { en: "Coding (with AI). Large Language Models recommended.", zh: "编程（AI 辅助）。建议先修大语言模型课程。" },
     modules: [
       {
         title: { en: "Agent foundations", zh: "智能体基础" },
