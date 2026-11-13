@@ -117,34 +117,3 @@ export const humanityAreas: ResearchArea[] = [
     },
   },
 ];
-
-export const researchSteps: { title: Localized; description: Localized }[] = [
-  {
-    title: { en: "Find a question", zh: "确定问题" },
-    description: {
-      en: "Explore areas that excite you and narrow down to a question that is new, focused, and feasible.",
-      zh: "探索感兴趣的领域，聚焦到一个新颖、具体且可行的研究问题。",
-    },
-  },
-  {
-    title: { en: "Read the literature", zh: "文献调研" },
-    description: {
-      en: "Learn what's already known, how others have approached it, and where the open gaps are.",
-      zh: "了解已有成果、前人的研究方法，以及尚未解决的空白。",
-    },
-  },
-  {
-    title: { en: "Run experiments", zh: "开展实验" },
-    description: {
-      en: "Collect or prepare data, build models, and test ideas with the rigor of real research.",
-      zh: "收集或准备数据、构建模型，并以真正科研的严谨标准验证想法。",
-    },
-  },
-  {
-    title: { en: "Write and present", zh: "撰写与展示" },
-    description: {
-      en: "Turn results into a paper, poster, or talk, ready for science fairs and research competitions.",
-      zh: "把成果整理成论文、海报或报告，用于科学竞赛和研究类比赛。",
-    },
-  },
-];

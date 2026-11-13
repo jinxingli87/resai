@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { CtaBand, PageHero, Section, SectionHeading } from "@/components/ui/page";
 import { Icon } from "@/components/ui/icons";
-import { humanityAreas, researchSteps, scienceAreas, type ResearchArea } from "@/content/research";
+import { humanityAreas, scienceAreas, type ResearchArea } from "@/content/research";
 import { pageMetadata, pick } from "@/lib/i18n";
 
 export async function generateMetadata({ params }: PageProps<"/[locale]/research">): Promise<Metadata> {
@@ -21,20 +21,7 @@ export default async function ResearchPage({ params }: PageProps<"/[locale]/rese
     <>
       <PageHero crumbs={[{ href: "/", label: nav("home") }, { label: nav("research") }]} eyebrow={t("eyebrow")} title={t("title")} lead={t("lead")} />
 
-      <Section>
-        <SectionHeading eyebrow={t("howEyebrow")} title={t("howTitle")} lead={t("howLead")} />
-        <ol className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-          {researchSteps.map((s, i) => (
-            <li key={i} className="relative rounded-2xl border border-slate-200 p-6">
-              <span className="font-mono text-sm text-brand-700">{String(i + 1).padStart(2, "0")}</span>
-              <h3 className="mt-3 text-lg font-semibold">{pick(s.title, locale)}</h3>
-              <p className="mt-2 leading-7 text-slate-600">{pick(s.description, locale)}</p>
-            </li>
-          ))}
-        </ol>
-      </Section>
-
-      <AreaGroup id="science" title={t("scienceTitle")} lead={t("scienceLead")} areas={scienceAreas} locale={locale} ideasLabel={t("ideas")} tinted />
+      <AreaGroup id="science" title={t("scienceTitle")} areas={scienceAreas} locale={locale} ideasLabel={t("ideas")} tinted />
       <AreaGroup id="humanity" title={t("humanityTitle")} lead={t("humanityLead")} areas={humanityAreas} locale={locale} ideasLabel={t("ideas")} />
 
       <Section className="pt-0">
@@ -57,7 +44,7 @@ function AreaGroup({
 }: {
   id: string;
   title: string;
-  lead: string;
+  lead?: string;
   areas: ResearchArea[];
   locale: string;
   ideasLabel: string;
