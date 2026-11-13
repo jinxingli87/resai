@@ -13,6 +13,7 @@ export async function WeChatQr({ size = 220, className, caption = true }: { size
           alt={t("qrAlt", { id: WECHAT_ID })}
           width={size}
           height={size}
+          unoptimized
           style={{ width: size, height: size }}
         />
       </a>

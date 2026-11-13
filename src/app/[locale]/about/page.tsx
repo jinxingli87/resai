@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { BookOpen, Compass, FlaskConical, Lightbulb, Target, Trophy } from "lucide-react";
+import { BookOpen, FlaskConical, Trophy } from "lucide-react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { CtaBand, PageHero, Section, SectionHeading } from "@/components/ui/page";
 import { pageMetadata } from "@/lib/i18n";
@@ -43,28 +43,7 @@ export default async function AboutPage({ params }: PageProps<"/[locale]/about">
         </div>
       </Section>
 
-      <section className="border-y border-slate-200/70 bg-slate-50/70">
-        <div className="container-page py-16 sm:py-20">
-          <SectionHeading eyebrow={t("teachEyebrow")} title={t("teachTitle")} />
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
-            {[
-              { icon: Target, key: "rigor" },
-              { icon: Lightbulb, key: "curiosity" },
-              { icon: Compass, key: "guidance" },
-            ].map((p) => (
-              <div key={p.key} className="rounded-2xl border border-slate-200 bg-white p-6">
-                <p.icon className="size-6 text-brand-700" aria-hidden />
-                <h3 className="mt-4 text-lg font-semibold">{t(`teach.${p.key}.title`)}</h3>
-                <p className="mt-2 leading-7 text-slate-600">{t(`teach.${p.key}.body`)}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <div className="pt-16">
-        <CtaBand title={t("ctaTitle")} lead={t("ctaLead")} />
-      </div>
+      <CtaBand title={t("ctaTitle")} lead={t("ctaLead")} />
     </>
   );
 }

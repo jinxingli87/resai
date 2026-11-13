@@ -118,7 +118,7 @@
   "education": {
     "metaTitle": "面向学生的 AI 课程",
     "eyebrow": "课程",
-    "title": "从第一性原理到前沿系统的 AI 课程",
+    "title": "编程、深度学习与人工智能基础",
     "lead": "两个阶段，六门课程。每门课程都将底层数学、动手编程和有意义的项目结合在一起。",
     "pathEyebrow": "学习路径",
     "pathTitle": "两个阶段，六门课程",
@@ -180,22 +180,6 @@
       "research": {
         "title": "科研",
         "body": "AI 赋能科学与社会的指导项目。"
-      }
-    },
-    "teachEyebrow": "教学理念",
-    "teachTitle": "我们的方法",
-    "teach": {
-      "rigor": {
-        "title": "严谨",
-        "body": "数学与代码相结合：先推导思想，再动手实现。"
-      },
-      "curiosity": {
-        "title": "好奇",
-        "body": "鼓励学生质疑结果、动手实验，追踪意想不到的发现。"
-      },
-      "guidance": {
-        "title": "指导",
-        "body": "由研究者引导学生选择既有挑战又力所能及的问题。"
       }
     },
     "ctaTitle": "欢迎交流",

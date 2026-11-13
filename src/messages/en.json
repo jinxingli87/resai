@@ -118,7 +118,7 @@
   "education": {
     "metaTitle": "AI programs for students",
     "eyebrow": "Education",
-    "title": "AI programs, from first principles to frontier systems",
+    "title": "Fundamentals of coding, deep learning and AI",
     "lead": "Six programs across two stages. Every program combines the underlying math, hands-on coding, and projects that matter.",
     "pathEyebrow": "Learning path",
     "pathTitle": "Two stages, six programs",
@@ -180,22 +180,6 @@
       "research": {
         "title": "Research",
         "body": "Mentored projects in AI for science and society."
-      }
-    },
-    "teachEyebrow": "How we teach",
-    "teachTitle": "Our approach",
-    "teach": {
-      "rigor": {
-        "title": "Rigor",
-        "body": "Math and code go together. Students derive the ideas and then implement them."
-      },
-      "curiosity": {
-        "title": "Curiosity",
-        "body": "We encourage students to question results, run experiments, and follow surprising findings."
-      },
-      "guidance": {
-        "title": "Guidance",
-        "body": "Researchers guide students toward problems that are challenging and within reach."
       }
     },
     "ctaTitle": "Let's talk",
