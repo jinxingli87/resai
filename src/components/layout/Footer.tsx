@@ -22,7 +22,6 @@ export async function Footer({ locale }: { locale: string }) {
       links: [
         { href: "/usaaio", label: t("usaaioOverview") },
         { href: "/usaaio/problems", label: t("problems") },
-        { href: "/usaaio/statistics", label: t("statistics") },
         { href: "/usaaio/ioai", label: t("ioai") },
       ],
     },
