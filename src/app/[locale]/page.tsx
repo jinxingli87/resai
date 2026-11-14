@@ -3,7 +3,7 @@ import { ArrowRight, BookOpen, FlaskConical, Trophy } from "lucide-react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { buttonClass } from "@/components/ui/button";
-import { CtaBand, Section, SectionHeading } from "@/components/ui/page";
+import { Section, SectionHeading } from "@/components/ui/page";
 import { Icon } from "@/components/ui/icons";
 import { programs, STAGES } from "@/content/programs";
 import { pageMetadata, pick } from "@/lib/i18n";
@@ -97,8 +97,6 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
           ))}
         </div>
       </Section>
-
-      <CtaBand />
     </>
   );
 }

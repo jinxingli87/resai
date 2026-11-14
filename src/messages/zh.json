@@ -38,7 +38,8 @@
     "programs": "浏览课程"
   },
   "footer": {
-    "tagline": "面向中小学生的人工智能教育、竞赛与科研指导",
+    "taglineLine1": "面向中小学生的人工智能教育、",
+    "taglineLine2": "竞赛与科研",
     "usaaioOverview": "USAAIO 概览",
     "researchOverview": "科研概览",
     "problems": "历年真题",

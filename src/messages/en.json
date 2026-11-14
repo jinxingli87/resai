@@ -38,7 +38,8 @@
     "programs": "Browse programs"
   },
   "footer": {
-    "tagline": "AI education, competition, and research mentorship for k-12 students",
+    "taglineLine1": "AI education, competition,",
+    "taglineLine2": "and research for k-12 students",
     "usaaioOverview": "USAAIO overview",
     "researchOverview": "Research overview",
     "problems": "Past problems",

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { ArrowRight } from "lucide-react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import { CtaBand, PageHero, SectionHeading } from "@/components/ui/page";
+import { PageHero, SectionHeading } from "@/components/ui/page";
 import { Icon } from "@/components/ui/icons";
 import { programs, STAGES } from "@/content/programs";
 import { pageMetadata, pick } from "@/lib/i18n";
@@ -68,8 +68,6 @@ export default async function EducationPage({ params }: PageProps<"/[locale]/edu
           </div>
         </div>
       </section>
-
-      <CtaBand />
     </>
   );
 }

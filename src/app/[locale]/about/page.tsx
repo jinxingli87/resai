@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { BookOpen, FlaskConical, Trophy } from "lucide-react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { CtaBand, PageHero, Section, SectionHeading } from "@/components/ui/page";
+import { PageHero, Section, SectionHeading } from "@/components/ui/page";
 import { pageMetadata } from "@/lib/i18n";
 
 export async function generateMetadata({ params }: PageProps<"/[locale]/about">): Promise<Metadata> {
@@ -42,8 +42,6 @@ export default async function AboutPage({ params }: PageProps<"/[locale]/about">
           ))}
         </div>
       </Section>
-
-      <CtaBand lead={t("ctaLead")} />
     </>
   );
 }

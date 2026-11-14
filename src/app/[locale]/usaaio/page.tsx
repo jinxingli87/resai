@@ -3,7 +3,7 @@ import { ArrowRight, CalendarDays, CheckCircle2, ExternalLink, FileText, Globe2,
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { buttonClass } from "@/components/ui/button";
-import { CtaBand, PageHero, Section, SectionHeading } from "@/components/ui/page";
+import { PageHero, Section, SectionHeading } from "@/components/ui/page";
 import { Icon } from "@/components/ui/icons";
 import { getProgram } from "@/content/programs";
 import { pageMetadata, pick } from "@/lib/i18n";
@@ -131,8 +131,6 @@ export default async function UsaaioPage({ params }: PageProps<"/[locale]/usaaio
           </a>
         </p>
       </Section>
-
-      <CtaBand />
     </>
   );
 }
