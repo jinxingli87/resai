@@ -28,7 +28,7 @@ export default async function StatisticsPage({ params }: PageProps<"/[locale]/us
   return (
     <>
       <PageHero
-        crumbs={[{ href: "/", label: nav("home") }, { href: "/usaaio", label: "USAAIO" }, { label: t("crumb") }]}
+        crumbs={[{ href: "/", label: nav("home") }, { href: "/usaaio", label: nav("usaaio") }, { label: t("crumb") }]}
         eyebrow={t("eyebrow")}
         title={t("title")}
         lead={t("lead", { winners: stats.winners, schools: stats.schools })}

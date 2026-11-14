@@ -47,7 +47,7 @@ export default async function IoaiYearPage({ params }: PageProps<"/[locale]/usaa
   return (
     <>
       <PageHero
-        crumbs={[{ href: "/", label: nav("home") }, { href: "/usaaio", label: "USAAIO" }, { href: "/usaaio/ioai", label: "IOAI" }, { label: String(y.year) }]}
+        crumbs={[{ href: "/", label: nav("home") }, { href: "/usaaio", label: nav("usaaio") }, { href: "/usaaio/ioai", label: "IOAI" }, { label: String(y.year) }]}
         eyebrow={pick(y.edition, locale)}
         title={`IOAI ${y.year}`}
         lead={pick(y.facts, locale)}

@@ -23,7 +23,7 @@ export default async function UsaaioPage({ params }: PageProps<"/[locale]/usaaio
 
   return (
     <>
-      <PageHero crumbs={[{ href: "/", label: nav("home") }, { label: "USAAIO" }]} eyebrow={t("eyebrow")} title={t("title")} lead={t("lead")}>
+      <PageHero crumbs={[{ href: "/", label: nav("home") }, { label: nav("usaaio") }]} eyebrow={t("eyebrow")} title={t("title")} lead={t("lead")}>
         <div className="flex flex-wrap gap-3">
           <Link href="/usaaio/problems" className={buttonClass({ size: "lg" })}>
             {t("problemsCta")}

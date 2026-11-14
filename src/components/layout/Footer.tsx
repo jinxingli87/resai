@@ -11,14 +11,16 @@ import { LanguageSwitcher } from "./LanguageSwitcher";
 export async function Footer({ locale }: { locale: string }) {
   const t = await getTranslations("footer");
   const nav = await getTranslations("nav");
+  const research = await getTranslations("research");
 
+  // Group titles reuse the header nav labels so the two never drift apart.
   const groups = [
     {
-      title: t("programs"),
+      title: nav("education"),
       links: programs.map((p) => ({ href: `/education/${p.slug}`, label: pick(p.shortTitle, locale) })),
     },
     {
-      title: t("olympiad"),
+      title: nav("usaaio"),
       links: [
         { href: "/usaaio", label: t("usaaioOverview") },
         { href: "/usaaio/problems", label: t("problems") },
@@ -26,9 +28,16 @@ export async function Footer({ locale }: { locale: string }) {
       ],
     },
     {
-      title: t("company"),
+      title: nav("research"),
       links: [
-        { href: "/research", label: nav("research") },
+        { href: "/research", label: t("researchOverview") },
+        { href: "/research#science", label: research("scienceTitle") },
+        { href: "/research#humanity", label: research("humanityTitle") },
+      ],
+    },
+    {
+      title: nav("about"),
+      links: [
         { href: "/about", label: nav("about") },
         { href: "/forum", label: nav("forum") },
         { href: "/contact", label: nav("contact") },
@@ -60,7 +69,7 @@ export async function Footer({ locale }: { locale: string }) {
             </dl>
           </div>
         </div>
-        <div className="grid grid-cols-1 gap-10 sm:grid-cols-3">
+        <div className="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 md:grid-cols-4">
           {groups.map((g) => (
             <div key={g.title}>
               <h2 className="text-sm font-semibold text-white">{g.title}</h2>

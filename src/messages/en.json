@@ -10,8 +10,8 @@
     "getInTouch": "Get in touch",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
-    "education": "Education",
-    "usaaio": "USAAIO",
+    "education": "Courses",
+    "usaaio": "Olympiad",
     "research": "Research",
     "about": "About",
     "forum": "Forum",
@@ -34,17 +34,14 @@
     "specialization": "Specializations"
   },
   "cta": {
-    "title": "Start your AI journey with ResAI",
     "lead": "Tell us about the student, their background, and their goals. We'll suggest where to begin.",
     "contact": "Contact us",
     "programs": "Browse programs"
   },
   "footer": {
     "tagline": "AI education, olympiad preparation, and research mentorship for students.",
-    "programs": "Programs",
-    "olympiad": "Olympiad",
-    "company": "ResAI",
     "usaaioOverview": "USAAIO overview",
+    "researchOverview": "Research overview",
     "problems": "Past problems",
     "ioai": "IOAI",
     "email": "Email",
@@ -66,7 +63,7 @@
       "title": "One place to learn, compete, and research",
       "lead": "Students build strong foundations, test themselves against the best, and go on to ask their own questions.",
       "education": {
-        "title": "Education",
+        "title": "Courses",
         "body": "Six programs that take students from coding and math through machine learning, LLMs, computer vision, and AI agents.",
         "link": "See the programs"
       },
@@ -103,7 +100,7 @@
   },
   "education": {
     "metaTitle": "AI programs for students",
-    "eyebrow": "Education",
+    "eyebrow": "Courses",
     "title": "Coding, Machine Learning and AI for K-12 Students",
     "lead": "Six programs across two stages. Every program combines the underlying math, hands-on coding, and projects that matter.",
     "pathEyebrow": "Learning path",
@@ -156,7 +153,7 @@
     "missionBody2": "ResAI brings a researcher's perspective to AI education: rigorous foundations, hands-on building, and the habit of asking good questions.",
     "what": {
       "education": {
-        "title": "Education",
+        "title": "Courses",
         "body": "Six programs from coding to AI agents."
       },
       "olympiad": {

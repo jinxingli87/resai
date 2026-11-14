@@ -22,7 +22,7 @@ export default async function ProblemsPage({ params }: PageProps<"/[locale]/usaa
   return (
     <>
       <PageHero
-        crumbs={[{ href: "/", label: nav("home") }, { href: "/usaaio", label: "USAAIO" }, { label: t("crumb") }]}
+        crumbs={[{ href: "/", label: nav("home") }, { href: "/usaaio", label: nav("usaaio") }, { label: t("crumb") }]}
         eyebrow={t("eyebrow")}
         title={t("title")}
         lead={t("lead")}

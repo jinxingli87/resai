@@ -20,7 +20,7 @@ export default async function IoaiPage({ params }: PageProps<"/[locale]/usaaio/i
 
   return (
     <>
-      <PageHero crumbs={[{ href: "/", label: nav("home") }, { href: "/usaaio", label: "USAAIO" }, { label: "IOAI" }]} eyebrow={t("eyebrow")} title={t("title")} lead={t("lead")} />
+      <PageHero crumbs={[{ href: "/", label: nav("home") }, { href: "/usaaio", label: nav("usaaio") }, { label: "IOAI" }]} eyebrow={t("eyebrow")} title={t("title")} lead={t("lead")} />
 
       <Section>
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">

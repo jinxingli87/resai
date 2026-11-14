@@ -4,6 +4,7 @@ import { CtaBand, PageHero, Section, SectionHeading } from "@/components/ui/page
 import { Icon } from "@/components/ui/icons";
 import { humanityAreas, scienceAreas, type ResearchArea } from "@/content/research";
 import { pageMetadata, pick } from "@/lib/i18n";
+import { cn } from "@/lib/utils";
 
 export async function generateMetadata({ params }: PageProps<"/[locale]/research">): Promise<Metadata> {
   const { locale } = await params;
@@ -51,7 +52,7 @@ function AreaGroup({
   tinted?: boolean;
 }) {
   return (
-    <section id={id} className={tinted ? "border-y border-slate-200/70 bg-slate-50/70" : undefined}>
+    <section id={id} className={cn("scroll-mt-16", tinted && "border-y border-slate-200/70 bg-slate-50/70")}>
       <div className="container-page py-16 sm:py-20">
         <SectionHeading title={title} lead={lead} />
         <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">

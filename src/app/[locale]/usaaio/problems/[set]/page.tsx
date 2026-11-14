@@ -34,7 +34,7 @@ export default async function ProblemSetPage({ params }: PageProps<"/[locale]/us
   const pageLabel = (n: number) => t("pageN", { n });
   const crumbs = [
     { href: "/", label: nav("home") },
-    { href: "/usaaio", label: "USAAIO" },
+    { href: "/usaaio", label: nav("usaaio") },
     { href: "/usaaio/problems", label: t("crumb") },
   ];
 

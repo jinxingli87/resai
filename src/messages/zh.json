@@ -11,7 +11,7 @@
     "openMenu": "打开菜单",
     "closeMenu": "关闭菜单",
     "education": "课程",
-    "usaaio": "USAAIO",
+    "usaaio": "竞赛",
     "research": "科研",
     "about": "关于我们",
     "forum": "论坛",
@@ -34,17 +34,14 @@
     "specialization": "专项"
   },
   "cta": {
-    "title": "与 ResAI 一起开启 AI 学习之旅",
     "lead": "告诉我们学生的背景和目标，我们会建议合适的起点。",
     "contact": "联系我们",
     "programs": "浏览课程"
   },
   "footer": {
     "tagline": "面向学生的人工智能教育、竞赛备赛与科研指导。",
-    "programs": "课程",
-    "olympiad": "竞赛",
-    "company": "ResAI",
     "usaaioOverview": "USAAIO 概览",
+    "researchOverview": "科研概览",
     "problems": "历年真题",
     "ioai": "IOAI",
     "email": "邮箱",
