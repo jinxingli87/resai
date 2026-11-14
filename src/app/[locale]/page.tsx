@@ -7,7 +7,6 @@ import { CtaBand, Section, SectionHeading } from "@/components/ui/page";
 import { Icon } from "@/components/ui/icons";
 import { programs, STAGES } from "@/content/programs";
 import { humanityAreas, scienceAreas } from "@/content/research";
-import { getUsaaioStats } from "@/lib/usaaio-data";
 import { pageMetadata, pick } from "@/lib/i18n";
 import { SITE_URL } from "@/lib/utils";
 
@@ -22,7 +21,6 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
   setRequestLocale(locale);
   const t = await getTranslations("home");
   const st = await getTranslations("stages");
-  const stats = getUsaaioStats();
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -69,7 +67,6 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
               label: st(s),
               items: programs.filter((p) => p.stage === s).map((p) => ({ icon: p.icon, label: pick(p.shortTitle, locale) })),
             }))}
-            stat={{ value: stats.winners, label: t("hero.panelStat", { schools: stats.schools }) }}
           />
         </div>
       </section>
@@ -190,11 +187,9 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
 function HeroPanel({
   title,
   stages,
-  stat,
 }: {
   title: string;
   stages: { key: string; label: string; items: { icon: string; label: string }[] }[];
-  stat: { value: number; label: string };
 }) {
   return (
     <div className="relative">
@@ -221,10 +216,6 @@ function HeroPanel({
             </li>
           ))}
         </ol>
-      </div>
-      <div className="absolute -top-6 -right-3 hidden rounded-2xl border border-slate-200 bg-white px-5 py-3 text-right shadow-lg sm:block">
-        <p className="text-3xl font-semibold tracking-tight text-ink tabular-nums">{stat.value}</p>
-        <p className="max-w-48 text-xs text-slate-500">{stat.label}</p>
       </div>
     </div>
   );
