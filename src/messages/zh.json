@@ -54,9 +54,9 @@
   "home": {
     "hero": {
       "eyebrow": "面向学生的人工智能教育与科研",
-      "titleA": "像研究者一样",
-      "titleB": "学习人工智能",
-      "lead": "从第一行 Python 代码到构建 AI 智能体，ResAI 讲授现代人工智能背后的数学、代码与思维方式，并帮助学生将所学用于真正的科研。",
+      "titleA": "面向中小学生的",
+      "titleB": "人工智能学习与科研",
+      "lead": "从第一行 Python 代码到科研中的深度学习，ResAI 讲授现代人工智能背后的数学、代码与思维方式，并帮助学生将所学用于真正的科研。",
       "primary": "浏览课程",
       "secondary": "美国 AI 奥赛",
       "panelTitle": "ResAI 学习路径",
@@ -88,18 +88,6 @@
       "lead": "每个阶段都建立在前一阶段之上。学生可以从适合自己的阶段开始，按自己的节奏前进。",
       "cta": "全部课程"
     },
-    "usaaio": {
-      "eyebrow": "美国 AI 奥赛",
-      "title": "看看 2026 年顶尖 AI 学生来自哪里",
-      "lead": "交互式地图按学校展示 2026 年 USA-NA-AIO 第二轮获奖情况，只显示人数，从不显示姓名。旁边还有附简要摘要的官方历年真题。",
-      "map": "打开获奖地图",
-      "problems": "历年真题",
-      "statWinners": "第二轮获奖者",
-      "statSchools": "所学校",
-      "statStates": "个美国州",
-      "statCampers": "入选集训营",
-      "source": "数据来源：USA-NA-AIO 2026 年第二轮结果，仅统计各校人数。"
-    },
     "research": {
       "eyebrow": "科研",
       "title": "以 AI 为工具探索未知",
@@ -110,14 +98,14 @@
     },
     "who": {
       "eyebrow": "我们是谁",
-      "statement": "ResAI 由来自加州大学洛杉矶分校（UCLA）、哈佛大学、斯坦福大学和北京大学的研究人员联合创办。",
+      "statement": "ResAI 由来自加州大学洛杉矶分校（UCLA）、哈佛大学、斯坦福大学和北京大学的研究人员和教授联合创办。",
       "link": "关于 ResAI"
     }
   },
   "education": {
     "metaTitle": "面向学生的 AI 课程",
     "eyebrow": "课程",
-    "title": "编程、深度学习与人工智能基础",
+    "title": "面向中小学生的编程、机器学习与人工智能",
     "lead": "两个阶段，六门课程。每门课程都将底层数学、动手编程和有意义的项目结合在一起。",
     "pathEyebrow": "学习路径",
     "pathTitle": "两个阶段，六门课程",
@@ -162,7 +150,7 @@
     "metaTitle": "关于 ResAI",
     "eyebrow": "关于我们",
     "title": "关于 ResAI",
-    "cofounded": "ResAI 由来自加州大学洛杉矶分校（UCLA）、哈佛大学、斯坦福大学和北京大学的研究人员联合创办。",
+    "cofounded": "ResAI 由来自加州大学洛杉矶分校（UCLA）、哈佛大学、斯坦福大学和北京大学的研究人员和教授联合创办。",
     "missionEyebrow": "我们的使命",
     "missionTitle": "帮助学生深入理解 AI，并用它做有价值的事",
     "missionBody1": "AI 正在成为科学、工程和日常生活的基础工具。我们相信，学生不仅应该会用 AI，更应该理解它的原理。",
