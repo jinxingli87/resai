@@ -6,7 +6,6 @@ import { buttonClass } from "@/components/ui/button";
 import { CtaBand, PageHero, Section, SectionHeading } from "@/components/ui/page";
 import { Icon } from "@/components/ui/icons";
 import { getProgram } from "@/content/programs";
-import { getUsaaioStats } from "@/lib/usaaio-data";
 import { pageMetadata, pick } from "@/lib/i18n";
 
 export async function generateMetadata({ params }: PageProps<"/[locale]/usaaio">): Promise<Metadata> {
@@ -20,18 +19,17 @@ export default async function UsaaioPage({ params }: PageProps<"/[locale]/usaaio
   setRequestLocale(locale);
   const t = await getTranslations("usaaio");
   const nav = await getTranslations("nav");
-  const stats = getUsaaioStats();
   const prep = ["math-for-ai", "machine-learning", "computer-vision", "llms"].map((s) => getProgram(s)!);
 
   return (
     <>
       <PageHero crumbs={[{ href: "/", label: nav("home") }, { label: "USAAIO" }]} eyebrow={t("eyebrow")} title={t("title")} lead={t("lead")}>
         <div className="flex flex-wrap gap-3">
-          <Link href="/usaaio/statistics" className={buttonClass({ size: "lg" })}>
-            <Map className="size-4" aria-hidden /> {t("statsCta", { count: stats.winners })}
-          </Link>
-          <Link href="/usaaio/problems" className={buttonClass({ variant: "secondary", size: "lg" })}>
+          <Link href="/usaaio/problems" className={buttonClass({ size: "lg" })}>
             {t("problemsCta")}
+          </Link>
+          <Link href="/usaaio/statistics" className={buttonClass({ variant: "secondary", size: "lg" })}>
+            <Map className="size-4" aria-hidden /> {t("statsCta")}
           </Link>
         </div>
         <p className="mt-6 text-sm text-slate-500">{t("disclaimer")}</p>
