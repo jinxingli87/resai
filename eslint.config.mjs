@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Legacy static map, scheduled for removal; the site does not depend on it.
+    "usaaio/**",
   ]),
 ]);
 

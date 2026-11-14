@@ -1,0 +1,590 @@
+{
+ "Adams Middle School": {
+  "Camper": 0,
+  "Gold": 0,
+  "Silver": 1,
+  "Bronze": 0
+ },
+ "Amador Valley High School": {
+  "Camper": 0,
+  "Gold": 0,
+  "Silver": 0,
+  "Bronze": 1
+ },
+ "Anaheim Discovery Christian School": {
+  "Camper": 0,
+  "Gold": 0,
+  "Silver": 1,
+  "Bronze": 0
+ },
+ "Archbishop Mitty High School": {
+  "Camper": 0,
+  "Gold": 0,
+  "Silver": 1,
+  "Bronze": 0
+ },
+ "BASIS Independent Fremont": {
+  "Camper": 1,
+  "Gold": 1,
+  "Silver": 1,
+  "Bronze": 3
+ },
+ "BASIS Independent Silicon Valley": {
+  "Camper": 0,
+  "Gold": 0,
+  "Silver": 0,
+  "Bronze": 3
+ },
+ "BASIS Scottsdale": {
+  "Camper": 0,
+  "Gold": 0,
+  "Silver": 0,
+  "Bronze": 1
+ },
+ "Bellevue High School": {
+  "Camper": 1,
+  "Gold": 0,
+  "Silver": 0,
+  "Bronze": 1
+ },
+ "Bentonville High School": {
+  "Camper": 0,
+  "Gold": 0,
+  "Silver": 0,
+  "Bronze": 2
+ },
+ "Berkshire School": {
+  "Camper": 0,
+  "Gold": 0,
+  "Silver": 1,
+  "Bronze": 0
+ },
+ "Bridgeland High School": {
+  "Camper": 0,
+  "Gold": 0,
+  "Silver": 1,
+  "Bronze": 0
+ },
+ "Bridgewater-Raritan High School": {
+  "Camper": 1,
+  "Gold": 0,
+  "Silver": 0,
+  "Bronze": 0
+ },
+ "Canyon Crest Academy": {
+  "Camper": 1,
+  "Gold": 0,
+  "Silver": 0,
+  "Bronze": 0
+ },
+ "Carlmont High School": {
+  "Camper": 2,
+  "Gold": 0,
+  "Silver": 0,
+  "Bronze": 0
+ },
+ "Carmel High School": {
+  "Camper": 1,
+  "Gold": 0,
+  "Silver": 0,
+  "Bronze": 2
+ },
+ "Carroll High School": {
+  "Camper": 0,
+  "Gold": 0,
+  "Silver": 0,
+  "Bronze": 1
+ },
+ "Challenger School Middlefield": {
+  "Camper": 0,
+  "Gold": 0,
+  "Silver": 0,
+  "Bronze": 1
+ },
+ "Concord Academy": {
+  "Camper": 0,
+  "Gold": 0,
+  "Silver": 0,
+  "Bronze": 1
+ },
+ "Crean Lutheran High School": {
+  "Camper": 0,
+  "Gold": 0,
+  "Silver": 1,
+  "Bronze": 0
+ },
+ "Cupertino High School": {
+  "Camper": 0,
+  "Gold": 0,
+  "Silver": 2,
+  "Bronze": 0
+ },
+ "Davidson Academy Online": {
+  "Camper": 0,
+  "Gold": 0,
+  "Silver": 1,
+  "Bronze": 0
+ },
+ "Davis Senior High School": {
+  "Camper": 0,
+  "Gold": 0,
+  "Silver": 0,
+  "Bronze": 1
+ },
+ "Del Norte High School": {
+  "Camper": 0,
+  "Gold": 0,
+  "Silver": 0,
+  "Bronze": 1
+ },
+ "Dulles High School": {
+  "Camper": 1,
+  "Gold": 1,
+  "Silver": 0,
+  "Bronze": 0
+ },
+ "Eastside Preparatory School": {
+  "Camper": 0,
+  "Gold": 0,
+  "Silver": 1,
+  "Bronze": 0
+ },
+ "Elite Preparatory Academy": {
+  "Camper": 0,
+  "Gold": 2,
+  "Silver": 2,
+  "Bronze": 1
+ },
+ "Enloe Magnet High School": {
+  "Camper": 0,
+  "Gold": 0,
+  "Silver": 0,
+  "Bronze": 1
+ },
+ "Frisco High School": {
+  "Camper": 0,
+  "Gold": 0,
+  "Silver": 0,
+  "Bronze": 1
+ },
+ "Fulton Science Academy": {
+  "Camper": 1,
+  "Gold": 0,
+  "Silver": 1,
+  "Bronze": 2
+ },
+ "Garnet Valley High School": {
+  "Camper": 0,
+  "Gold": 0,
+  "Silver": 0,
+  "Bronze": 1
+ },
+ "Grace Church School": {
+  "Camper": 0,
+  "Gold": 0,
+  "Silver": 1,
+  "Bronze": 0
+ },
+ "H. H. Dow High School": {
+  "Camper": 0,
+  "Gold": 0,
+  "Silver": 0,
+  "Bronze": 1
+ },
+ "Henry M. Gunn High School": {
+  "Camper": 0,
+  "Gold": 0,
+  "Silver": 1,
+  "Bronze": 0
+ },
+ "Highland Park High School": {
+  "Camper": 1,
+  "Gold": 0,
+  "Silver": 0,
+  "Bronze": 0
+ },
+ "Homestead High School": {
+  "Camper": 0,
+  "Gold": 0,
+  "Silver": 1,
+  "Bronze": 0
+ },
+ "Illinois Mathematics and Science Academy": {
+  "Camper": 0,
+  "Gold": 0,
+  "Silver": 1,
+  "Bronze": 0
+ },
+ "International Community School": {
+  "Camper": 0,
+  "Gold": 0,
+  "Silver": 0,
+  "Bronze": 1
+ },
+ "Iolani School": {
+  "Camper": 0,
+  "Gold": 0,
+  "Silver": 1,
+  "Bronze": 0
+ },
+ "James E. Taylor High School": {
+  "Camper": 1,
+  "Gold": 0,
+  "Silver": 0,
+  "Bronze": 0
+ },
+ "Jericho High School": {
+  "Camper": 1,
+  "Gold": 0,
+  "Silver": 0,
+  "Bronze": 1
+ },
+ "Jesuit High School": {
+  "Camper": 0,
+  "Gold": 0,
+  "Silver": 1,
+  "Bronze": 0
+ },
+ "Lakeside School": {
+  "Camper": 0,
+  "Gold": 0,
+  "Silver": 0,
+  "Bronze": 1
+ },
+ "Lexington High School": {
+  "Camper": 0,
+  "Gold": 1,
+  "Silver": 1,
+  "Bronze": 0
+ },
+ "Los Gatos High School": {
+  "Camper": 1,
+  "Gold": 0,
+  "Silver": 0,
+  "Bronze": 0
+ },
+ "Lubbock High School": {
+  "Camper": 0,
+  "Gold": 0,
+  "Silver": 2,
+  "Bronze": 0
+ },
+ "Lynbrook High School": {
+  "Camper": 2,
+  "Gold": 1,
+  "Silver": 0,
+  "Bronze": 3
+ },
+ "Mater Dei High School": {
+  "Camper": 0,
+  "Gold": 0,
+  "Silver": 0,
+  "Bronze": 1
+ },
+ "McLean High School": {
+  "Camper": 0,
+  "Gold": 0,
+  "Silver": 1,
+  "Bronze": 0
+ },
+ "Mission San Jose High School": {
+  "Camper": 0,
+  "Gold": 0,
+  "Silver": 0,
+  "Bronze": 1
+ },
+ "Montgomery Blair High School": {
+  "Camper": 0,
+  "Gold": 0,
+  "Silver": 1,
+  "Bronze": 1
+ },
+ "Montgomery High School": {
+  "Camper": 0,
+  "Gold": 0,
+  "Silver": 0,
+  "Bronze": 1
+ },
+ "Morris Hills High School": {
+  "Camper": 0,
+  "Gold": 0,
+  "Silver": 0,
+  "Bronze": 1
+ },
+ "Mountain House High School": {
+  "Camper": 0,
+  "Gold": 1,
+  "Silver": 0,
+  "Bronze": 0
+ },
+ "North Reading High School": {
+  "Camper": 0,
+  "Gold": 0,
+  "Silver": 1,
+  "Bronze": 0
+ },
+ "Northern Highlands Regional High School": {
+  "Camper": 0,
+  "Gold": 0,
+  "Silver": 0,
+  "Bronze": 2
+ },
+ "Palo Alto High School": {
+  "Camper": 0,
+  "Gold": 0,
+  "Silver": 1,
+  "Bronze": 0
+ },
+ "Panther Creek High School": {
+  "Camper": 1,
+  "Gold": 0,
+  "Silver": 0,
+  "Bronze": 0
+ },
+ "Parkland High School": {
+  "Camper": 0,
+  "Gold": 1,
+  "Silver": 0,
+  "Bronze": 0
+ },
+ "Phillips Academy Andover": {
+  "Camper": 1,
+  "Gold": 0,
+  "Silver": 0,
+  "Bronze": 0
+ },
+ "Phillips Exeter Academy": {
+  "Camper": 2,
+  "Gold": 0,
+  "Silver": 1,
+  "Bronze": 0
+ },
+ "Pinewood School": {
+  "Camper": 0,
+  "Gold": 1,
+  "Silver": 0,
+  "Bronze": 0
+ },
+ "Princeton International School of Mathematics and Science": {
+  "Camper": 0,
+  "Gold": 0,
+  "Silver": 1,
+  "Bronze": 0
+ },
+ "Redmond High School": {
+  "Camper": 0,
+  "Gold": 1,
+  "Silver": 1,
+  "Bronze": 1
+ },
+ "Richmond Hill High School": {
+  "Camper": 1,
+  "Gold": 0,
+  "Silver": 1,
+  "Bronze": 0
+ },
+ "Ruben S. Ayala High School": {
+  "Camper": 0,
+  "Gold": 0,
+  "Silver": 0,
+  "Bronze": 1
+ },
+ "Sage Hill School": {
+  "Camper": 0,
+  "Gold": 1,
+  "Silver": 0,
+  "Bronze": 0
+ },
+ "Semiahmoo Secondary School": {
+  "Camper": 0,
+  "Gold": 0,
+  "Silver": 0,
+  "Bronze": 1
+ },
+ "Sequoyah Middle School": {
+  "Camper": 0,
+  "Gold": 0,
+  "Silver": 0,
+  "Bronze": 1
+ },
+ "Shanghai High School International Division": {
+  "Camper": 1,
+  "Gold": 1,
+  "Silver": 2,
+  "Bronze": 1
+ },
+ "Skyline High School": {
+  "Camper": 1,
+  "Gold": 0,
+  "Silver": 0,
+  "Bronze": 1
+ },
+ "South Pasadena High School": {
+  "Camper": 1,
+  "Gold": 0,
+  "Silver": 0,
+  "Bronze": 0
+ },
+ "St. George's School": {
+  "Camper": 0,
+  "Gold": 0,
+  "Silver": 0,
+  "Bronze": 1
+ },
+ "St. John's School": {
+  "Camper": 0,
+  "Gold": 0,
+  "Silver": 0,
+  "Bronze": 1
+ },
+ "Stanford Online High School": {
+  "Camper": 1,
+  "Gold": 1,
+  "Silver": 0,
+  "Bronze": 0
+ },
+ "Stevenson High School": {
+  "Camper": 0,
+  "Gold": 1,
+  "Silver": 0,
+  "Bronze": 0
+ },
+ "Stevenson School": {
+  "Camper": 0,
+  "Gold": 0,
+  "Silver": 1,
+  "Bronze": 0
+ },
+ "Stratford Academy": {
+  "Camper": 0,
+  "Gold": 0,
+  "Silver": 0,
+  "Bronze": 1
+ },
+ "Stuyvesant High School": {
+  "Camper": 0,
+  "Gold": 0,
+  "Silver": 0,
+  "Bronze": 1
+ },
+ "Texas Academy of Mathematics and Science": {
+  "Camper": 1,
+  "Gold": 0,
+  "Silver": 0,
+  "Bronze": 0
+ },
+ "The Harker School": {
+  "Camper": 1,
+  "Gold": 2,
+  "Silver": 5,
+  "Bronze": 0
+ },
+ "The Hockaday School": {
+  "Camper": 0,
+  "Gold": 0,
+  "Silver": 0,
+  "Bronze": 1
+ },
+ "The King's Academy": {
+  "Camper": 0,
+  "Gold": 2,
+  "Silver": 1,
+  "Bronze": 0
+ },
+ "The Nueva School": {
+  "Camper": 1,
+  "Gold": 0,
+  "Silver": 0,
+  "Bronze": 1
+ },
+ "The Pingry School": {
+  "Camper": 0,
+  "Gold": 0,
+  "Silver": 0,
+  "Bronze": 1
+ },
+ "Thomas Jefferson High School for Science and Technology": {
+  "Camper": 1,
+  "Gold": 2,
+  "Silver": 2,
+  "Bronze": 6
+ },
+ "Toronto French School": {
+  "Camper": 1,
+  "Gold": 0,
+  "Silver": 0,
+  "Bronze": 0
+ },
+ "Troy High School": {
+  "Camper": 0,
+  "Gold": 0,
+  "Silver": 1,
+  "Bronze": 0
+ },
+ "USCA Academy International School": {
+  "Camper": 1,
+  "Gold": 0,
+  "Silver": 0,
+  "Bronze": 0
+ },
+ "Unionville High School": {
+  "Camper": 0,
+  "Gold": 1,
+  "Silver": 0,
+  "Bronze": 0
+ },
+ "University High School": {
+  "Camper": 1,
+  "Gold": 0,
+  "Silver": 0,
+  "Bronze": 0
+ },
+ "University of Chicago Laboratory Schools": {
+  "Camper": 0,
+  "Gold": 1,
+  "Silver": 0,
+  "Bronze": 0
+ },
+ "University of Toronto Schools": {
+  "Camper": 0,
+  "Gold": 1,
+  "Silver": 0,
+  "Bronze": 0
+ },
+ "Vincent Massey Secondary School": {
+  "Camper": 0,
+  "Gold": 0,
+  "Silver": 0,
+  "Bronze": 1
+ },
+ "West Ranch High School": {
+  "Camper": 0,
+  "Gold": 0,
+  "Silver": 0,
+  "Bronze": 1
+ },
+ "West Windsor-Plainsboro High School South": {
+  "Camper": 0,
+  "Gold": 1,
+  "Silver": 0,
+  "Bronze": 0
+ },
+ "Weston High School": {
+  "Camper": 0,
+  "Gold": 0,
+  "Silver": 0,
+  "Bronze": 1
+ },
+ "Westwood High School": {
+  "Camper": 0,
+  "Gold": 0,
+  "Silver": 1,
+  "Bronze": 0
+ },
+ "Whitney M. Young Magnet High School": {
+  "Camper": 0,
+  "Gold": 0,
+  "Silver": 1,
+  "Bronze": 0
+ }
+}
