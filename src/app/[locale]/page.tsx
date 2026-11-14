@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ArrowRight, BookOpen, FlaskConical, Map, Trophy } from "lucide-react";
+import { ArrowRight, BookOpen, FlaskConical, Trophy } from "lucide-react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { buttonClass } from "@/components/ui/button";
@@ -138,39 +138,6 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
           </ol>
         </div>
       </section>
-
-      {/* USAAIO teaser */}
-      <Section>
-        <div className="grid items-center gap-12 lg:grid-cols-2">
-          <div>
-            <SectionHeading eyebrow={t("usaaio.eyebrow")} title={t("usaaio.title")} lead={t("usaaio.lead")} />
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link href="/usaaio/statistics" className={buttonClass()}>
-                <Map className="size-4" aria-hidden /> {t("usaaio.map")}
-              </Link>
-              <Link href="/usaaio/problems" className={buttonClass({ variant: "secondary" })}>
-                {t("usaaio.problems")}
-              </Link>
-            </div>
-          </div>
-          <div className="rounded-3xl border border-slate-200 bg-gradient-to-br from-white to-brand-50/50 p-8">
-            <dl className="grid grid-cols-2 gap-6">
-              {[
-                [stats.winners, t("usaaio.statWinners")],
-                [stats.schools, t("usaaio.statSchools")],
-                [stats.states, t("usaaio.statStates")],
-                [stats.byTier.Camper, t("usaaio.statCampers")],
-              ].map(([v, l]) => (
-                <div key={String(l)}>
-                  <dd className="text-4xl font-semibold tracking-tight text-ink tabular-nums sm:text-5xl">{v}</dd>
-                  <dt className="mt-1 text-sm text-slate-500">{l}</dt>
-                </div>
-              ))}
-            </dl>
-            <p className="mt-8 border-t border-slate-200 pt-4 text-xs text-slate-500">{t("usaaio.source")}</p>
-          </div>
-        </div>
-      </Section>
 
       {/* Research teaser */}
       <section className="bg-ink text-slate-300">

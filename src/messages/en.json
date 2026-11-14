@@ -54,9 +54,9 @@
   "home": {
     "hero": {
       "eyebrow": "AI education and research for students",
-      "titleA": "Learn AI the way",
-      "titleB": "researchers do",
-      "lead": "From your first line of Python to building AI agents, ResAI teaches the math, the code, and the thinking behind modern AI, and then helps students put it to work on real research.",
+      "titleA": "AI Learning & Research for",
+      "titleB": "K-12 Students",
+      "lead": "From your first line of Python to deep learning in research, ResAI teaches the math, the code, and the thinking behind modern AI, and then helps students put it to work on real research.",
       "primary": "Explore programs",
       "secondary": "USA AI Olympiad",
       "panelTitle": "The ResAI learning path",
@@ -88,18 +88,6 @@
       "lead": "Each stage builds on the last. Students can start where they are and follow the path at their own pace.",
       "cta": "All programs"
     },
-    "usaaio": {
-      "eyebrow": "USA AI Olympiad",
-      "title": "See where 2026's top AI students come from",
-      "lead": "Our interactive map shows the 2026 USA-NA-AIO Round 2 winners by school. It shows counts only, never names. Next to it are the official past problems, each with a short summary.",
-      "map": "Open the winner map",
-      "problems": "Past problems",
-      "statWinners": "Round 2 winners",
-      "statSchools": "schools",
-      "statStates": "US states",
-      "statCampers": "selected for camp",
-      "source": "Source: USA-NA-AIO 2026 Round 2 results. Counts per school only."
-    },
     "research": {
       "eyebrow": "Research",
       "title": "AI as a tool for discovery",
@@ -110,14 +98,14 @@
     },
     "who": {
       "eyebrow": "Who we are",
-      "statement": "ResAI is co-founded by researchers from UCLA, Harvard, Stanford, and Peking University.",
+      "statement": "ResAI is co-founded by researchers and professors from UCLA, Harvard, Stanford, and Peking University.",
       "link": "About ResAI"
     }
   },
   "education": {
     "metaTitle": "AI programs for students",
     "eyebrow": "Education",
-    "title": "Fundamentals of coding, deep learning and AI",
+    "title": "Coding, Machine Learning and AI for K-12 Students",
     "lead": "Six programs across two stages. Every program combines the underlying math, hands-on coding, and projects that matter.",
     "pathEyebrow": "Learning path",
     "pathTitle": "Two stages, six programs",
@@ -162,7 +150,7 @@
     "metaTitle": "About ResAI",
     "eyebrow": "About",
     "title": "About ResAI",
-    "cofounded": "ResAI is co-founded by researchers from UCLA, Harvard, Stanford, and Peking University.",
+    "cofounded": "ResAI is co-founded by researchers and professors from UCLA, Harvard, Stanford, and Peking University.",
     "missionEyebrow": "Our mission",
     "missionTitle": "Help students understand AI deeply and use it to do good work",
     "missionBody1": "AI is becoming a basic tool of science, engineering, and everyday life. We believe students should understand how it works, not just how to use it.",
