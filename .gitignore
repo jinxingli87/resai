@@ -30,3 +30,7 @@ next-env.d.ts
 *.pem
 npm-debug.log*
 __pycache__/
+
+# macOS / iCloud sync duplicates (e.g. "page 2.tsx", "contact 2/")
+* [0-9].*
+* [0-9]
