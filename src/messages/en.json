@@ -34,12 +34,11 @@
     "specialization": "Specializations"
   },
   "cta": {
-    "lead": "Tell us about the student, their background, and their goals. We'll suggest where to begin.",
     "contact": "Contact us",
     "programs": "Browse programs"
   },
   "footer": {
-    "tagline": "AI education, olympiad preparation, and research mentorship for students.",
+    "tagline": "AI education, competition, and research mentorship for k-12 students",
     "usaaioOverview": "USAAIO overview",
     "researchOverview": "Research overview",
     "problems": "Past problems",
@@ -165,7 +164,6 @@
         "body": "Mentored projects in AI for science and society."
       }
     },
-    "ctaTitle": "Let's talk",
     "ctaLead": "Questions about programs, olympiad preparation, or research? We'd love to hear from you."
   },
   "contact": {

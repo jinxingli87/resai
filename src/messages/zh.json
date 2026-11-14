@@ -34,12 +34,11 @@
     "specialization": "专项"
   },
   "cta": {
-    "lead": "告诉我们学生的背景和目标，我们会建议合适的起点。",
     "contact": "联系我们",
     "programs": "浏览课程"
   },
   "footer": {
-    "tagline": "面向学生的人工智能教育、竞赛备赛与科研指导。",
+    "tagline": "面向中小学生的人工智能教育、竞赛与科研指导",
     "usaaioOverview": "USAAIO 概览",
     "researchOverview": "科研概览",
     "problems": "历年真题",
@@ -165,7 +164,6 @@
         "body": "AI 赋能科学与社会的指导项目。"
       }
     },
-    "ctaTitle": "欢迎交流",
     "ctaLead": "关于课程、竞赛备赛或科研有任何问题，欢迎联系我们。"
   },
   "contact": {

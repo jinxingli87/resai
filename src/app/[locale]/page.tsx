@@ -6,7 +6,6 @@ import { buttonClass } from "@/components/ui/button";
 import { CtaBand, Section, SectionHeading } from "@/components/ui/page";
 import { Icon } from "@/components/ui/icons";
 import { programs, STAGES } from "@/content/programs";
-import { humanityAreas, scienceAreas } from "@/content/research";
 import { pageMetadata, pick } from "@/lib/i18n";
 import { SITE_URL } from "@/lib/utils";
 
@@ -96,86 +95,6 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
               </span>
             </Link>
           ))}
-        </div>
-      </Section>
-
-      {/* Learning path */}
-      <section className="border-y border-slate-200/70 bg-slate-50/70">
-        <div className="container-page py-16 sm:py-20">
-          <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
-            <SectionHeading eyebrow={t("path.eyebrow")} title={t("path.title")} lead={t("path.lead")} />
-            <Link href="/education" className={buttonClass({ variant: "secondary", className: "shrink-0" })}>
-              {t("path.cta")}
-            </Link>
-          </div>
-          <ol className="mt-12 grid gap-4 md:grid-cols-2">
-            {STAGES.map((s, i) => (
-              <li key={s} className="relative rounded-2xl border border-slate-200 bg-white p-6">
-                <div className="flex items-center gap-3">
-                  <span className="grid size-8 place-items-center rounded-full bg-ink text-sm font-semibold text-white">{i + 1}</span>
-                  <span className="text-sm font-semibold tracking-wide text-brand-700">{st(s)}</span>
-                </div>
-                <ul className="mt-5 space-y-2">
-                  {programs
-                    .filter((p) => p.stage === s)
-                    .map((p) => (
-                      <li key={p.slug}>
-                        <Link href={`/education/${p.slug}`} className="group flex items-start gap-3 rounded-xl p-2 -mx-2 hover:bg-brand-50/60">
-                          <Icon name={p.icon} className="mt-0.5 size-5 shrink-0 text-brand-600" />
-                          <span>
-                            <span className="block font-medium text-ink group-hover:text-brand-800">{pick(p.title, locale)}</span>
-                            <span className="mt-0.5 block text-sm leading-6 text-slate-500">{pick(p.tagline, locale)}</span>
-                          </span>
-                        </Link>
-                      </li>
-                    ))}
-                </ul>
-              </li>
-            ))}
-          </ol>
-        </div>
-      </section>
-
-      {/* Research teaser */}
-      <section className="bg-ink text-slate-300">
-        <div className="container-page py-16 sm:py-20">
-          <div className="max-w-3xl">
-            <p className="text-sm font-semibold tracking-wide text-brand-300">{t("research.eyebrow")}</p>
-            <h2 className="mt-2 text-3xl font-semibold tracking-tight text-white sm:text-4xl">{t("research.title")}</h2>
-            <p className="mt-4 text-lg leading-8 text-slate-400">{t("research.lead")}</p>
-          </div>
-          <div className="mt-12 grid gap-6 md:grid-cols-2">
-            {[
-              { key: "science", areas: scienceAreas },
-              { key: "humanity", areas: humanityAreas },
-            ].map((g) => (
-              <div key={g.key} className="rounded-2xl border border-white/10 bg-white/[0.03] p-7">
-                <h3 className="text-xl font-semibold text-white">{t(`research.${g.key}`)}</h3>
-                <ul className="mt-5 flex flex-wrap gap-2">
-                  {g.areas.map((a) => (
-                    <li key={a.key} className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-sm text-slate-200">
-                      <Icon name={a.icon} className="size-4 text-brand-300" />
-                      {pick(a.title, locale)}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-          <Link href="/research" className={buttonClass({ variant: "light", className: "mt-10" })}>
-            {t("research.cta")} <ArrowRight className="size-4" aria-hidden />
-          </Link>
-        </div>
-      </section>
-
-      {/* Who we are */}
-      <Section>
-        <div className="mx-auto max-w-3xl text-center">
-          <p className="text-sm font-semibold tracking-wide text-brand-700">{t("who.eyebrow")}</p>
-          <p className="mt-4 text-2xl leading-relaxed font-medium text-ink sm:text-3xl">{t("who.statement")}</p>
-          <Link href="/about" className="mt-6 inline-flex items-center gap-1.5 font-semibold text-brand-700 hover:underline">
-            {t("who.link")} <ArrowRight className="size-4" aria-hidden />
-          </Link>
         </div>
       </Section>
 

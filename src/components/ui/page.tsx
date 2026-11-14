@@ -97,8 +97,8 @@ export async function CtaBand({ title, lead }: { title?: string; lead?: string }
         />
         <div className="relative">
           {title && <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">{title}</h2>}
-          <p className={cn("mx-auto max-w-2xl text-lg text-slate-300", title && "mt-4")}>{lead ?? t("lead")}</p>
-          <div className="mt-8 flex flex-wrap justify-center gap-3">
+          {lead && <p className={cn("mx-auto max-w-2xl text-lg text-slate-300", title && "mt-4")}>{lead}</p>}
+          <div className={cn("flex flex-wrap justify-center gap-3", (title || lead) && "mt-8")}>
             <Link href="/contact" className={buttonClass({ variant: "light", size: "lg" })}>
               {t("contact")}
             </Link>

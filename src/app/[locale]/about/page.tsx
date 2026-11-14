@@ -43,7 +43,7 @@ export default async function AboutPage({ params }: PageProps<"/[locale]/about">
         </div>
       </Section>
 
-      <CtaBand title={t("ctaTitle")} lead={t("ctaLead")} />
+      <CtaBand lead={t("ctaLead")} />
     </>
   );
 }

@@ -47,7 +47,7 @@ export async function Footer({ locale }: { locale: string }) {
 
   return (
     <footer className="mt-24 bg-ink text-slate-300">
-      <div className="container-page grid gap-12 py-16 lg:grid-cols-[1.3fr_2fr]">
+      <div className="container-page py-16">
         <div className="max-w-sm">
           <div className="inline-flex rounded-xl bg-white px-3 py-2">
             <Image src="/brand/logo.svg" alt="ResAI" width={828} height={346} className="h-8 w-auto" />
@@ -69,7 +69,7 @@ export async function Footer({ locale }: { locale: string }) {
             </dl>
           </div>
         </div>
-        <div className="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 md:grid-cols-4">
+        <div className="mt-12 grid grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-4">
           {groups.map((g) => (
             <div key={g.title}>
               <h2 className="text-sm font-semibold text-white">{g.title}</h2>
