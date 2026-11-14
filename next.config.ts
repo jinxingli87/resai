@@ -8,6 +8,10 @@ const nextConfig: NextConfig = {
     return [
       { source: "/courses", destination: "/education", permanent: true },
       { source: "/consulting", destination: "/", permanent: true },
+      { source: "/checkout/:path*", destination: "/contact", permanent: false },
+      { source: "/dashboard/:path*", destination: "/", permanent: false },
+      { source: "/auth/:path*", destination: "/", permanent: false },
+      { source: "/admin/:path*", destination: "/", permanent: false },
       ...[
         ["python", "coding"],
         ["vibe-coding", "coding"],
