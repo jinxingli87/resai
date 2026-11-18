@@ -28,7 +28,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
     url: SITE_URL,
     logo: `${SITE_URL}/brand/logo.png`,
     description: t("hero.lead"),
-    email: "foxglobe2023@gmail.com",
+    email: "jli@resai.us",
   };
 
   return (
