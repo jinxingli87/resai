@@ -6,5 +6,5 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export const SITE_URL = "https://resai.us";
-export const CONTACT_EMAIL_PARTS = ["foxglobe2023", "gmail.com"] as const;
+export const CONTACT_EMAIL_PARTS = ["jli", "resai.us"] as const;
 export const WECHAT_ID = "StarryNightSecret";
