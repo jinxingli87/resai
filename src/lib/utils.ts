@@ -7,4 +7,4 @@ export function cn(...inputs: ClassValue[]) {
 
 export const SITE_URL = "https://resai.us";
 export const CONTACT_EMAIL_PARTS = ["jli", "resai.us"] as const;
-export const WECHAT_ID = "StarryNightSecret";
+export const WECHAT_ID = "ResAI_ResAI";
