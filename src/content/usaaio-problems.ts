@@ -13,25 +13,26 @@ export type ProblemSet = {
   slug: string;
   year: number;
   round: Localized;
-  date: string; // ISO date
-  pages: number;
-  pdf: string; // file under public/usaaio/problems
+  date?: string; // ISO date
+  pdf?: string; // official PDF, copied under public/usaaio/problems
   officialUrl: string;
-  /** Show the official pages on the site. Set false to fall back to "summary + official link". */
-  showFull: boolean;
   intro: Localized;
   problems: Problem[];
-  rationale?: { slug: string; pages: number; pdf: string; officialUrl: string };
+  /** Official solutions are included and shown behind a "Show solution" toggle. */
+  hasSolutions?: boolean;
+  rationale?: { slug: string; pdf: string; officialUrl: string };
 };
 
 const OFFICIAL = "https://www.usaaio.org/attachments/past-problems/2026";
 
 export const PAST_PROBLEMS_URL = "https://www.usaaio.org/usa-na-aio/past-problems";
+const FORUM_2025_R1 = "https://forum.beaver-edge.ai/c/ai-olympiads/usa-north-america-ai-olympiad/8";
+const FORUM_2025_R2 = "https://forum.beaver-edge.ai/c/ai-olympiads/2025-usa-na-aio-round-2/9";
+
 export const DATASETS_URL = "https://huggingface.co/usaaio-official";
 
 const rationale = {
   slug: "2026-round2-rationale",
-  pages: 6,
   pdf: "/usaaio/problems/usaaio-2026-round2-rationale.pdf",
   officialUrl: `${OFFICIAL}/usaaio-2026-round-2-design-and-rationale.pdf`,
 };
@@ -42,10 +43,8 @@ export const problemSets: ProblemSet[] = [
     year: 2026,
     round: { en: "Round 1", zh: "第一轮" },
     date: "2026-01-30",
-    pages: 24,
     pdf: "/usaaio/problems/usaaio-2026-round1.pdf",
     officialUrl: `${OFFICIAL}/usaaio-2026-round-1-problems.pdf`,
-    showFull: true,
     intro: {
       en: "Nine problems mixing multiple-choice concept questions, short derivations, and Colab coding tasks across the Round 1 syllabus: math foundations, classical ML, PyTorch, NLP embeddings, and CNNs.",
       zh: "共九道题，覆盖第一轮考纲：数学基础、经典机器学习、PyTorch、NLP 词向量与 CNN，题型包括概念选择题、简短推导和 Colab 编程题。",
@@ -148,10 +147,8 @@ export const problemSets: ProblemSet[] = [
     year: 2026,
     round: { en: "Round 2 · Day 1", zh: "第二轮 · 第一天" },
     date: "2026-04-04",
-    pages: 15,
     pdf: "/usaaio/problems/usaaio-2026-round2-day1.pdf",
     officialUrl: `${OFFICIAL}/usaaio-2026-round-2-day-1-problems.pdf`,
-    showFull: true,
     intro: {
       en: "Two long problems: a guided derivation-and-implementation problem on linear attention, and an open-ended scientific inverse problem.",
       zh: "两道大题：一道关于线性注意力的推导与实现引导题，一道开放式的科学反问题。",
@@ -187,10 +184,8 @@ export const problemSets: ProblemSet[] = [
     year: 2026,
     round: { en: "Round 2 · Day 2", zh: "第二轮 · 第二天" },
     date: "2026-04-05",
-    pages: 14,
     pdf: "/usaaio/problems/usaaio-2026-round2-day2.pdf",
     officialUrl: `${OFFICIAL}/usaaio-2026-round-2-day-2-problems.pdf`,
-    showFull: true,
     intro: {
       en: "One derivation problem on diffusion models and two open-ended modeling problems under realistic constraints.",
       zh: "一道扩散模型推导题，以及两道在现实约束下的开放式建模题。",
@@ -232,21 +227,91 @@ export const problemSets: ProblemSet[] = [
     ],
     rationale,
   },
-];
-
-/** 2025 problems are hosted by USAAIO on an external forum, so they are linked rather than shown. */
-export const externalSets = [
   {
-    key: "2025-round1",
+    slug: "2025-round1",
     year: 2025,
     round: { en: "Round 1", zh: "第一轮" },
-    url: "https://forum.beaver-edge.ai/c/ai-olympiads/usa-north-america-ai-olympiad/8",
+    officialUrl: FORUM_2025_R1,
+    hasSolutions: true,
+    intro: {
+      en: "Three multi-part problems that build from hand derivations to working code: linear algebra on the Fibonacci sequence, neural-network fundamentals in NumPy and PyTorch, and logistic regression on the Titanic dataset.",
+      zh: "三道多小问的大题，从手工推导逐步过渡到编程实现：用线性代数分析斐波那契数列、用 NumPy 和 PyTorch 实现神经网络基础，以及在 Titanic 数据集上实现逻辑回归。",
+    },
+    problems: [
+      {
+        number: 1,
+        title: { en: "Fibonacci numbers and eigenvalues", zh: "斐波那契数与特征值" },
+        points: 100,
+        topics: { en: ["Linear algebra", "Eigendecomposition", "NumPy"], zh: ["线性代数", "特征分解", "NumPy"] },
+        summary: {
+          en: "Write the Fibonacci recurrence in matrix form, prove that eigenvectors of a symmetric matrix are orthogonal, derive a closed form through spectral decomposition, and implement it in NumPy without loops.",
+          zh: "将斐波那契递推写成矩阵形式，证明对称矩阵的特征向量正交，利用谱分解推导通项公式，并在不使用循环的情况下用 NumPy 实现。",
+        },
+      },
+      {
+        number: 2,
+        title: { en: "Neural network basics", zh: "神经网络基础" },
+        points: 100,
+        topics: { en: ["Linear layers", "Gradients", "PyTorch", "MLP"], zh: ["线性层", "梯度", "PyTorch", "多层感知机"] },
+        summary: {
+          en: "Compute gradients of a linear layer by hand, implement it in NumPy and PyTorch, count parameters and analyze rank, then build a ReLU module and an MLP and train it on a synthetic dataset.",
+          zh: "手工计算线性层的梯度，分别用 NumPy 和 PyTorch 实现，统计参数量并分析矩阵的秩，再实现 ReLU 模块和 MLP，并在合成数据集上训练。",
+        },
+      },
+      {
+        number: 3,
+        title: { en: "Titanic survival with logistic regression", zh: "用逻辑回归预测 Titanic 生还" },
+        points: 100,
+        topics: { en: ["pandas", "Data preprocessing", "Logistic regression", "Convexity"], zh: ["pandas", "数据预处理", "逻辑回归", "凸性"] },
+        summary: {
+          en: "Clean and encode the Titanic data with pandas, derive the gradient and Hessian of the log-likelihood and prove its concavity, then implement logistic regression trained by gradient descent and Newton's method.",
+          zh: "用 pandas 清洗并编码 Titanic 数据，推导对数似然的梯度和 Hessian 矩阵并证明其凹性，再实现分别用梯度下降和牛顿法训练的逻辑回归。",
+        },
+      },
+    ],
   },
   {
-    key: "2025-round2",
+    slug: "2025-round2",
     year: 2025,
     round: { en: "Round 2", zh: "第二轮" },
-    url: "https://forum.beaver-edge.ai/c/ai-olympiads/2025-usa-na-aio-round-2/9",
+    officialUrl: FORUM_2025_R2,
+    hasSolutions: true,
+    intro: {
+      en: "Three long problems on modern deep learning, each mixing derivations with PyTorch implementation: physics-informed neural networks, multi-head attention and its efficient variants, and CLIP.",
+      zh: "三道关于现代深度学习的长题，每道题都把推导与 PyTorch 实现结合起来：物理信息神经网络、多头注意力及其高效变体，以及 CLIP。",
+    },
+    problems: [
+      {
+        number: 1,
+        title: { en: "Physics-informed neural networks", zh: "物理信息神经网络（PINN）" },
+        points: 100,
+        topics: { en: ["AI for science", "PDEs", "Autograd"], zh: ["科学智能", "偏微分方程", "自动求导"] },
+        summary: {
+          en: "Prove the analytical solution of a 1-D heat equation, then train a PINN whose loss combines PDE residual, initial-condition and boundary-condition terms, using torch.autograd.grad for derivatives and mini-batch training.",
+          zh: "先证明一维热传导方程的解析解，再训练一个 PINN：损失由 PDE 残差、初始条件和边界条件三部分组成，用 torch.autograd.grad 求导并进行小批量训练。",
+        },
+      },
+      {
+        number: 2,
+        title: { en: "Multi-head attention and its variants", zh: "多头注意力及其变体" },
+        points: 100,
+        topics: { en: ["Transformers", "GQA", "MLA", "KV cache"], zh: ["Transformer", "GQA", "MLA", "KV 缓存"] },
+        summary: {
+          en: "Work through the shapes and formulas of multi-head attention, implement MHA and grouped-query attention, relate GQA to DeepSeek's multi-head latent attention, and compare KV-cache sizes across the three.",
+          zh: "梳理多头注意力的张量形状与公式，实现 MHA 与分组查询注意力（GQA），分析 GQA 与 DeepSeek 多头潜在注意力（MLA）的关系，并比较三者的 KV 缓存大小。",
+        },
+      },
+      {
+        number: 3,
+        title: { en: "CLIP: contrastive language-image pre-training", zh: "CLIP：对比式语言-图像预训练" },
+        points: 100,
+        topics: { en: ["Multimodal AI", "Contrastive learning", "High-dimensional geometry"], zh: ["多模态 AI", "对比学习", "高维几何"] },
+        summary: {
+          en: "Preprocess paired images and captions, build and train a small CLIP model with a learnable temperature and contrastive loss, and prove that random high-dimensional vectors are nearly orthogonal to justify cosine similarity.",
+          zh: "预处理成对的图像与文本，构建并训练一个带可学习温度参数和对比损失的小型 CLIP 模型，并证明高维随机向量近似正交，以说明使用余弦相似度的合理性。",
+        },
+      },
+    ],
   },
 ];
 
@@ -254,6 +319,4 @@ export function getProblemSet(slug: string) {
   return problemSets.find((s) => s.slug === slug);
 }
 
-export function pageImages(slug: string, pages: number) {
-  return Array.from({ length: pages }, (_, i) => `/usaaio/problems/${slug}/page-${String(i + 1).padStart(2, "0")}.webp`);
-}
+export const problemYears = [...new Set(problemSets.map((s) => s.year))].sort((a, b) => b - a);

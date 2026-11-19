@@ -1,0 +1,353 @@
+{
+ "problems": [
+  {
+   "number": 1,
+   "points": 100,
+   "intro": "Let us consider the following sequence:\n\n$$\nF_n = F_{n-1} + F_{n-2} , \\ \\forall \\ n \\geq 2 .\n$$\n\nBefore starting this problem, make sure to run the following code first **without any change**:\n\n```\n# DO NOT CHANGE\n\nimport numpy as np\n\nimport matplotlib.pyplot as plt\n\n\"\"\" END OF THIS PART \"\"\"\n```\n\n$\\color{red}{\\text{WARNING !!!}}$\n\n* Beyond importing libraries/modules/classes/functions in the preceeding cell, you are **NOT allowed to import anything else for the following purposes**:\n\n    * **As a part of your final solution.** For instance, if a problem asks you to build a model without using sklearn but you use it, then you will not earn points.\n\n    * **Temporarily import something to assist you to get a solution.** For instance, if a problem asks you to manually compute eigenvalues but you temporarily use `np.linalg.eig` to get an answer and then delete your code, then you violate the rule.\n\n  **Rule of thumb:** Each part has its particular purpose to intentionally test you something. Do not attempt to find a shortcut to circumvent the rule.\n\n* All coding tasks shall run on CPUs, **not GPUs**.",
+   "parts": [
+    {
+     "label": "1",
+     "points": 10,
+     "kind": "non-coding",
+     "body": "Let $F_0 = 3$, $F_1 = 1$.\n\n**Manually write down $F_n$ for $n = 2, 3, 4 , 5$.**\n\n* Reasoning is not required.",
+     "answer": "$$\n\\begin{align*}\n\\boxed{F_2 = 4, F_3 = 5, F_4 = 9, F_5 = 14 .}\n\\end{align*}\n$$",
+     "source": "https://forum.beaver-edge.ai/t/164"
+    },
+    {
+     "label": "2",
+     "points": 10,
+     "kind": "non-coding",
+     "body": "The recursive equation that defines the sequence in this problem can be written in a matrix form:\n\n$$\n\\begin{bmatrix}\nF_n \\\\\nF_{n-1}\n\\end{bmatrix}\n= \\mathbf{A}\n\\begin{bmatrix}\nF_{n-1} \\\\\nF_{n-2}\n\\end{bmatrix}, \\ \\forall \\ n \\geq 2 ,\n$$\n\nwhere $\\mathbf{A} \\in \\Bbb R^{2 \\times 2}$.\n\n**Compute $\\mathbf{A}$.**\n\n* Reasoning is not required.\n\n* The value of each entry in $\\mathbf{A}$ must be exact. For instance, the following values are exact: $\\sqrt{3}$, $\\frac{2}{\\sqrt{7}}$, $\\pi + \\frac{3}{8}$, $e^2$, $\\sin 40^\\circ$, $\\log 18$. However, their float approximations are not exact.",
+     "answer": "$$\n\\boxed{\\mathbf{A}\n= \\begin{bmatrix}\n1 & 1 \\\\\n1 & 0\n\\end{bmatrix} .}\n$$",
+     "source": "https://forum.beaver-edge.ai/t/165"
+    },
+    {
+     "label": "3",
+     "points": 10,
+     "kind": "non-coding",
+     "body": "**Explain why $\\mathbf{A}$ is a symmetric matrix.**",
+     "answer": "Because\n\n$$\n\\mathbf{A}^\\top\n= \\mathbf{A}\n= \\begin{bmatrix}\n1 & 1 \\\\\n1 & 0\n\\end{bmatrix} ,\n$$\n\nmatrix $\\mathbf{A}$ is symmetric.",
+     "source": "https://forum.beaver-edge.ai/t/166"
+    },
+    {
+     "label": "4",
+     "points": 10,
+     "kind": "non-coding",
+     "body": "**In this part, you are asked to prove a general result that holds for any real-valued symmetric matrix.**\n\nLet $\\mathbf{U} \\in \\Bbb R^{N \\times N}$ be a real-valued symmetric matrix.\n\nConsider the following eigenvalue equation\n\n$$\n\\mathbf{U} \\mathbf{v} = \\lambda \\mathbf{v} ,\n$$\n\nwhere $\\lambda \\in \\Bbb R$ and $\\mathbf{v} \\in \\Bbb R^{N \\times 1}$.\n\nLet $\\lambda_i$ and $\\lambda_j$ be two distinct real eigenvalues and $\\mathbf{v}_i, \\mathbf{v}_j \\in \\Bbb R^{N \\times 1}$ be two eigenvectors associated with them, respectively.\n\nProve that\n\n$$\n\\mathbf{v}_i^\\top \\mathbf{v}_j = 0 .\n$$\n\nThat is, vectors $\\mathbf{v}_i$ and $\\mathbf{v}_j$ are orthogonal.",
+     "answer": "We use two approaches to compute\n\n$$\n\\mathbf{v}_i^\\top \\mathbf{U} \\mathbf{v}_j .\n$$\n\n**Approach 1**\n\nWe have\n\n$$\n\\begin{align*}\n\\mathbf{v}_i^\\top \\mathbf{U} \\mathbf{v}_j\n& = \\mathbf{v}_i^\\top \\left( \\mathbf{U} \\mathbf{v}_j \\right) \\\\\n& = \\mathbf{v}_i^\\top \\left( \\lambda_j \\mathbf{v}_j \\right) \\\\\n& = \\lambda_j \\mathbf{v}_i^\\top \\mathbf{v}_j . \\hspace{1cm} (1)\n\\end{align*}\n$$\n\n**Approach 1**\n\nWe have\n\n$$\n\\begin{align*}\n\\mathbf{v}_i^\\top \\mathbf{U} \\mathbf{v}_j\n& = \\left( \\mathbf{v}_i^\\top \\mathbf{U} \\right) \\mathbf{v}_j \\\\\n& = \\left( \\mathbf{v}_i^\\top \\mathbf{U}^\\top \\right) \\mathbf{v}_j \\\\\n& = \\left( \\mathbf{U} \\mathbf{v}_i \\right)^\\top \\mathbf{v}_j \\\\\n& = \\left( \\lambda_i \\mathbf{v}_i \\right)^\\top \\mathbf{v}_j \\\\\n& = \\lambda_i \\mathbf{v}_i^\\top \\mathbf{v}_j , \\hspace{1cm} (2)\n\\end{align*}\n$$\n\nwhere the second equality follows from the property that $\\mathbf{U}$ is a symmetric matrix.\n\nTwo approaches should yield the same result. Equating (1) and (2), we have\n\n$$\n\\lambda_j \\mathbf{v}_i^\\top \\mathbf{v}_j\n= \\lambda_i \\mathbf{v}_i^\\top \\mathbf{v}_j .\n$$\n\nBecause $\\lambda_i \\neq \\lambda_j$, we must have\n\n$$\n\\mathbf{v}_i^\\top \\mathbf{v}_j = 0 .\n$$\n\nThis completes the proof.",
+     "source": "https://forum.beaver-edge.ai/t/167"
+    },
+    {
+     "label": "5",
+     "points": 10,
+     "kind": "non-coding",
+     "body": "Let us go back to our matrix $\\mathbf{A}$.\n\nIn the following eigenvalue equation\n\n$$\n\\mathbf{A} \\mathbf{x} = \\lambda \\mathbf{x} ,\n$$\n\n**compute two eigenvalues $\\lambda_0$ and $\\lambda_1$ whose values are in a descending order.**\n\n* Reasoning is required.",
+     "answer": "We solve the following characteristic equation:\n\n$$\n\\det \\left( \\mathbf{A} - \\lambda \\mathbf{I} \\right) = 0 .\n$$\n\nThus, we compute $\\lambda$ that satisfies\n\n$$\n\\left( 1 - \\lambda \\right) \\left( - \\lambda \\right) - 1 \\cdot 1 = 0 .\n$$\n\nHence, all eigenvalues are\n\n$$\n\\boxed{\\lambda_0 = \\frac{1 + \\sqrt{5}}{2} , \\quad \\lambda_1 = \\frac{1 - \\sqrt{5}}{2} .}\n$$",
+     "source": "https://forum.beaver-edge.ai/t/168"
+    },
+    {
+     "label": "6",
+     "points": 10,
+     "kind": "non-coding",
+     "body": "**In the remaining parts of this problem, for all non-coding tasks, when you need to use those eigenvalues,**\n\n$$\n\\color{red}{\\textbf{keep them as \\(\\lambda_0\\) and \\(\\lambda_1\\). No need to apply their formulae.}}\n$$\n\n**Since matrix $\\mathbf{A}$ is symmetric, let us do the spectral decomposition of it.**\n\nThat is, you should write $\\mathbf{A}$ in the following form:\n\n$$\n\\mathbf{A} = \\mathbf{Q} \\mathbf{\\Lambda} \\mathbf{Q}^\\top ,\n$$\n\nwhere\n\n* $\\mathbf{Q} \\in \\Bbb R^{2 \\times 2}$ is an orthonormal matrix.\n\n* $\\mathbf{\\Lambda} = \\begin{bmatrix} \\lambda_0 & 0 \\\\ 0 & \\lambda_1 \\end{bmatrix} \\in \\Bbb R^{2 \\times 2}$ is a diagnomal matrix with $\\lambda_0 > \\lambda_1$\n\n**In this task, you need to compute $\\mathbf{Q}$. Reasoning is required.**",
+     "answer": "To compute an eigenvector $\\mathbf{x}_i$ assocaited with the eigenvalue $\\lambda_i$ for $i \\in \\left\\{ 0, 1 \\right\\}$, we solve the following equation:\n\n$$\n\\begin{bmatrix}\n1 - \\lambda_i & 1 \\\\\n1 & - \\lambda_i\n\\end{bmatrix}\n\\begin{bmatrix}\nx_{i0} \\\\\nx_{i1}\n\\end{bmatrix}\n= \\begin{bmatrix}\n0 \\\\\n0\n\\end{bmatrix} .\n$$\n\nSince the determintant of the 2-by-2 matrix on the L.H.S. is 0, the rank of this matrix is 1. Thus, it is sufficient to only solve the following equation:\n\n$$\n\\begin{bmatrix}\n1 & - \\lambda_i\n\\end{bmatrix}\n\\begin{bmatrix}\nx_{i0} \\\\\nx_{i1}\n\\end{bmatrix}\n= \\begin{bmatrix}\n0 \\\\\n0\n\\end{bmatrix} .\n$$\n\nOne solution is\n\n$$\n\\mathbf{x}_i = \\begin{bmatrix}\nx_{i0} \\\\\nx_{i1}\n\\end{bmatrix}\n= \\begin{bmatrix}\n\\lambda_i \\\\\n1\n\\end{bmatrix} .\n$$\n\nThus, the $i$th orthonormal vector is\n\n$$\n\\begin{align*}\n\\mathbf{q}_i\n& = \\frac{\\mathbf{x}_i}{|| \\mathbf{x}_i ||_2} \\\\\n& = \\frac{1}{\\sqrt{1 + \\lambda_i^2}}\n\\begin{bmatrix}\n\\lambda_i \\\\\n1\n\\end{bmatrix} .\n\\end{align*}\n$$\n\nTherefore,\n\n$$\n\\begin{align*}\n\\mathbf{Q}\n= \\boxed{\\begin{bmatrix}\n\\frac{\\lambda_0}{\\sqrt{1 + \\lambda_0^2}}\n&\n\\frac{\\lambda_1}{\\sqrt{1 + \\lambda_1^2}} \\\\\n\\frac{1}{\\sqrt{1 + \\lambda_0^2}}\n&\n\\frac{1}{\\sqrt{1 + \\lambda_1^2}}\n\\end{bmatrix} }.\n\\end{align*}\n$$",
+     "source": "https://forum.beaver-edge.ai/t/169"
+    },
+    {
+     "label": "7",
+     "points": 10,
+     "kind": "non-coding",
+     "body": "**Use the spectral decomposition result to derive a closed form of $F_{n}$ for any $n \\in \\left\\{ 0, 1, \\cdots \\right\\}$.**\n\n* Reasoning is required.\n\n* Your answer shall be written in terms of $\\lambda_0$, $\\lambda_1$, and $F_0$ and $F_1$.",
+     "answer": "For $n \\geq 1$, we have\n\n$$\n\\begin{align*}\n\\begin{bmatrix}\nF_n \\\\\nF_{n-1}\n\\end{bmatrix}\n& = \\mathbf{A}^{n-1}\n\\begin{bmatrix}\nF_1 \\\\\nF_0\n\\end{bmatrix} \\\\\n& = \\left( \\mathbf{Q} \\mathbf{\\Lambda} \\mathbf{Q}^\\top \\right)^{n-1}\n\\begin{bmatrix}\nF_1 \\\\\nF_0\n\\end{bmatrix} \\\\\n& = \\mathbf{Q} \\mathbf{\\Lambda}^{n-1} \\mathbf{Q}^\\top\n\\begin{bmatrix}\nF_1 \\\\\nF_0\n\\end{bmatrix} .\n\\end{align*}\n$$\n\nThus, for $n \\geq 1$, we have\n\n$$\n\\begin{align*}\nF_n & = \\begin{bmatrix}\n1 & 0\n\\end{bmatrix}\n\\mathbf{A}\n\\begin{bmatrix}\nF_1 \\\\\nF_0\n\\end{bmatrix} \\\\\n& = \\begin{bmatrix}\n1 & 0\n\\end{bmatrix}\n\\mathbf{Q} \\mathbf{\\Lambda}^{n-1} \\mathbf{Q}^\\top\n\\begin{bmatrix}\nF_1 \\\\\nF_0\n\\end{bmatrix} \\\\\n& = \\begin{bmatrix}\n1 & 0\n\\end{bmatrix}\n\\begin{bmatrix}\n\\frac{\\lambda_0}{\\sqrt{1 + \\lambda_0^2}}\n&\n\\frac{\\lambda_1}{\\sqrt{1 + \\lambda_1^2}} \\\\\n\\frac{1}{\\sqrt{1 + \\lambda_0^2}}\n&\n\\frac{1}{\\sqrt{1 + \\lambda_1^2}}\n\\end{bmatrix}\n\\begin{bmatrix}\n\\lambda_0^{n-1} & 0 \\\\\n0 & \\lambda_1^{n-1}\n\\end{bmatrix}\n\\begin{bmatrix}\n\\frac{\\lambda_0}{\\sqrt{1 + \\lambda_0^2}}\n&\n\\frac{1}{\\sqrt{1 + \\lambda_0^2}} \\\\\n\\frac{\\lambda_1}{\\sqrt{1 + \\lambda_1^2}}\n&\n\\frac{1}{\\sqrt{1 + \\lambda_1^2}}\n\\end{bmatrix}\n\\begin{bmatrix}\nF_1 \\\\\nF_0\n\\end{bmatrix} \\\\\n& = \\begin{bmatrix}\n\\frac{\\lambda_0}{\\sqrt{1 + \\lambda_0^2}}\n&\n\\frac{\\lambda_1}{\\sqrt{1 + \\lambda_1^2}}\n\\end{bmatrix}\n\\begin{bmatrix}\n\\lambda_0^{n-1} & 0 \\\\\n0 & \\lambda_1^{n-1}\n\\end{bmatrix}\n\\begin{bmatrix}\n\\frac{\\lambda_0}{\\sqrt{1 + \\lambda_0^2}}\n&\n\\frac{1}{\\sqrt{1 + \\lambda_0^2}} \\\\\n\\frac{\\lambda_1}{\\sqrt{1 + \\lambda_1^2}}\n&\n\\frac{1}{\\sqrt{1 + \\lambda_1^2}}\n\\end{bmatrix}\n\\begin{bmatrix}\nF_1 \\\\\nF_0\n\\end{bmatrix} \\\\\n& = \\begin{bmatrix}\n\\frac{\\lambda_0^n}{\\sqrt{1 + \\lambda_0^2}}\n&\n\\frac{\\lambda_1^n}{\\sqrt{1 + \\lambda_1^2}}\n\\end{bmatrix}\n\\begin{bmatrix}\n\\frac{\\lambda_0}{\\sqrt{1 + \\lambda_0^2}}\n&\n\\frac{1}{\\sqrt{1 + \\lambda_0^2}} \\\\\n\\frac{\\lambda_1}{\\sqrt{1 + \\lambda_1^2}}\n&\n\\frac{1}{\\sqrt{1 + \\lambda_1^2}}\n\\end{bmatrix}\n\\begin{bmatrix}\nF_1 \\\\\nF_0\n\\end{bmatrix} \\\\\n& = \\begin{bmatrix}\n\\frac{\\lambda_0^{n+1}}{1 + \\lambda_0^2}\n+ \\frac{\\lambda_1^{n+1}}{1 + \\lambda_1^2}\n&\n\\frac{\\lambda_0^{n}}{1 + \\lambda_0^2}\n+ \\frac{\\lambda_1^{n}}{1 + \\lambda_1^2}\n\\end{bmatrix}\n\\begin{bmatrix}\nF_1 \\\\\nF_0\n\\end{bmatrix} \\\\\n& = \\boxed{\\left( \\frac{\\lambda_0^{n+1}}{1 + \\lambda_0^2}\n+ \\frac{\\lambda_1^{n+1}}{1 + \\lambda_1^2} \\right) F_1\n+ \\left( \\frac{\\lambda_0^{n}}{1 + \\lambda_0^2}\n+ \\frac{\\lambda_1^{n}}{1 + \\lambda_1^2} \\right) F_0} .\n\\end{align*}\n$$\n\nFor $n = 0$, we can\n\n$$\n\\frac{\\lambda_0^{0+1}}{1 + \\lambda_0^2}\n+ \\frac{\\lambda_1^{0+1}}{1 + \\lambda_1^2}\n= 0\n$$\n\nand\n\n$$\n\\frac{\\lambda_0^{0}}{1 + \\lambda_0^2}\n+ \\frac{\\lambda_1^{0}}{1 + \\lambda_1^2}\n= 1 .\n$$\n\nTherefore, the above answer holds for all $n \\in \\left\\{ 0, 1, \\cdots \\right\\}$.",
+     "source": "https://forum.beaver-edge.ai/t/170"
+    },
+    {
+     "label": "8",
+     "points": 10,
+     "kind": "non-coding",
+     "body": "**Compute**\n\n$$\n\\lim_{n \\rightarrow \\infty} \\ \\frac{F_n}{F_{n-1}} .\n$$\n\n* Reasoning is required.\n\n* Your answer shall be written in terms of one or two eigenvalues.",
+     "answer": "We notice that $| \\lambda_0 | > 1$ and $| \\lambda_1 | < 1$.\n\nHence,\n\n$$\n\\begin{align*}\n\\lim_{n \\rightarrow \\infty} \\ \\frac{F_n}{F_{n-1}}\n& = \\boxed{\\lambda_0 } .\n\\end{align*}\n$$",
+     "source": "https://forum.beaver-edge.ai/t/171"
+    },
+    {
+     "label": "9",
+     "points": 15,
+     "kind": "coding",
+     "body": "**Define a class called `My_Fib`.**\n\n* Attributes: \n\n    * `Q`: This attribute is matrix $\\mathbf{Q}$ computed above. It is a numpy array with shape `(2,2)`.\n\n    * `lambdas`: This attribute is a numpy array with shape `(2,)` that includes two eigenvalues computed above.\n\n* Method `__init__`:\n\n    * All atttribute values shall be initialized when an object in this class is constructed.\n\n* Method `compute_fib`:\n\n    * This method computes the sequence values on designated indices.\n    \n    * You must use the spectral decomposition result to write this method.\n\n    * **You are not allowed to use any loop.**\n\n    * Inputs:\n\n        * `f0`: The value of $F_0$\n\n        * `f1`: The value of $F_1$\n\n        * `indices`: a list/tuple/range object that includes indices with which the sequence values shall be computed.\n        \n        For instance, if `indices` takes the value `[3, 5, 9]`, we need to compute $F_3$, $F_5$, $F_9$.\n\n        In our test cases, you are guaranteed that `len(indices)` is at least 1. You do not need to worry about the size of the test cases or whether the sequence values are too big (that is, on your side, you do not need to worry about those corner cases).\n\n    * Outputs:\n\n        * Return a numpy array `fib_values` with shape `(len(indices),)` and datatype `int32`.\n\n        * `fib_values[i]` takes the value of $F_{indices[i]}$.\n\n        For instance, if `indices` takes the value `[3, 5, 9]`, then `fib_values` has shape `(3,)`. The values of `fib_values[0]`, `fib_values[1]`, `fib_values[2]` are $F_3$, $F_5$, $F_9$, respectively.\n\n    * Inside this method:\n\n        * Print `fib_values`.\n\n* Method `plot_fib`:\n\n    * This method plots indices vs. sequence values on those indices.\n    \n    * Inputs: The same as the method `compute_fib(f0, f1, indices)`.\n\n    * Outputs: None.\n\n    * In your plot,\n    \n        * All data points with input indices are with marker `x`.\n\n        * The linestyle is `--`.\n\n        * The color is red.\n\n        * The x-lable is: $n$.\n\n        * The y-label is: $F_n$.\n\n        * The title is: Fibounacci sequence.",
+     "answer": "```\n\nclass My_Fib:\n    def __init__(self):\n        self.lambdas = np.array([(1 + 5**.5)/2, (1 - 5**.5)/2])\n        self.Q = np.stack([self.lambdas / np.sqrt(1 + self.lambdas**2), np.ones(2) / np.sqrt(1 + self.lambdas**2)])\n\n    def compute_fib(self, f0, f1, indices):\n        fib_values = (np.power(self.lambdas, np.array(indices)[:, np.newaxis]) / np.sqrt(1 + self.lambdas**2)) \\\n                         @ (self.Q.T @ np.array([f1, f0]))\n\n        fib_values = fib_values.astype(np.int32)\n        print(fib_values)\n        return fib_values\n\n    def plot_fib(self, f0, f1, indices):\n        fib_values = self.compute_fib(f0, f1, indices)\n        plt.plot(indices, fib_values, marker = \"x\", linestyle = \"--\", color = \"red\")\n        plt.xlabel('$n$')\n        plt.ylabel('$F_n$')\n        plt.title('Fibounacci sequence')\n\n```",
+     "source": "https://forum.beaver-edge.ai/t/172"
+    },
+    {
+     "label": "10",
+     "points": 5,
+     "kind": "coding",
+     "body": "**Do the following tasks in this part.**\n\n* Define an object of the class `My_Fib` called `my_fib`.\n\n* Set `f0 = 0`, `f1 = 1`, `indices = range(10)`.\n\n* Call method `my_fib.plot_fib(f0, f1, indices)`.",
+     "answer": "```\n\nmy_fib = My_Fib()\n\nf0 = 0\nf1 = 1\nindices = range(10)\n\nmy_fib.plot_fib(f0, f1, indices)\n\n```",
+     "source": "https://forum.beaver-edge.ai/t/173"
+    }
+   ]
+  },
+  {
+   "number": 2,
+   "points": 100,
+   "intro": "This problem is about the basics of neural network.\n\nBefore starting this problem, make sure to run the following code first **without change**:\n\n```\n\n\"\"\" DO NOT CHANGE \"\"\"\nimport numpy as np\nimport matplotlib.pyplot as plt\nimport torch\nimport torch.nn as nn\nimport torch.optim as optim\ntorch.manual_seed(2025)\n\n```\n\n$\\color{red}{\\text{WARNING !!!}}$\n\n* Beyond importing libraries/modules/classes/functions in the preceeding cell, you are **NOT allowed to import anything else for the following purposes**:\n\n    * **As a part of your final solution.** For instance, if a problem asks you to build a model without using sklearn but you use it, then you will not earn points.\n\n    * **Temporarily import something to assist you to get a solution.** For instance, if a problem asks you to manually compute eigenvalues but you temporarily use `np.linalg.eig` to get an answer and then delete your code, then you violate the rule.\n\n  **Rule of thumb:** Each part has its particular purpose to intentionally test you something. Do not attempt to find a shortcut to circumvent the rule.\n\n* All coding tasks shall run on CPUs, **not GPUs**.",
+   "parts": [
+    {
+     "label": "1",
+     "points": 5,
+     "kind": "non-coding",
+     "body": "The high level idea of affine transformation in math is that for each column vector $\\mathbf{x} \\in \\Bbb R^N$, an affine transformation maps it to another column vector $\\mathbf{y} \\in \\Bbb R^M$ via\n\n$$\n\\mathbf{y} = \\mathbf{W} \\mathbf{x} + \\mathbf{b} ,\n$$\n\nwhere\n\n* $\\mathbf{W} \\in \\Bbb R^{M \\times N}$.\n\n* $\\mathbf{b} \\in \\Bbb R^{M}$.\n\nNow, let us study a small-sized problem.\n\nLet\n\n$$\n\\mathbf{W}\n= \\begin{bmatrix}\n2 & -3 & 1 & 3 & -2 \\\\\n0 & 1 & 2 & 5 & -1 \\\\\n7 & -1 & -3 & 7 & 0\n\\end{bmatrix}\n$$\n\nand\n\n$$\n\\mathbf{b}\n= \\begin{bmatrix}\n1 \\\\\n0 \\\\\n-1\n\\end{bmatrix}\n$$\n\nand\n\n$$\n\\mathbf{x}\n= \\begin{bmatrix}\n1 \\\\\n2 \\\\\n-3 \\\\\n1 \\\\\n-2\n\\end{bmatrix}\n$$\n\n**Answer the following questions:**\n\n1. What is the value of $N$?\n\n2. What is the value of $M$?\n\n3. What is the value of $\\mathbf{y}$.\n\nQuestions 1 and 2 do not require reasoning. Question 3 requires reasoning.",
+     "answer": "1. $N = 5$.\n\n2. $M = 3$.\n\n3. We have\n\n$$\n\\begin{align*}\n\\mathbf{y} & = \\mathbf{W} \\mathbf{x} + \\mathbf{b} \\\\\n& = \\begin{bmatrix}\n2 & -3 & 1 & 3 & -2 \\\\\n0 & 1 & 2 & 5 & -1 \\\\\n7 & -1 & -3 & 7 & 0\n\\end{bmatrix}\n\\begin{bmatrix}\n1 \\\\\n2 \\\\\n-3 \\\\\n1 \\\\\n-2\n\\end{bmatrix}\n+ \\begin{bmatrix}\n1 \\\\\n0 \\\\\n-1\n\\end{bmatrix} \\\\\n& = \\begin{bmatrix}\n2 \\cdot 1 + (-3) \\cdot 2 + 1 \\cdot (-3) | 3 \\cdot 1 + (-2) \\cdot (-2) + 1 \\\\\n0 \\cdot 1 + 1 \\cdot 2 + 2 \\cdot (-3) + 5 \\cdot 1 + (-1) \\cdot (-2) + 0 \\\\\n7 \\cdot 1 (-1) \\cdot 2 + (-3) \\cdot (-3) + 7 \\cdot 1 + 0 \\cdot (-2) + (-1)\n\\end{bmatrix} \\\\\n& = \\boxed{\\begin{bmatrix}\n1 \\\\\n3 \\\\\n20\n\\end{bmatrix} }.\n\\end{align*}\n$$",
+     "source": "https://forum.beaver-edge.ai/t/174"
+    },
+    {
+     "label": "2",
+     "points": 10,
+     "kind": "non-coding",
+     "body": "Define $\\nabla_{\\mathbf{z}} \\ f\\left( \\mathbf{z} \\right)$ to be the gradient of function $f$ with respect to vector/matrix $\\mathbf{z}$.\n\n**Compute the following gradients. Reasoning is required.**\n\n1. $\\nabla_{\\mathbf{x}} \\ y$.\n\n   The final answer should be in a matrix form.\n\n2. $\\nabla_{\\mathbf{W}} \\ y$.\n\n   The final answer should be in an element-wise form.\n\n3. $\\nabla_{\\mathbf{b}} \\ y$.\n\n   The final answer should be in a matrix form.",
+     "answer": "1. Since $\\mathbf{y} \\in \\Bbb R^M$ and $\\mathbf{x} \\in \\Bbb R^N$, $\\nabla_{\\mathbf{x}} \\ \\mathbf{y} \\in \\Bbb R^{M \\times N}$.\n\nWe have\n\n$$\n\\begin{align*}\n\\frac{\\partial y_m}{\\partial x_n}\n& = \\frac{\\partial \\left( \\sum_{i=0}^{N-1} w_{mi} x_i + b_m \\right)}{\\partial x_n} \\\\\n& = w_{mn} .\n\\end{align*}\n$$\n\nTherefore,\n\n$$\n\\boxed{\\nabla_{\\mathbf{x}} \\ \\mathbf{y} = \\mathbf{W} }.\n$$\n\n2. Since $\\mathbf{y} \\in \\Bbb R^M$ and $\\mathbf{W} \\in \\Bbb R^{M \\times N}$, $\\nabla_{\\mathbf{W}} \\ \\mathbf{y} \\in \\Bbb R^{M \\times M \\times N}$.\n\nWe have\n\n$$\n\\begin{align*}\n\\frac{\\partial y_m}{\\partial w_{kn}}\n& = \\frac{\\partial \\left( \\sum_{i=0}^{N-1} w_{mi} x_i + b_m \\right)}{\\partial w_{kn}} \\\\\n& = \\boxed{x_n \\delta_{mk}}.\n\\end{align*}\n$$\n\n3. Since $\\mathbf{y} \\in \\Bbb R^M$ and $\\mathbf{b} \\in \\Bbb R^M$, $\\nabla_{\\mathbf{b}} \\ \\mathbf{y} \\in \\Bbb R^{M \\times M}$.\n\nWe have\n\n$$\n\\begin{align*}\n\\frac{\\partial y_m}{\\partial w_k}\n& = \\frac{\\partial \\left( \\sum_{i=0}^{N-1} w_{mi} x_i + b_m \\right)}{\\partial b_k} \\\\\n& = \\delta_{mk} .\n\\end{align*}\n$$\n\nTherefore,\n\n$$\n\\boxed{\\nabla_{\\mathbf{b}} \\ \\mathbf{y} = \\mathbf{I}_{M \\times M}} .\n$$",
+     "source": "https://forum.beaver-edge.ai/t/175"
+    },
+    {
+     "label": "3",
+     "points": 10,
+     "kind": "coding",
+     "body": "In this part, you are asked to build an affine transformation module from scratch by using **NumPy, NOT PyTorch or TensorFlow**.\n\n**Define such a class as `My_Linear_NumPy`.**\n\n* Attributes\n\n    * `in_features`: Number of input features\n\n    * `out_features`: Number of output features\n    \n    * `weight`: This refers to matrix $\\mathbf{W}$ in Part 1. The shape is `(out_features, in_features)`.\n\n    * `bias`: This refers to vector $\\mathbf{b}$ in Part 1. The shape is `(out_features,)`.\n\n    * `random_seed`: The NumPy random seed number used to generate initial values of `weight` and `bias`.\n\n* Method `__init__`:\n\n    * To initialize an object in this class, you need to specify `in_features` and `out_features`.\n\n    * You may initialize the object by specifying a value for `random_seed`. If it is not specified, then its default value is 42.\n\n    * The initial values of `weight` and `bias` are random that follow standard normal distributions generated with the seed number attribute`random_seed`.\n\n* Method `forward`: \n\n    * Input `x`: numpy array with shape `(n_0, n_1, ..., n_{d-1}, in_features)` with an arbitrary dimension $d = 0, 1, \\cdots$.\n\n    * Output `y`: numpy array with shape `(n_0, n_1, ..., n_{d-1}, out_features)`.\n\n    * The affine transformation works in a way that given the first d indices in `x` and `y`, it does affine transformation along the last axis of `x` and `y`.\n\n* **Do not use any loop in your code.**",
+     "answer": "```\n\nclass My_Linear_NumPy:\n    def __init__(self, in_features, out_features, random_seed=42):\n        self.in_features = in_features\n        self.out_features = out_features\n        self.random_seed = random_seed\n        np.random.seed(self.random_seed)\n        self.weight = np.random.randn(self.out_features, self.in_features)\n        self.bias = np.random.randn(self.out_features)\n\n    def forward(self, x):\n        return np.sum(x[..., np.newaxis] * self.weight.T, axis = -2) + self.bias\n\n```",
+     "source": "https://forum.beaver-edge.ai/t/176"
+    },
+    {
+     "label": "4",
+     "points": 5,
+     "kind": "coding",
+     "body": "**Do the following tasks in this part.**\n\n1. Construct an object in the class `My_Linear_Numpy` called `linear_model_np`.\n\n2. Set `in_features = 3` and `out_features = 5`.\n\n3. Create multiple `X` with the following different shapes, but common numpy random seed number 2025 and the same standard normal distribution.\n\n    * `(in_features,)`\n\n    * `(10,in_features)`\n\n    * `(10,20,in_features)`\n\n    * `(10,20,30,in_features)`\n\n   After generating `X`, reset the numpy random seed number to its default value.\n\n4. We call our constructed function with each of the above `X` as the input. Print the shape of each output.",
+     "answer": "```\n\nin_features = 3\nout_features = 5\n\nlinear_model_np = My_Linear_NumPy(in_features, out_features)\n\nnp.random.seed(2025)\n\nX_list = [np.random.randn(in_features), np.random.randn(10,in_features), np.random.randn(10,20,in_features), np.random.randn(10,20,30,in_features)]\n\nnp.random.seed()\n\nfor X in X_list:\n    print(linear_model_np.forward(X).shape)\n\n```",
+     "source": "https://forum.beaver-edge.ai/t/177"
+    },
+    {
+     "label": "5",
+     "points": 10,
+     "kind": "coding",
+     "body": "In this part, you are asked to program with **PyTorch, NOT NumPy**.\n\n**Define a deep neural network module (class) named `Linear_Model`.**\n\nIt has the following architecture:\n\n* 2 layers: 1 hidden layer and 1 output layer.\n\n* No activation function. That is, the connection between two consecutive layers is only an affine transformation.",
+     "answer": "```\n\nclass Linear_Model(nn.Module):\n    def __init__(self, in_features, hidden_features, out_features):\n        super().__init__()\n        self.in_features = in_features\n        self.hidden_features = hidden_features\n        self.out_features = out_features\n        self.linear0 = nn.Linear(in_features, hidden_features)\n        self.linear1 = nn.Linear(hidden_features, out_features)\n\n    def forward(self, x):\n        x = self.linear0(x)\n        x = self.linear1(x)\n        return x\n\n```",
+     "source": "https://forum.beaver-edge.ai/t/178"
+    },
+    {
+     "label": "6",
+     "points": 5,
+     "kind": "non-coding",
+     "body": "We make the following modifications on the previous part.\n\n* We consider a special symmetric neural network that `out_features = in_features`.\n\n* No bias in all affine transformations.\n\n* The transformation matrix from the hidden layer to the output layer is binded to be the transpose of the transformation matrix from the input layer to the hidden layer\n\n**What is the total number of learnable parameters in this model?**\n\n* Reasoning is not required.",
+     "answer": "`in_features * hidden_features`",
+     "source": "https://forum.beaver-edge.ai/t/179"
+    },
+    {
+     "label": "7",
+     "points": 5,
+     "kind": "non-coding",
+     "body": "This question follows Part 6.\n\nDenote by $\\mathbf{W} \\in \\Bbb R^{hidden\\_features \\times input\\_features}$ the transformation matrix from the input layer to the hidden layer.\n\n**Given input $\\mathbf{x} \\in \\Bbb R^{input\\_features}$, write down the formula of the output $\\mathbf{y}$ and its shape.**\n\n* Reasoning is not required.",
+     "answer": "$$\n\\begin{align*}\n\\mathbf{y} & = \\mathbf{W}^\\top \\mathbf{W} \\mathbf{x} \\\\\n& \\in \\Bbb R^{input_features} .\n\\end{align*}\n$$",
+     "source": "https://forum.beaver-edge.ai/t/180"
+    },
+    {
+     "label": "8",
+     "points": 10,
+     "kind": "non-coding",
+     "body": "This question follows Part 7.\n\nDenote $r = \\text{rank} \\left( \\mathbf{W} \\right)$.\n\n**Compute the rank of $\\mathbf{W}^\\top \\mathbf{W}$.**\n\n* Reasoning is required.",
+     "answer": "Let $\\mathbf{W}$ be with the following singular value decomposition:\n\n$$\n\\mathbf{W} = \\sum_{i = 0}^{r-1} \\mathbf{u}_i \\sigma_i \\mathbf{v}_i^\\top .\n$$\n\nHence,\n\n$$\n\\begin{align*}\n\\mathbf{W}^\\top \\mathbf{W}\n& = \\left( \\sum_{i = 0}^{r-1} \\mathbf{u}_i \\sigma_i \\mathbf{v}_i^\\top \\right)^\\top\n\\left( \\sum_{j = 0}^{r-1} \\mathbf{u}_j \\sigma_j \\mathbf{v}_j^\\top \\right) \\\\\n& = \\sum_{i = 0}^{r-1} \\sum_{j = 0}^{r-1}\n\\mathbf{v}_i \\sigma_i \\mathbf{u}_i^\\top \\mathbf{u}_j \\sigma_j \\mathbf{v}_j ^\\top \\\\\n& = \\sum_{i = 0}^{r-1} \\sum_{j = 0}^{r-1}\n\\mathbf{v}_i \\sigma_i \\sigma_j \\delta_{ij} \\mathbf{v}_j^\\top \\\\\n& = \\sum_{i = 0}^{r-1}\n\\mathbf{v}_i \\sigma_i^2 \\mathbf{v}_j^\\top .\n\\end{align*}\n$$\n\nThis is the singular value decomposition of $\\mathbf{W} \\mathbf{W}^\\top$. Therefore, the rank of this matrix is also $r$.",
+     "source": "https://forum.beaver-edge.ai/t/181"
+    },
+    {
+     "label": "9",
+     "points": 5,
+     "kind": "coding",
+     "body": "This question follows Part 6.\n\nIn this part, you are asked to program with **PyTorch, not NumPy**.\n\n**Build a deep neural network class named as `Symmetric_Linear_Model` that meets the modifications imposed in Part 6.**",
+     "answer": "```\n\nclass Symmetric_Linear_Model(nn.Module):\n    def __init__(self, in_features, hidden_features):\n        super().__init__()\n        self.in_features = in_features\n        self.hidden_features = hidden_features\n        self.linear0 = nn.Linear(in_features, hidden_features, bias = False)\n\n    def forward(self, x):\n        x = self.linear0(x)\n        x = torch.sum(self.linear0.weight * x.reshape(*x.shape, 1), dim = -2)\n        return x\n\n```",
+     "source": "https://forum.beaver-edge.ai/t/182"
+    },
+    {
+     "label": "10",
+     "points": 5,
+     "kind": "coding",
+     "body": "Rectified Linear Unit, or the \"ReLU\", is one of the most common used function in deep learning. It is defined as\n\n$$\n\\text{ReLU}(x)= \\max \\left\\{ 0,x \\right\\} .\n$$\n\n**In this part, you are asked to use PyTorch to build a ReLU class named `My_ReLU` that subclasses `nn.module`.**\n\nA successful class works in the following ways:\n\n* The initialization of an object in `My_ReLU` does not take any input.\n\n* Suppose we have a `My_ReLU` object called `activiation0`. When we call `activiation0(x)`with input `x` that is a tensor `x` with an arbitrary dimension and shape, we get an output `y` from the element-wise ReLU acvitivation on `x`.",
+     "answer": "```\n\nclass My_ReLU(nn.Module):\n    def __init__(self):\n        super().__init__()\n\n    def forward(self, x):\n        return torch.max(torch.zeros_like(x), x)\n\n```",
+     "source": "https://forum.beaver-edge.ai/t/183"
+    },
+    {
+     "label": "11",
+     "points": 10,
+     "kind": "coding",
+     "body": "It is known by math that the combination of several linear layers can still be seen as an linear layer, so we can add some non-linear activation functions, such as ReLU, in between to get better effect.\n\nMulti-Layer Perceptron (MLP), is such a neural network composed of multiple fully connected layers with non-linear activations, commonly used in deep learning.\n\n**Please define a class called `My_MLP_Model` that subclasses `nn.Module` and works in the following ways:**\n\n* The architecture consists of two hidden layers and one output layer.\n\n* Each hidden layer consists of an affine transformation module and a ReLU activiation module.\n\n* Each affine transformation module shall be initialized with the build-in class `nn.Linear`.\n\n* Each ReLU activiatio nmodule shall be initialized with your self-defined class `My_ReLU`.",
+     "answer": "```\n\nclass My_MLP_Model(nn.Module):\n    def __init__(self, in_features, hidden_features1, hidden_features2, out_features):\n        super().__init__()\n        self.in_features = in_features\n        self.hidden_features1 = hidden_features1\n        self.hidden_features2 = hidden_features2\n        self.out_features = out_features\n        self.seq = nn.Sequential(\n            nn.Linear(in_features, hidden_features1),\n            My_ReLU(),\n            nn.Linear(hidden_features1, hidden_features2),\n            My_ReLU(),\n            nn.Linear(hidden_features2, out_features)\n        )\n\n    def forward(self, x):\n        x = self.seq(x)\n        return x\n\n```",
+     "source": "https://forum.beaver-edge.ai/t/184"
+    },
+    {
+     "label": "12",
+     "points": 5,
+     "kind": "coding",
+     "body": "After building our deep neural network architecture in Part 11 and before using it to train our model, we need to prepare our training dataset.\n\nLet us look at a simple application of deep neural network in studying harmonic motion in physics.\n\n**Write code to construct the following training dataset:**\n\n* Use `sample_size` to store the number of samples. Set the value as 1000.\n\n* Define `x_train` as a tensor whose shape is `(sample_size,)` and the value on each entry is uniformly drawn between 0 and 1.\n\n* Define `y_train` as a tensor whose values are obtained from the following element-wise mapping from `x_train`:\n\n   $$\n   y = \\sin \\left( 2 \\pi x \\right) + 0.1 \\cdot \\mathcal N \\left( 0, 1 \\right) ,\n   $$\n\n   where $\\mathcal N \\left( 0, 1 \\right)$ is a standard normal random variable.\n\n* Print the dimensions of `x_train` and `y_train`.\n\n* Print the shapes of `x_train` and `y_train`.",
+     "answer": "```\n\nsample_size = 1000\nx_train = torch.rand(sample_size,)\ny_train = torch.sin(2 * np.pi * x_train) + 0.1 * torch.randn_like(x_train)\n\nprint(x_train.ndim)\nprint(y_train.ndim)\n\nprint(x_train.shape)\nprint(y_train.shape)\n\n```",
+     "source": "https://forum.beaver-edge.ai/t/185"
+    },
+    {
+     "label": "13",
+     "points": 15,
+     "kind": "coding",
+     "body": "**In this part, we use the training dataset constructed in Part 12 to train a model defined in Part 11.**\n\n* Use mean-squred error (MSE) as the loss function.\n\n* Use Adam as the optimization algorithm.\n\n* Do whole-batch training in each epoch.\n\n* After every 10 epochs, print the following sentence:\n\n   Epoch: XXX. Loss: XXX.\n   \n   The loss value should be with 4 decimal places.\n\n* Generate an epoch-MSE loss plot after completing the training. Set the x-label as `epoch` and the y-label as `MSE loss`.",
+     "answer": "```\n# HYPERPARAMETERS\n''' DO NOT CHANGE ANYTHING IN THIS CODE CELL '''\n\nhidden_features1 = 32\nhidden_features2 = 16\n\nnum_epochs = 500\nlearning_rate = 1e-3\n\nmy_mlp_model = My_MLP_Model(1, hidden_features1, hidden_features2, 1)\noptimizer = torch.optim.Adam(my_mlp_model.parameters(), lr = learning_rate)\nloss_fn = torch.nn.MSELoss()\n\nloss_list_plot = []\n\nfor epoch in range(num_epochs):\n    optimizer.zero_grad()\n    y_pred = my_mlp_model(x_train.reshape(-1,1))\n    loss = loss_fn(y_pred, y_train.reshape(-1,1))\n    loss.backward()\n    optimizer.step()\n\n    if epoch % 10 == 0:\n        print(f\"Epoch: {epoch}. Loss: {loss.item():.4f}\")\n        loss_list_plot.append(loss.item())\n\nplt.plot(loss_list_plot)\nplt.xlabel(\"epoch\")\nplt.ylabel(\"MSE loss\")\nplt.show()\n```",
+     "source": "https://forum.beaver-edge.ai/t/186"
+    }
+   ]
+  },
+  {
+   "number": 3,
+   "points": 100,
+   "intro": "Before starting this problem, make sure to run the following code first **without any change**:\n\n```\n# DO NOT CHANGE\n\nimport numpy as np\n\nimport pandas as pd\n\nimport copy\n\nimport matplotlib.pyplot as plt\n\nfrom sklearn.preprocessing import StandardScaler\n\nnp.random.seed(2025)\n\n\"\"\" END OF THIS PART \"\"\"\n```\n\n$\\color{red}{\\text{WARNING !!!}}$\n\n* Beyond importing libraries/modules/classes/functions in the preceeding cell, you are **NOT allowed to import anything else for the following purposes**:\n\n    * **As a part of your final solution.** For instance, if a problem asks you to build a model without using sklearn but you use it, then you will not earn points.\n\n    * **Temporarily import something to assist you to get a solution.** For instance, if a problem asks you to manually compute eigenvalues but you temporarily use `np.linalg.eig` to get an answer and then delete your code, then you violate the rule.\n\n  **Rule of thumb:** Each part has its particular purpose to intentionally test you something. Do not attempt to find a shortcut to circumvent the rule.\n\n* All coding tasks shall run on CPUs, **not GPUs**.",
+   "parts": [
+    {
+     "label": "1",
+     "points": 5,
+     "kind": "coding",
+     "body": "We study the dataset `USAAIO_2025_round1_prob3_train.csv` provided in this contest.\n\nThe dataset can be found here:\n\n```\nurl = \"https://drive.google.com/file/d/125YsFPS2nCNRvYyy1tgnD8RhYIUglLX9/view?usp=sharing\"\n```\n\n**Do the following tasks in this part.**\n\n1. Load `USAAIO_2025_round1_prob3_train.csv` into a pandas DataFrame object called `df_1`.\n\n2. Print the first 10 rows.\n\n3. Define a function called `data_summary` that\n\n    - Takes a DataFrame object as an input.\n\n    - Prints the shape of the DataFrame.\n\n    - Prints the data type for each column.\n\n    - Prints the count of missing values for each column.\n\n    - Delivers no output.\n\n4. After defining the above function, call it by feeding `df_1` to it.",
+     "answer": "```\n\ndf_1 = pd.read_csv('USAAIO_2025_round1_prob3_train.csv')\nprint(df_1.head(10))\n\ndef data_summary(df):\n    print(f\"Shape: {df.shape}\")\n    print(f\"Data Types: {df.dtypes}\")\n    print(f\"Missing Values per Column: {df.isnull().sum()}\")\n\ndata_summary(df_1)\n\n```",
+     "source": "https://forum.beaver-edge.ai/t/187"
+    },
+    {
+     "label": "2",
+     "points": 5,
+     "kind": "coding",
+     "body": "**Do the following tasks in this part.**\n\n1. Create a DataFrame object called `df_2` that keeps the following columns in `df_1` (all other columns in `df_1` shall not appear in `df_2`):\n\n    * Survived\n\n    * Sex\n\n    * Age\n\n    * SibSp\n\n    * Parch\n\n    * Fare\n\n    * Embarked\n\n2. Print the first 5 rows of `df_2`.\n\n3. Print the shape of `df_2`.",
+     "answer": "```\n\ndf_2 = df_1[['Survived', 'Sex', 'Age', 'SibSp', 'Parch', 'Fare', 'Embarked']]\n\nprint(df_2.head())\n\n```",
+     "source": "https://forum.beaver-edge.ai/t/188"
+    },
+    {
+     "label": "3",
+     "points": 5,
+     "kind": "coding",
+     "body": "**Do the following tasks in this part.**\n\n1. In `df_2`, remove all rows that contain null (missing) values.\n\n2. Save the updated DateFrame object as `df_3` (that is, the change of `df_2` should not be inplace).\n\n3. For `df_3`, print the count of missing values per column.\n\n4. Print the shape of `df_3`.",
+     "answer": "```\ndf_3 = df_2.dropna()\n\nprint(df_3.isnull().sum())\n\nprint(df_3.shape)\n```",
+     "source": "https://forum.beaver-edge.ai/t/189"
+    },
+    {
+     "label": "4",
+     "points": 5,
+     "kind": "coding",
+     "body": "**Do the following tasks in this part.**\n\n1. Create a deep copy of `df_3`, named `df_4`.\n\n2. In `df_4`, create a new column called `GroupSize`. Its value is equal to `SibSp + Parch + 1`.\n\n3. Print the first five rows of `df_3` and `df_4`.\n\n4. Print the shapes of `df_3` and `df_4`.",
+     "answer": "```\ndf_4 = copy.deepcopy(df_3)\n\ndf_4['GroupSize'] = df_4['SibSp'] + df_4['Parch'] + 1\n\nprint(df_3.head())\nprint(df_4.head())\n\nprint(df_3.shape)\nprint(df_4.shape)\n\n```",
+     "source": "https://forum.beaver-edge.ai/t/190"
+    },
+    {
+     "label": "5",
+     "points": 5,
+     "kind": "coding",
+     "body": "**Do the following tasks in this part.**\n\n1. Remove columns `SibSp` and `Parch` in `df_4`, and save this new DataFrame object as `df_5` (changes on `df_4` should not be inplace).\n\n2. Print the first five rows of `df_4` and `df_5`.\n\n3. Print the shapes of `df_4` and `df_5`.",
+     "answer": "```\ndf_5 = df_4.drop(columns=['SibSp', 'Parch'])\n\nprint(df_4.head())\nprint(df_5.head())\n\nprint(df_4.shape)\nprint(df_5.shape)\n\n```",
+     "source": "https://forum.beaver-edge.ai/t/191"
+    },
+    {
+     "label": "6",
+     "points": 5,
+     "kind": "coding and conceptual reasoning",
+     "body": "In `df_5`, columns `Sex` and `Embarked` are categorical data.\n\n**Do the following tasks to process these categorical data.**\n\n1. To do logistic regression on this dataset, we need to do one hot encoding on these two columns. Explain why?\n\n2. Do one hot encoding on these two columns. Set `drop_first = True` and `dtype = np.int8`. Save the new dataframe object as `df_6`.\n\n3. Explain what `drop_first = True` means and why we do so.\n\n4. Print the first five rows of `df_5` and `df_6`.\n\n5. Print the shapes of `df_5` and `df_6`.",
+     "answer": "```\n\n# Question 1\n\"\"\"\nAnswer:\n\nLogistic regression requires numerical data, not categorical data.\n\n\"\"\"\n\n# Question 2\n# Answer: (put your code here)\n\ndf_6 = pd.get_dummies(df_5, columns=['Sex', 'Embarked'], drop_first = True, dtype = np.int8)\n\n# Question 3\n\"\"\"\nAnswer:\n\nSuppose a categorical variable takes value k chosen from K categories, indexed as 0, 1, ..., K-1.\n\nBy setting drop_first = True, it is replaced by a vector with shape K-1.\n\nIf k = 0, then in this vector, all entries are 0.\n\nIf k is not 0, then in this vector, the (k-1)th entry (entry indices starts from 0 and ends with K-2) is 1 and all other entries are 0.\n\nSetting drop_first = True avoids multicollinearity.\n\n\"\"\"\n\n# Question 4\n# Answer: (put your code here)\n\nprint(df_5.head())\nprint(df_6.head())\n\n# Question 5\n# Answer: (put your code here)\n\nprint(df_5.shape)\nprint(df_6.shape)\n\n```",
+     "source": "https://forum.beaver-edge.ai/t/192"
+    },
+    {
+     "label": "7",
+     "points": 5,
+     "kind": "coding",
+     "body": "**Do the following tasks in this part.**\n\n1. Define `X` that keeps all features in `df_6` and drops the label column `Survived`.\n\n2. Define `y` that keeps the label column `Survived` in `df_6` only.\n\n3. Print the types of objects `X` and `y`.\n\n4. Print the first five rows of `X` and the first five elements in `y`.",
+     "answer": "```\nX = df_6.drop(columns=['Survived'])\ny = df_6['Survived']\n\nprint(type(X))\nprint(type(y))\n\nprint(X.head())\nprint(y.head())\n\n```",
+     "source": "https://forum.beaver-edge.ai/t/193"
+    },
+    {
+     "label": "8",
+     "points": 5,
+     "kind": "coding",
+     "body": "**Do the following tasks in this part.**\n\n1. Define a function called `my_train_test_split` that splits the whole dataset into the training component and the test/validation component.\n\n    * The split is random\n    \n    * Inputs\n\n        * `X`: A DataFrame object of features of all sample data.\n\n        * `y`: A Series object of labels of all sample data.\n\n        * `test_size`: It takes a value between 0 and 1 that denotes the fraction of samples used for testing. That is, the number of samples used for testing is `int(total number of samples * test_size)`.\n\n    * Outputs\n\n        * `X_train`: It keeps samples in `X` for training.\n\n        * `X_test`: It keeps samples in `X` for testing.\n\n        * `y_train`: It keeps samples in `y` for training.\n\n        * `y_test`: It keeps samples in `y` for testing.\n\n2. Call this function with inputs\n\n    * `X = X`\n\n    * `y = y`\n\n    * `test_state = 0.2`\n\n3. Print object types and shapes of `X_train`, `X_test`, `y_train`, `y_test`.",
+     "answer": "```\ndef my_train_test_split(X, y, test_size):\n    num_samples = X.shape[0]\n    num_test_samples = int(num_samples * test_size)\n    indices = np.random.permutation(num_samples)\n    test_indices = indices[:num_test_samples]\n    train_indices = indices[num_test_samples:]\n\n    X_train = X.iloc[train_indices]\n    X_test = X.iloc[test_indices]\n    y_train = y.iloc[train_indices]\n    y_test = y.iloc[test_indices]\n\n    return X_train, X_test, y_train, y_test\n\nX_train, X_test, y_train, y_test = my_train_test_split(X, y, 0.2)\n\nprint(type(X_train))\nprint(type(X_test))\nprint(type(y_train))\nprint(type(y_test))\n\nprint(X_train.shape)\nprint(X_test.shape)\nprint(y_train.shape)\nprint(y_test.shape)\n\n```",
+     "source": "https://forum.beaver-edge.ai/t/194"
+    },
+    {
+     "label": "9",
+     "points": 5,
+     "kind": "coding",
+     "body": "**Use `StandardScaler` that has been imported from `sklearn.preprocessing` (DO NOT IMPORT IT AGAIN) to do the following tasks.**\n\n1. Create an object called `scaler`.\n\n2. Use `scaler.fit_transform` to scale each column in `X_train` to standard normal. Save the scaled training dataset as `X_train_scaled`.\n\n3. Use `scaler.transform` to scale `X_test`. Save the scaled test dataset as `X_test_scaled`.\n\n4. Add a column to `X_train_scaled` with all 1s. Do the same thing for `X_test_scaled`.\n\n5. Print the types of objects `X_train_scaled` and `X_test_scaled`.\n\n6. Print the shapes of objects `X_train_scaled` and `X_test_scaled`.\n\n7. Print the first five rows of `X_train_scaled` and `X_test_scaled`.",
+     "answer": "```\nscaler = StandardScaler()\n\nX_train_scaled = scaler.fit_transform(X_train)\nX_test_scaled = scaler.transform(X_test)\n\nX_train_scaled = np.concat([X_train_scaled, np.ones((X_train_scaled.shape[0], 1))], axis=1)\nX_test_scaled = np.concat([X_test_scaled, np.ones((X_test_scaled.shape[0], 1))], axis=1)\n\nprint(type(X_train_scaled))\nprint(type(X_test_scaled))\n\nprint(X_train_scaled.shape)\nprint(X_test_scaled.shape)\n\nprint(X_train_scaled[:5])\nprint(X_test_scaled[:5])\n```",
+     "source": "https://forum.beaver-edge.ai/t/195"
+    },
+    {
+     "label": "10",
+     "points": 5,
+     "kind": "non-coding",
+     "body": "So far, we have finished preprocessing our dataset. We use this dataset for the purpose of doing **binary classification**.\n\n**In all remaining parts in this problem, we will train a logistic regression model with our preprocessed data and test its performance.**\n\nLet all training samples be indexed as $0, 1, \\cdots , N-1$. For the $n$th sample, denote by $\\mathbf{x}^{(n)} \\in \\Bbb R^{d \\times 1}$ a column vector of all features and $y^{(n)} \\in \\left\\{ 0, 1 \\right\\}$ its ground-truth label.\n\nIn the logistic regression, denote by $\\mathbf{\\beta} \\in \\Bbb R^{d \\times 1}$ the learnable parameters.\n\nThus, our predicted label is determined according to:\n\n$$\ny^{(n)}_{predict} =\n\\begin{cases}\n1 , & \\text{with probability } \\sigma \\left( \\mathbf{x}^{(n), \\top} \\mathbf{\\beta} \\right) \\\\\n0, & \\text{with probability } 1 - \\sigma \\left( \\mathbf{x}^{(n), \\top} \\mathbf{\\beta} \\right) \\\\\n\\end{cases}\n$$\n\nwhere\n\n$$\n\\sigma \\left( z \\right) = \\frac{1}{1 + e^{-z}}\n$$\n\nis the sigmoid function.\n\n**Do the following task in this part.**\n\nTo train our model, we need to solve the following optimization problem:\n\n$$\n\\min_{\\mathbf{\\beta}} \\ L \\left(\\mathbf{\\beta} \\right) .\n$$\n\nWrite down the loss function $L \\left(\\mathbf{\\beta} \\right)$ in the following form (reasoning is not required):\n\n$$\nL \\left(\\mathbf{\\beta} \\right)\n= \\sum_{n=0}^{N-1} \\cdots .\n$$",
+     "answer": "$$\n\\boxed{L \\left( \\mathbf{\\beta} \\right)\n= \\sum_{n = 0}^{N-1} - \\left(\ny^{(n)} \\log \\left( \\sigma \\left( \\mathbf{x}^{(n), \\top} \\mathbf{\\beta}\n\\right) \\right)\n+ \\left( 1 - y^{(n)} \\right)\n\\log \\left( 1 - \\sigma \\left( \\mathbf{x}^{(n), \\top} \\mathbf{\\beta}\n\\right) \\right)\n\\right) } .\n$$",
+     "source": "https://forum.beaver-edge.ai/t/196"
+    },
+    {
+     "label": "11",
+     "points": 5,
+     "kind": "non-coding",
+     "body": "**Compute**\n\n$$\n\\frac{d \\sigma \\left( z \\right)}{dz} .\n$$\n\n* Express your answer using $\\sigma \\left( z \\right)$ only ($e^z$ or $e^{-z}$ should not appear in your final solution).\n\n* Reasoning is required.",
+     "answer": "We have\n\n$$\n\\begin{align*}\n\\frac{d \\sigma \\left( z \\right)}{d z}\n& = \\frac{e^{-z}}{\\left( 1 + e^{-z} \\right)^2} \\\\\n& = \\boxed{ \\sigma \\left( z \\right)\n\\left( 1 - \\sigma \\left( z \\right) \\right) } .\n\\end{align*}\n$$",
+     "source": "https://forum.beaver-edge.ai/t/198"
+    },
+    {
+     "label": "12",
+     "points": 5,
+     "kind": "non-coding",
+     "body": "**In this part, you are asked to compute $\\nabla_{\\mathbf{\\beta}} \\ L \\left( \\mathbf{\\beta} \\right)$ and express your solutions in two forms. Reasoning is not required.**\n\n1. Write $\\nabla_{\\mathbf{\\beta}} \\ L \\left( \\mathbf{\\beta} \\right)$ in the following summation form:\n\n   $$\n   \\nabla_{\\mathbf{\\beta}} \\ L \\left( \\mathbf{\\beta} \\right)\n   = \\sum_{n=0}^{N-1} \\cdots .\n   $$\n\n2. Denote\n\n   $$\n   \\mathbf{X}\n   = \\begin{bmatrix}\n   \\mathbf{x}^{(0), \\top} \\\\\n   \\mathbf{x}^{(1), \\top} \\\\\n   \\vdots \\\\\n   \\mathbf{x}^{(N-1), \\top}\n   \\end{bmatrix}\n   $$\n\n   and\n\n   $$\n   \\mathbf{y}\n   = \\begin{bmatrix}\n   y^{(0)} \\\\\n   y^{(1)} \\\\\n   \\vdots \\\\\n   y^{(N-1)}\n   \\end{bmatrix}\n   $$\n\n   and\n\n   $$\n   \\mathbf{z}\n   = \\begin{bmatrix}\n   \\sigma \\left( \\mathbf{x}^{(0), \\top} \\mathbf{\\beta} \\right) \\\\\n   \\sigma \\left( \\mathbf{x}^{(1), \\top} \\mathbf{\\beta} \\right) \\\\\n   \\vdots \\\\\n   \\sigma \\left( \\mathbf{x}^{(N-1), \\top} \\mathbf{\\beta} \\right)\n   \\end{bmatrix}\n   $$\n\n   Write $\\nabla_{\\mathbf{\\beta}} \\ L \\left( \\mathbf{\\beta} \\right)$ in terms of $\\mathbf{X}$, $\\mathbf{y}$, $\\mathbf{z}$ with matrix operations (the summation symbol is not allowed).",
+     "answer": "We have\n\n$$\n\\begin{align*}\n\\nabla_{\\mathbf{\\beta}} \\ L \\left( \\mathbf{\\beta} \\right)\n& = \\boxed{ \\sum_{n = 0}^{N-1}\n\\left(\n\\sigma \\left( \\mathbf{x}^{(n), \\top} \\mathbf{\\beta}\n\\right)\n- y^{(n)}\n\\right)\n\\mathbf{x}^{(n)}\n} \\\\\n& = \\boxed{\\mathbf{X}^\\top \\left( \\mathbf{z} - \\mathbf{y} \\right)} .\n\\end{align*}\n$$",
+     "source": "https://forum.beaver-edge.ai/t/197"
+    },
+    {
+     "label": "13",
+     "points": 5,
+     "kind": "non-coding",
+     "body": "In this part, you are asked to compute $\\nabla_{\\mathbf{\\beta}}^2 \\ L \\left( \\mathbf{\\beta} \\right)$ and express your solutions in two forms. Reasoning is not required.\n\n1. Write $\\nabla_{\\mathbf{\\beta}}^2 \\ L \\left( \\mathbf{\\beta} \\right)$ in the following summation form:\n\n   $$\n   \\nabla_{\\mathbf{\\beta}} \\ L \\left( \\mathbf{\\beta} \\right)\n   = \\sum_{n=0}^{N-1} \\cdots .\n   $$\n\n2. Denote\n\n   $$\n   \\mathbf{Z}\n   = \\begin{bmatrix}\n   z_0 & 0 & \\cdots & 0 \\\\\n   0 & z_1 & \\cdots & 0 \\\\\n   \\vdots & \\vdots & \\ddots & 0 \\\\\n   0 & 0 & \\cdots & z_{N-1}\n   \\end{bmatrix} .\n   $$\n\n   Write $\\nabla_{\\mathbf{\\beta}}^2 \\ L \\left( \\mathbf{\\beta} \\right)$ in terms of $\\mathbf{X}$, $\\mathbf{Z}$ with matrix operations (the summation symbol is not allowed).",
+     "answer": "We have\n\n$$\n\\begin{align*}\n\\nabla_{\\mathbf{\\beta}}^2 \\ L \\left( \\mathbf{\\beta} \\right)\n& = \\boxed{ \\sum_{n = 0}^{N-1}\n\\sigma \\left( \\mathbf{x}^{(n), \\top} \\mathbf{\\beta}\n\\right)\n\\left( 1 - \\sigma \\left( \\mathbf{x}^{(n), \\top} \\mathbf{\\beta}\n\\right)\n\\right)\n\\mathbf{x}^{(n)}\n\\mathbf{x}^{(n)^\\top}\n} \\\\\n& = \\boxed{\\mathbf{X}^\\top \\mathbf{Z} \\mathbf{X} } .\n\\end{align*}\n$$",
+     "source": "https://forum.beaver-edge.ai/t/199"
+    },
+    {
+     "label": "14",
+     "points": 5,
+     "kind": "non-coding",
+     "body": "**Prove that $L \\left( \\mathbf{\\beta} \\right)$ is a (weakly) concave function.**\n\n* Reasoning is required.",
+     "answer": "Because $\\sigma \\left( \\cdot \\right) \\in \\left[ 0 , 1 \\right]$ and $\\mathbf{x}^{(n)}\n\\mathbf{x}^{(n)^\\top}$ is a positive semidefinite matrix, we have that $\\nabla_{\\mathbf{\\beta}}^2 \\ L \\left( \\mathbf{\\beta} \\right)$ is a positive semidefinite matrix.\n\nTherefore, $L \\left( \\mathbf{\\beta} \\right)$ is (weakly) concave.",
+     "source": "https://forum.beaver-edge.ai/t/200"
+    },
+    {
+     "label": "15",
+     "points": 5,
+     "kind": "non-coding",
+     "body": "To learn $\\mathbf{\\beta}$, we do whole-batch iteration with the gradient descent algorithm and the Netwon's method.\n\nIn this part, denote by $\\eta > 0$ the learning rate.\n\n**Do the following tasks in this part (reasoning is not required).**\n\n1. Write down the gradient descent algorithm in the following form:\n\n   $$\n   \\mathbf{\\beta} \\leftarrow \\mathbf{\\beta} - \\eta \\cdot \\boxed{???} .\n   $$\n\n2. Write down the Newton's method in the following form:\n\n   $$\n   \\mathbf{\\beta} \\leftarrow \\mathbf{\\beta} - \\eta \\cdot \\boxed{???} .\n   $$",
+     "answer": "1.\n\n   $$\n   \\mathbf{\\beta} \\leftarrow \\mathbf{\\beta} - \\eta \\cdot \\boxed{\\nabla_{\\mathbf{\\beta}} \\ L \\left( \\mathbf{\\beta} \\right)} .\n   $$\n\n2.\n\n   $$\n   \\mathbf{\\beta} \\leftarrow \\mathbf{\\beta} - \\eta \\cdot \\boxed{\\left( \\nabla_{\\mathbf{\\beta}}^2 \\ L \\left( \\mathbf{\\beta} \\right) \\right)^{-1} \\left( \\nabla_{\\mathbf{\\beta}} \\ L \\left( \\mathbf{\\beta} \\right) \\right)} .\n   $$",
+     "source": "https://forum.beaver-edge.ai/t/201"
+    },
+    {
+     "label": "16",
+     "points": 5,
+     "kind": "coding",
+     "body": "**Define a function called `my_signoid`:**\n\n* Input: A numpy array with any shape.\n\n* Output: Elementwise sigmoid functional values.\n\n* No loop in the body of your function.",
+     "answer": "```\ndef my_sigmoid(z):\n    return 1 / (1 + np.exp(-z))\n\n```",
+     "source": "https://forum.beaver-edge.ai/t/202"
+    },
+    {
+     "label": "17",
+     "points": 15,
+     "kind": "coding",
+     "body": "**Construct a class called `My_Log_Reg` whose objects are logistic regression models.**\n\n* Method `__init__` \n\n    * Inputs\n\n        * `solver`: The value must be `GD` or `Newton`. Otherwise, it raises an error message `Invalid solver`.\n\n        * `lr`: The learning rate.\n\n        * `num_iter`: The total number of iterations.\n\n    * Attributes\n\n        * `solver`\n\n        * `lr`\n\n        * `num_iter`\n\n        * `coef_`: $\\mathbf{\\beta}$ in our theoretical model. It shall be a 1-dim numpy array with shape `(d,)`.\n\n* Method `fit`\n\n    * Inputs\n\n        * `X`: Features in a training dataset. The shape is `(N_train,d)`.\n\n        * `y`: Ground-truth labels in a training dataset. The shape is `(N_train,)`\n\n    * In the body of this method\n\n        * Use the configured solver to compute `coef_`.\n\n        * Do whole-batch iteration.\n\n        * After finishing training `coef_`, generate a plot about the loss function vs iteration.\n\n            * The x-label is `iter`.\n\n            * The y-label is `loss`.\n\n            * The title is the optimization method: either `GD` or `Netwon`.\n        * **The only loop that you can use is the whole-batch iteration. Within each iteration, when you update `coef_` by applying either `GD` or `Newton`, you are not allowed to use any loop.**\n\n    * Output\n\n        * None\n\n* Method `predict`\n\n    * Input\n\n        * `X`: Features in a test dataset. The shape is `(N_test,d)`.\n\n    * Output\n\n        * `y_pred`: Predicted labels in the test dataset. The shape is `(N_test,)`.\n\n* Method `score`\n\n    * Input\n\n        * `X`: Features in a test dataset. The shape is `(N_test,d)`.\n\n        * `y`: Ground-truth labels in the test dataset. The shape is `(N_test,)`.\n\n    * Output\n\n        * `accuracy_score`: The accuracy score of the prediction of `y`.",
+     "answer": "```\n\nclass My_Log_Reg:\n    def __init__(self, solver, lr, num_iter):\n        self.solver = solver\n        self.lr = lr\n        self.num_iter = num_iter\n        self.coef_ = None\n\n    def fit(self, X, y):\n        N, d = X.shape\n        self.coef_ = np.zeros(d)\n        loss_history = []\n        loss = -np.sum(y * np.log(my_sigmoid(X @ self.coef_)) + (1 - y) * np.log(1 - my_sigmoid(X @ self.coef_)))\n        loss_history.append(loss)\n\n        if self.solver == 'GD':\n            for i in range(self.num_iter):\n                params_grad = X.T @ (my_sigmoid(X @ self.coef_) - y)\n                self.coef_ -= self.lr * params_grad\n                loss = -np.sum(y * np.log(my_sigmoid(X @ self.coef_)) + (1 - y) * np.log(1 - my_sigmoid(X @ self.coef_)))\n                loss_history.append(loss)\n\n            plt.plot(loss_history)\n            plt.xlabel('iter')\n            plt.ylabel('loss')\n            plt.title('self.solver')\n            plt.show()\n        elif self.solver == 'Newton':\n            for i in range(self.num_iter):\n                params_grad = X.T @ (my_sigmoid(X @ self.coef_) - y)\n                params_Hessian = X.T @ np.diag(my_sigmoid(X @ self.coef_) * (1 - my_sigmoid(X @ self.coef_))) @ X\n                self.coef_ -= self.lr * np.linalg.inv(params_Hessian) @ params_grad\n                loss = -np.sum(y * np.log(my_sigmoid(X @ self.coef_)) + (1 - y) * np.log(1 - my_sigmoid(X @ self.coef_)))\n                loss_history.append(loss)\n\n            plt.plot(loss_history)\n            plt.xlabel('iter')\n            plt.ylabel('loss')\n            plt.title('self.solver')\n            plt.show()\n        else:\n            raise ValueError('Invalid solver')\n\n    def predict(self, X):\n        y_pred = np.where(my_sigmoid(X @ self.coef_) >= 0.5, 1, 0)\n        return y_pred\n\n    def score(self, X, y):\n        y_pred = self.predict(X)\n        accuracy_score = np.mean(y_pred == y)\n        return accuracy_score\n\n```",
+     "source": "https://forum.beaver-edge.ai/t/203"
+    },
+    {
+     "label": "18",
+     "points": 5,
+     "kind": "coding",
+     "body": "**Do the following tasks in this problem.**\n\n1. Define two models:\n\n    * `model_GD = My_Log_Reg(solver='GD', lr=.01, num_iter=200)`\n    \n    * `model_Newton = My_Log_Reg(solver='Newton', lr=.1, num_iter=200)`\n\n2. For each model,\n\n    * Use the training dataset to train it.\n\n    * Print the trained coefficients `coef_`.\n\n    * Use the test dataset to compute the accuracy score. Print it.",
+     "answer": "```\nmodel_GD = My_Log_Reg(solver='GD', lr=.001, num_iter=200)\nmodel_GD.fit(X_train_scaled, y_train)\nprint(model_GD.coef_)\nprint(model_GD.score(X_test_scaled, y_test))\n\nmodel_Newton = My_Log_Reg(solver='Newton', lr=.1, num_iter=200)\nmodel_Newton.fit(X_train_scaled, y_train)\nprint(model_Newton.coef_)\nprint(model_Newton.score(X_test_scaled, y_test))\n\n```",
+     "source": "https://forum.beaver-edge.ai/t/204"
+    }
+   ]
+  }
+ ]
+}
