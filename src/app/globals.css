@@ -83,8 +83,25 @@ html:lang(zh-CN) {
   @apply prose prose-slate max-w-none prose-headings:scroll-mt-24 prose-headings:font-semibold prose-a:text-brand-700 prose-a:underline-offset-2 prose-code:rounded prose-code:bg-slate-100 prose-code:px-1 prose-code:py-0.5 prose-code:font-normal prose-code:before:content-none prose-code:after:content-none prose-pre:bg-slate-900 prose-img:rounded-xl prose-img:border prose-img:border-slate-200 prose-table:text-sm prose-th:bg-slate-50 prose-th:px-3 prose-td:px-3;
 }
 
+/* The inline-code chip (prose-code:bg-slate-100 …) must not apply inside dark code blocks. */
+.prose-resai pre code {
+  @apply rounded-none bg-transparent p-0 text-slate-100;
+}
+
 .prose-resai :not(pre) > code {
   overflow-wrap: anywhere;
+}
+
+.prose-resai > :first-child {
+  margin-top: 0;
+}
+
+.prose-resai > :last-child {
+  margin-bottom: 0;
+}
+
+.prose-resai img {
+  @apply mx-auto h-auto max-h-96 w-auto max-w-full;
 }
 
 .prose-resai .katex-display {
